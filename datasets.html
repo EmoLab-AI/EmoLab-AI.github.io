@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datasets - EmoLab-AI</title>
+    <style>
+        :root {
+            --primary-color: #4a4a9e;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .dataset-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .dataset-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .dataset-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .dataset-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .dataset-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #f5f5f5;
+        }
+
+        .dataset-info {
+            padding: 1.5rem;
+        }
+
+        .dataset-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .dataset-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+        }
+
+        .dataset-stats {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .stat-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .stat-label {
+            color: #666;
+        }
+
+        .stat-value {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .dataset-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .dataset-tag {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        .dataset-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .dataset-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .dataset-link:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .dataset-filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .dataset-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="EmoLab-AI Logo">
+                EmoLab-AI
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="members.html">Members</a>
+                <a href="publications.html">Publications</a>
+                <a href="datasets.html">Datasets</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Datasets</h1>
+
+        <div class="dataset-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Emotion</button>
+            <button class="filter-btn">Multimodal</button>
+            <button class="filter-btn">Vision</button>
+            <button class="filter-btn">Audio</button>
+        </div>
+
+        <div class="dataset-grid">
+            <!-- Example Dataset Card -->
+            <div class="dataset-card">
+                <img src="dataset1.jpg" alt="Dataset Preview" class="dataset-image">
+                <div class="dataset-info">
+                    <div class="dataset-title">Multimodal Emotion Dataset</div>
+                    <div class="dataset-description">
+                        A comprehensive dataset for emotion recognition containing facial expressions, voice recordings, and physiological signals.
+                    </div>
+                    <div class="dataset-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Size:</span>
+                            <span class="stat-value">100GB</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Samples:</span>
+                            <span class="stat-value">50,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Classes:</span>
+                            <span class="stat-value">8</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Format:</span>
+                            <span class="stat-value">Mixed</span>
+                        </div>
+                    </div>
+                    <div class="dataset-tags">
+                        <span class="dataset-tag">Emotion</span>
+                        <span class="dataset-tag">Multimodal</span>
+                        <span class="dataset-tag">Vision</span>
+                        <span class="dataset-tag">Audio</span>
+                    </div>
+                    <div class="dataset-links">
+                        <a href="#" class="dataset-link">Download</a>
+                        <a href="#" class="dataset-link">Documentation</a>
+                        <a href="#" class="dataset-link">Paper</a>
+                        <a href="#" class="dataset-link">Code</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Dataset Card -->
+            <div class="dataset-card">
+                <img src="dataset2.jpg" alt="Dataset Preview" class="dataset-image">
+                <div class="dataset-info">
+                    <div class="dataset-title">Facial Expression Database</div>
+                    <div class="dataset-description">
+                        High-quality facial expression images collected under controlled laboratory conditions with detailed emotion annotations.
+                    </div>
+                    <div class="dataset-stats">
+                        <div class="stat-item">
+                            <span class="stat-label">Size:</span>
+                            <span class="stat-value">50GB</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Samples:</span>
+                            <span class="stat-value">25,000</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Classes:</span>
+                            <span class="stat-value">7</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Format:</span>
+                            <span class="stat-value">Images</span>
+                        </div>
+                    </div>
+                    <div class="dataset-tags">
+                        <span class="dataset-tag">Emotion</span>
+                        <span class="dataset-tag">Vision</span>
+                        <span class="dataset-tag">Face</span>
+                    </div>
+                    <div class="dataset-links">
+                        <a href="#" class="dataset-link">Download</a>
+                        <a href="#" class="dataset-link">Documentation</a>
+                        <a href="#" class="dataset-link">Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 EmoLab-AI</p>
+    </footer>
+
+    <script>
+        // Dataset filters
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Here you would typically filter the datasets
+                // For now, this is just for demonstration
+            });
+        });
+    </script>
+</body>
+</html> 

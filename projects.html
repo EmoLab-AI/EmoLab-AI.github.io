@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - EmoLab-AI</title>
+    <style>
+        :root {
+            --primary-color: #4a4a9e;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 6rem 2rem 2rem;
+        }
+
+        .page-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .project-filters {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1rem;
+            border: none;
+            background-color: #f0f0f0;
+            color: var(--text-color);
+            border-radius: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #f5f5f5;
+        }
+
+        .project-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-description {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            flex-grow: 1;
+        }
+
+        .project-status {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            margin-bottom: 1rem;
+        }
+
+        .status-active {
+            background-color: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status-completed {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .project-tag {
+            background-color: #f0f0f0;
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            color: var(--text-color);
+        }
+
+        .project-team {
+            margin-bottom: 1rem;
+        }
+
+        .team-title {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 0.5rem;
+        }
+
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .team-member {
+            font-size: 0.9rem;
+            color: var(--primary-color);
+        }
+
+        .project-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: auto;
+        }
+
+        .project-link {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .project-link:hover {
+            text-decoration: underline;
+        }
+
+        .project-details {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #eee;
+        }
+
+        .detail-item {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .detail-label {
+            color: #666;
+        }
+
+        .detail-value {
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                gap: 1rem;
+            }
+            
+            .project-filters {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="EmoLab-AI Logo">
+                EmoLab-AI
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="members.html">Members</a>
+                <a href="publications.html">Publications</a>
+                <a href="datasets.html">Datasets</a>
+                <a href="projects.html">Projects</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1 class="page-title">Research Projects</h1>
+
+        <div class="project-filters">
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Active</button>
+            <button class="filter-btn">Completed</button>
+            <button class="filter-btn">Emotion Recognition</button>
+            <button class="filter-btn">Multimodal Learning</button>
+            <button class="filter-btn">AI Systems</button>
+        </div>
+
+        <div class="projects-grid">
+            <!-- Example Project Card -->
+            <div class="project-card">
+                <img src="project1.jpg" alt="Project Preview" class="project-image">
+                <div class="project-info">
+                    <div class="project-title">Multimodal Emotion Recognition System</div>
+                    <span class="project-status status-active">Active</span>
+                    <div class="project-description">
+                        Development of a novel system that combines facial expressions, voice patterns, and physiological signals for accurate emotion recognition in real-time applications.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Emotion Recognition</span>
+                        <span class="project-tag">Deep Learning</span>
+                        <span class="project-tag">Multimodal</span>
+                    </div>
+                    <div class="project-team">
+                        <div class="team-title">Research Team:</div>
+                        <div class="team-members">
+                            <span class="team-member">Dr. Smith</span>
+                            <span class="team-member">Alice Chen</span>
+                            <span class="team-member">Bob Johnson</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Start Date:</span>
+                            <span class="detail-value">Jan 2024</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Expected Completion:</span>
+                            <span class="detail-value">Dec 2024</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Project Page</a>
+                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link">Demo</a>
+                        <a href="#" class="project-link">Paper</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Example Project Card -->
+            <div class="project-card">
+                <img src="project2.jpg" alt="Project Preview" class="project-image">
+                <div class="project-info">
+                    <div class="project-title">Emotional Speech Synthesis</div>
+                    <span class="project-status status-completed">Completed</span>
+                    <div class="project-description">
+                        A deep learning-based system for generating natural and emotionally expressive speech, with applications in human-computer interaction and assistive technologies.
+                    </div>
+                    <div class="project-tags">
+                        <span class="project-tag">Speech Synthesis</span>
+                        <span class="project-tag">Deep Learning</span>
+                        <span class="project-tag">NLP</span>
+                    </div>
+                    <div class="project-team">
+                        <div class="team-title">Research Team:</div>
+                        <div class="team-members">
+                            <span class="team-member">Dr. Wang</span>
+                            <span class="team-member">Carol Zhang</span>
+                            <span class="team-member">David Lee</span>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="detail-item">
+                            <span class="detail-label">Completed:</span>
+                            <span class="detail-value">Dec 2023</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="detail-label">Duration:</span>
+                            <span class="detail-value">18 months</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Project Page</a>
+                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link">Demo</a>
+                        <a href="#" class="project-link">Paper</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2025 EmoLab-AI</p>
+    </footer>
+
+    <script>
+        // Project filters
+        document.querySelectorAll('.filter-btn').forEach(button => {
+            button.addEventListener('click', () => {
+                // Remove active class from all buttons
+                document.querySelectorAll('.filter-btn').forEach(btn => {
+                    btn.classList.remove('active');
+                });
+                // Add active class to clicked button
+                button.classList.add('active');
+                // Here you would typically filter the projects
+                // For now, this is just for demonstration
+            });
+        });
+    </script>
+</body>
+</html> 
