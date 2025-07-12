@@ -1,29 +1,198 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Organization</title>
+    <title>EmoLab-AI</title>
     <style>
+        :root {
+            --primary-color: #4a4a9e;
+            --secondary-color: #2196F3;
+            --text-color: #333;
+            --background-color: #fff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+
+        nav {
+            background-color: var(--background-color);
+            padding: 1rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text-color);
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .hero {
+            padding: 8rem 2rem 4rem;
             text-align: center;
-            margin: 50px;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
         }
-        h1 {
-            color: #333;
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
         }
+
         .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .intro {
+            text-align: center;
+            margin: 3rem 0;
+            padding: 0 1rem;
+        }
+
+        .intro p {
             max-width: 800px;
             margin: 0 auto;
+            font-size: 1.1rem;
+            line-height: 1.8;
+        }
+
+        .news-section {
+            background-color: #f5f5f5;
+            padding: 3rem 0;
+        }
+
+        .news-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .news-item {
+            background: white;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .news-date {
+            color: #666;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            margin-top: 2rem;
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .social-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 3rem;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>欢迎来到 My Organization</h1>
-        <p>这是一个示例组织主页，托管在 GitHub Pages 上。</p>
-        <p>访问我们的 <a href="https://github.com/my-organization">GitHub 页面</a> 了解更多！</p>
-    </div>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo">EmoLab-AI</a>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#members">Members</a>
+                <a href="#publications">Publications</a>
+                <a href="#datasets">Datasets</a>
+                <a href="#projects">Projects</a>
+                <a href="#gallery">Gallery</a>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="home">
+        <h1>EmoLab-AI</h1>
+        <p>Advancing Multimodal Understanding and Perception</p>
+    </section>
+
+    <section class="intro">
+        <div class="container">
+            <p>EmoLab-AI is a research group focusing on how to make machines perceive and understand the world as our humans, especially with multimodal messages, such as vision, sound, tactile etc. We aim to equip machines with the ability of learning from multiple modalities, under the direction of doing valuable contribution to the community and society. If you are interested in our lab, you can learn more via the following ways.</p>
+            <div class="social-links">
+                <a href="https://github.com/EmoLab-AI" target="_blank">GitHub</a>
+                <a href="mailto:contact@emolab-ai.org">Email</a>
+            </div>
+        </div>
+    </section>
+
+    <section class="news-section">
+        <div class="container">
+            <h2>News</h2>
+            <div class="news-container">
+                <div class="news-item">
+                    <div class="news-date">[05-01-2023]</div>
+                    <p>One paper accepted by ICLR! Congrats to all authors!</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">[04-29-2024]</div>
+                    <p>"Play to the Score" is selected as Oral by CoRL! Congrats to the team!</p>
+                </div>
+                <div class="news-item">
+                    <div class="news-date">[04-29-2024]</div>
+                    <p>Two papers accepted by CoRL! Congrats to all co-authors!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 EmoLab-AI</p>
+    </footer>
 </body>
 </html>
