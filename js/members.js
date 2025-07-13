@@ -1,8 +1,10 @@
 // Function to load member data from JSON file
 async function loadMembers() {
     try {
-        const response = await fetch('/info/members/info.json');
+        // Add cache-busting parameter to prevent browser caching
+        const response = await fetch('/info/members/info.json?t=' + new Date().getTime());
         const data = await response.json();
+        console.log('Loaded members data:', data.members); // Debug log
         return data.members;
     } catch (error) {
         console.error('Error loading member data:', error);
@@ -32,13 +34,18 @@ function createMemberCard(member) {
 // Function to render members by category
 function renderMembersByCategory(members, category, containerId) {
     const categoryContainer = document.getElementById(containerId);
-    if (!categoryContainer) return;
+    if (!categoryContainer) {
+        console.error(`Container not found for category: ${category}, containerId: ${containerId}`);
+        return;
+    }
 
     const filteredMembers = members.filter(member => {
         const lowerCaseTitle = member.title.toLowerCase();
         const lowerCaseCategory = category.toLowerCase();
         return lowerCaseTitle.includes(lowerCaseCategory);
     });
+    
+    console.log(`Filtered members for ${category}:`, filteredMembers); // Debug log
     
     const membersHTML = filteredMembers.map(member => createMemberCard(member)).join('');
     categoryContainer.innerHTML = membersHTML || '<p>No members in this category yet.</p>';
@@ -59,6 +66,7 @@ async function initializePage() {
     
     // Render members for each category
     categoryMappings.forEach(mapping => {
+        console.log(`Processing category: ${mapping.category}`); // Debug log
         renderMembersByCategory(members, mapping.category, mapping.containerId);
     });
 }
