@@ -30,24 +30,37 @@ function createMemberCard(member) {
 }
 
 // Function to render members by category
-function renderMembersByCategory(members, category) {
-    const categoryContainer = document.querySelector(`#${category.toLowerCase()}-members`);
+function renderMembersByCategory(members, category, containerId) {
+    const categoryContainer = document.getElementById(containerId);
     if (!categoryContainer) return;
 
-    const filteredMembers = members.filter(member => member.title.includes(category));
+    const filteredMembers = members.filter(member => {
+        const lowerCaseTitle = member.title.toLowerCase();
+        const lowerCaseCategory = category.toLowerCase();
+        return lowerCaseTitle.includes(lowerCaseCategory);
+    });
+    
     const membersHTML = filteredMembers.map(member => createMemberCard(member)).join('');
-    categoryContainer.innerHTML = membersHTML;
+    categoryContainer.innerHTML = membersHTML || '<p>No members in this category yet.</p>';
 }
 
 // Initialize the page
 async function initializePage() {
     const members = await loadMembers();
     
-    // Render members by category
-    renderMembersByCategory(members, 'Master');
-    renderMembersByCategory(members, 'Ph.D');
-    renderMembersByCategory(members, 'Alumni');
-    renderMembersByCategory(members, 'Principal Investigator');
+    // Define category mappings (category name -> container ID)
+    const categoryMappings = [
+        { category: 'Leader', containerId: 'leader-members' },
+        { category: 'Ph.D', containerId: 'phd-members' },
+        { category: 'Master', containerId: 'master-members' },
+        { category: 'Exchange', containerId: 'exchange-members' },
+        { category: 'Others', containerId: 'others-members' }
+    ];
+    
+    // Render members for each category
+    categoryMappings.forEach(mapping => {
+        renderMembersByCategory(members, mapping.category, mapping.containerId);
+    });
 }
 
 // Load members when the page is ready
