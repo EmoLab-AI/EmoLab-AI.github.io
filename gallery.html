@@ -78,7 +78,7 @@
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 70%;
             margin: 0 auto;
             padding: 6rem 2rem 2rem;
         }
@@ -127,25 +127,30 @@
             border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 16/9;
-            cursor: pointer;
+            cursor: default; /* 改为默认光标，表示不可点击 */
             box-shadow: 0 8px 16px rgba(0,0,0,0.15);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            user-select: none; /* 防止选中 */
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
 
         .gallery-item:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 12px 24px rgba(0,0,0,0.2);
+            transform: none; /* 移除悬停效果 */
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
         }
 
         .gallery-image {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s;
+            pointer-events: none; /* 禁止图片交互 */
+            filter: brightness(0.85); /* 使图片略微暗淡 */
         }
 
         .gallery-item:hover .gallery-image {
-            transform: scale(1.05);
+            transform: none; /* 移除悬停缩放效果 */
         }
 
         .gallery-overlay {
@@ -156,10 +161,10 @@
             bottom: 0;
             background: linear-gradient(
                 to bottom,
-                rgba(0,0,0,0.4) 0%,
-                rgba(0,0,0,0.2) 30%,
-                rgba(0,0,0,0.2) 70%,
-                rgba(0,0,0,0.6) 100%
+                rgba(0,0,0,0.5) 0%,
+                rgba(0,0,0,0.3) 30%,
+                rgba(0,0,0,0.3) 70%,
+                rgba(0,0,0,0.7) 100%
             );
             color: white;
             padding: 2rem;
@@ -167,7 +172,7 @@
             flex-direction: column;
             justify-content: space-between;
             opacity: 1;
-            transition: opacity 0.3s;
+            pointer-events: none; /* 禁止遮罩层交互 */
         }
 
         .gallery-date {
@@ -186,17 +191,9 @@
             font-weight: 500;
         }
 
+        /* 移除模态框相关样式，因为不需要点击放大功能 */
         .modal {
             display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.9);
-            z-index: 2000;
-            padding: 2rem;
-            overflow-y: auto;
         }
 
         .modal.active {
@@ -211,6 +208,7 @@
             max-height: 90vh;
             border-radius: 20px;
             overflow: hidden;
+            display: none;
         }
 
         .modal-image {
@@ -218,6 +216,7 @@
             max-height: 80vh;
             object-fit: contain;
             border-radius: 20px;
+            display: none;
         }
 
         .modal-info {
@@ -238,6 +237,7 @@
             padding: 0.5rem;
             z-index: 2001;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            display: none;
         }
 
         footer {
@@ -269,6 +269,20 @@
                 padding: 0.4rem 1rem;
                 font-size: 0.9rem;
             }
+        }
+
+        /* 添加禁止复制的样式 */
+        img {
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
+        }
+
+        /* 移除图片链接样式 */
+        a {
+            pointer-events: none;
         }
     </style>
 </head>
