@@ -47,6 +47,7 @@ async function initializePage() {
     renderMembersByCategory(members, 'Master');
     renderMembersByCategory(members, 'Ph.D');
     renderMembersByCategory(members, 'Alumni');
+    renderMembersByCategory(members, 'Principal Investigator');
 }
 
 // Load members when the page is ready
