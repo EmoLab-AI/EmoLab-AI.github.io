@@ -71,6 +71,7 @@
             text-decoration: none;
             color: var(--text-color);
             transition: color 0.3s;
+            pointer-events: auto;
         }
 
         .nav-links a:hover {
@@ -116,10 +117,12 @@
         }
 
         .gallery-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
             margin-top: 2rem;
+            width: 100%;
         }
 
         .gallery-item {
@@ -127,10 +130,11 @@
             border-radius: 20px;
             overflow: hidden;
             aspect-ratio: 16/9;
-            cursor: default; /* 改为默认光标，表示不可点击 */
+            cursor: default;
             box-shadow: 0 8px 16px rgba(0,0,0,0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            user-select: none; /* 防止选中 */
+            width: 70%;
+            margin: 0 auto;
+            user-select: none;
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
@@ -176,7 +180,7 @@
         }
 
         .gallery-date {
-            font-size: 2.5rem;
+            font-size: 3rem;
             font-weight: 600;
             text-align: center;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
@@ -184,11 +188,12 @@
         }
 
         .gallery-location {
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             text-align: center;
             color: #fff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
             font-weight: 500;
+            margin-top: 1rem;
         }
 
         /* 移除模态框相关样式，因为不需要点击放大功能 */
@@ -257,12 +262,16 @@
                 grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             }
 
+            .gallery-item {
+                width: 90%;
+            }
+
             .gallery-date {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
 
             .gallery-location {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
             }
 
             .filter-btn {
@@ -282,7 +291,18 @@
 
         /* 移除图片链接样式 */
         a {
+            pointer-events: auto;
+        }
+
+        /* 移除全局链接禁用，只针对图片相关元素 */
+        .gallery-item a,
+        .gallery-item img {
             pointer-events: none;
+            -webkit-user-drag: none;
+            -khtml-user-drag: none;
+            -moz-user-drag: none;
+            -o-user-drag: none;
+            user-drag: none;
         }
     </style>
 </head>
@@ -309,8 +329,7 @@
 
         <div class="gallery-filters">
             <button class="filter-btn active">All</button>
-            <button class="filter-btn">Lab Life</button>
-            <button class="filter-btn">Research Results</button>
+            <button class="filter-btn">Life</button>
             <button class="filter-btn">Events</button>
             <button class="filter-btn">Awards</button>
         </div>

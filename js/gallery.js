@@ -105,4 +105,80 @@ async function initializePage() {
 }
 
 // Load gallery when the page is ready
-document.addEventListener('DOMContentLoaded', initializePage); 
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        // 获取gallery数据
+        const response = await fetch('/info/gallery/gallery.json');
+        const data = await response.json();
+
+        // 按日期排序（最新的在前）
+        const sortedGallery = data.gallery.sort((a, b) => {
+            return new Date(b.date) - new Date(a.date);
+        });
+
+        const galleryGrid = document.querySelector('.gallery-grid');
+        
+        // 清空现有内容
+        galleryGrid.innerHTML = '';
+
+        // 添加排序后的图片
+        sortedGallery.forEach(item => {
+            // 格式化日期
+            const date = new Date(item.date);
+            const formattedDate = date.toISOString().split('T')[0];
+
+            const galleryItem = document.createElement('div');
+            galleryItem.className = 'gallery-item';
+            
+            galleryItem.innerHTML = `
+                <img src="/${item.image}" alt="${item.title}" class="gallery-image">
+                <div class="gallery-overlay">
+                    <div class="gallery-date">${formattedDate}</div>
+                    <div class="gallery-location">${item.title}</div>
+                </div>
+            `;
+
+            galleryGrid.appendChild(galleryItem);
+        });
+
+        // 添加过滤器功能
+        const filterButtons = document.querySelectorAll('.filter-btn');
+        filterButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const category = button.textContent;
+                
+                // 更新按钮状态
+                filterButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                // 过滤图片
+                const filteredGallery = category === 'All' 
+                    ? sortedGallery 
+                    : sortedGallery.filter(item => item.category === category);
+
+                // 更新显示
+                galleryGrid.innerHTML = '';
+                filteredGallery.forEach(item => {
+                    const date = new Date(item.date);
+                    const formattedDate = date.toISOString().split('T')[0];
+
+                    const galleryItem = document.createElement('div');
+                    galleryItem.className = 'gallery-item';
+                    
+                    galleryItem.innerHTML = `
+                        <img src="/${item.image}" alt="${item.title}" class="gallery-image">
+                        <div class="gallery-overlay">
+                            <div class="gallery-date">${formattedDate}</div>
+                            <div class="gallery-location">${item.title}</div>
+                        </div>
+                    `;
+
+                    galleryGrid.appendChild(galleryItem);
+                });
+            });
+        });
+
+    } catch (error) {
+        console.error('Error loading gallery:', error);
+    }
+}); 

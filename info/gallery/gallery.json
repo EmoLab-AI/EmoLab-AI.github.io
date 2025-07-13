@@ -1,11 +1,18 @@
 {
     "gallery": [
         {
-            "category": "Lab Life",
+            "category": "Events",
             "date": "2025-06-23",
             "title": "BME,SUZHOU-CHINA",
-            "description": "Biomedical Engineering Lab in Suzhou, China",
+            "description": "Hongbin delivered an oral presentation at BME2025 in Suzhou, China.",
             "image": "info/gallery/img/BME-2025-06-23.jpg"
+        },
+        {
+            "category": "Life",
+            "date": "2025-07-12",
+            "title": "Exercise",
+            "description": "Louis is building himself.",
+            "image": "info/gallery/img/Exercise.jpg"
         }
     ]
 } 

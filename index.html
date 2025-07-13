@@ -96,16 +96,54 @@
         }
 
         .intro {
-            text-align: center;
             margin: 3rem 0;
             padding: 0 1rem;
         }
 
-        .intro p {
-            max-width: 800px;
+        .intro-container {
+            max-width: 1200px;
             margin: 0 auto;
-            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        .intro-text {
+            flex: 3; /* 60% */
+        }
+
+        .intro-image {
+            flex: 2; /* 40% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .intro-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .intro p {
+            max-width: 100%;
+            font-size: 1.5rem;
             line-height: 1.8;
+            text-align: left;
+            font-family: 'Comic Sans MS', 'Comic Sans', cursive;
+            color: #666666;
+        }
+
+        @media (max-width: 768px) {
+            .intro-container {
+                flex-direction: column;
+            }
+            
+            .intro-text, .intro-image {
+                flex: none;
+                width: 100%;
+            }
         }
 
         .news-section {
@@ -114,8 +152,35 @@
         }
 
         .news-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
+            gap: 4rem;
+        }
+
+        .news-image {
+            flex: 2; /* 40% */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+        }
+
+        .news-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+            transform: scale(1.3);
+            transition: transform 0.3s ease;
+        }
+
+        .news-image img:hover {
+            transform: scale(1.35);
+        }
+
+        .news-content {
+            flex: 3; /* 60% */
         }
 
         .news-item {
@@ -134,7 +199,7 @@
         .social-links {
             margin-top: 2rem;
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 1rem;
         }
 
@@ -154,6 +219,17 @@
             left: 0;
             width: 100%;
             z-index: 999;
+        }
+
+        @media (max-width: 768px) {
+            .intro-container, .news-container {
+                flex-direction: column;
+            }
+            
+            .intro-text, .intro-image, .news-image, .news-content {
+                flex: none;
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -182,29 +258,43 @@
 
     <section class="intro">
         <div class="container">
-            <p>EmoLab-AI is a research group focusing on how to make machines perceive and understand the world as our humans, especially with multimodal messages, such as vision, sound, tactile etc. We aim to equip machines with the ability of learning from multiple modalities, under the direction of doing valuable contribution to the community and society. If you are interested in our lab, you can learn more via the following ways.</p>
-            <div class="social-links">
-                <a href="https://github.com/EmoLab-AI" target="_blank">GitHub</a>
-                <a href="mailto:contact@emolab-ai.org">Email</a>
+            <div class="intro-container">
+                <div class="intro-text">
+                    <p>
+                        EmoLab-AI is a research group dedicated to exploring how machines can perceive and understand the world as humans do — particularly through multimodal information such as vision, speech, and biomedical signals. Our mission is to empower machines with the ability to learn from diverse modalities, with the ultimate goal of making meaningful contributions to both the scientific community and society at large.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/EmoLab-AI" target="_blank">GitHub</a>
+                        <a href="mailto:contact@emolab-ai.org">Email</a>
+                    </div>
+                </div>
+                <div class="intro-image">
+                    <img src="logo.png" alt="EmoLab-AI Logo">
+                </div>
             </div>
         </div>
     </section>
 
     <section class="news-section">
         <div class="container">
-            <h2>News</h2>
             <div class="news-container">
-                <div class="news-item">
-                    <div class="news-date">[05-01-2023]</div>
-                    <p>One paper accepted by ICLR! Congrats to all authors!</p>
+                <div class="news-image">
+                    <img src="homepage/img/overiew.svg" alt="Overview of EmoLab-AI">
                 </div>
-                <div class="news-item">
-                    <div class="news-date">[04-29-2024]</div>
-                    <p>"Play to the Score" is selected as Oral by CoRL! Congrats to the team!</p>
-                </div>
-                <div class="news-item">
-                    <div class="news-date">[04-29-2024]</div>
-                    <p>Two papers accepted by CoRL! Congrats to all co-authors!</p>
+                <div class="news-content">
+                    <h2>News</h2>
+                    <div class="news-item">
+                        <div class="news-date">[05-01-2023]</div>
+                        <p>One paper accepted by ICLR! Congrats to all authors!</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">[04-29-2024]</div>
+                        <p>"Play to the Score" is selected as Oral by CoRL! Congrats to the team!</p>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">[04-29-2024]</div>
+                        <p>Two papers accepted by CoRL! Congrats to all co-authors!</p>
+                    </div>
                 </div>
             </div>
         </div>
