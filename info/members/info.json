@@ -23,6 +23,18 @@
                     "url": "https://github.com/YunWuS"
                 }
             ]
+        },
+        {
+            "name": "Wentao Xiang",
+            "avatar": "info/members/img/wentao.jpg",
+            "title": "Principal Investigator",
+            "bio": "Research focus: Physiological signal analysis, virtual reality rehabilitation technology, emotion recognition",
+            "links": [
+                {
+                    "name": "Homepage",
+                    "url": "https://bmei.njmu.edu.cn/2024/0506/c19989a262997/page.htm"
+                }
+            ]
         }
     ]
 }
