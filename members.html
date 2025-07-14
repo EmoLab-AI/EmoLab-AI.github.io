@@ -107,6 +107,7 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             transition: transform 0.3s;
             margin-bottom: 2rem;
+            min-height: 300px;
         }
 
         .member-card:hover {
@@ -114,54 +115,69 @@
         }
 
         .member-photo {
-            width: 200px;
-            height: 200px;
+            width: 250px;
+            height: 300px;
             object-fit: cover;
             background-color: #f5f5f5;
         }
 
         .member-info {
-            padding: 1.5rem;
+            padding: 2rem;
             flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
         }
 
         .member-name {
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: bold;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.8rem;
             color: var(--primary-color);
         }
 
         .member-title {
             color: #666;
-            font-size: 0.9rem;
-            margin-bottom: 1rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
         }
 
         .member-bio {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #444;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
         }
 
         .member-introduction {
-            font-size: 0.9rem;
+            font-size: 1rem;
             color: #444;
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             font-style: italic;
             border-left: 3px solid var(--secondary-color);
-            padding-left: 10px;
+            padding-left: 15px;
+            line-height: 1.8;
         }
 
         .member-links {
             display: flex;
             gap: 1rem;
+            margin-top: auto;
         }
 
         .member-links a {
             color: var(--secondary-color);
             text-decoration: none;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--secondary-color);
+            border-radius: 4px;
+            transition: all 0.3s;
+        }
+        
+        .member-links a:hover {
+            background-color: var(--secondary-color);
+            color: white;
         }
 
         .member-links a:hover {
@@ -183,11 +199,16 @@
         @media (max-width: 768px) {
             .member-card {
                 flex-direction: column;
+                min-height: auto;
             }
             
             .member-photo {
                 width: 100%;
-                height: 250px;
+                height: 300px;
+            }
+            
+            .member-info {
+                padding: 1.5rem;
             }
         }
     </style>

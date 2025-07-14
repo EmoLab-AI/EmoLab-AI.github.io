@@ -27,6 +27,8 @@ function createMemberCard(member) {
                     ${member.links.map(link => `
                         <a href="${link.url}" target="_blank">${link.name}</a>
                     `).join('')}
+                    ${member["google scholar"] ? 
+                        `<a href="${member["google scholar"]}" target="_blank">Google Scholar</a>` : ''}
                 </div>
             </div>
         </div>
