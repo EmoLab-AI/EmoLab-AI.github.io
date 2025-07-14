@@ -19,7 +19,6 @@ function createMemberCard(member) {
             <img src="${member.avatar}" alt="${member.name}" class="member-photo">
             <div class="member-info">
                 <div class="member-name">${member.name}</div>
-                <div class="member-title">${member.title}</div>
                 <div class="member-bio">${member.bio}</div>
                 ${member.introduction && member.introduction !== "暂无" ? 
                     `<div class="member-introduction">${member.introduction}</div>` : ''}

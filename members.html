@@ -108,6 +108,7 @@
             transition: transform 0.3s;
             margin-bottom: 2rem;
             min-height: 300px;
+            align-items: center;
         }
 
         .member-card:hover {
@@ -116,9 +117,10 @@
 
         .member-photo {
             width: 250px;
-            height: 300px;
+            height: 250px;
             object-fit: cover;
             background-color: #f5f5f5;
+            align-self: center;
         }
 
         .member-info {
@@ -136,17 +138,13 @@
             color: var(--primary-color);
         }
 
-        .member-title {
-            color: #666;
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-
         .member-bio {
             font-size: 1rem;
             color: #444;
             margin-bottom: 1.5rem;
             line-height: 1.8;
+            font-weight: bold;
+            color: var(--secondary-color);
         }
 
         .member-introduction {
@@ -161,7 +159,7 @@
 
         .member-links {
             display: flex;
-            gap: 1rem;
+            gap: 1.5rem;
             margin-top: auto;
         }
 
@@ -169,17 +167,9 @@
             color: var(--secondary-color);
             text-decoration: none;
             font-size: 1rem;
-            padding: 0.5rem 1rem;
-            border: 1px solid var(--secondary-color);
-            border-radius: 4px;
             transition: all 0.3s;
         }
         
-        .member-links a:hover {
-            background-color: var(--secondary-color);
-            color: white;
-        }
-
         .member-links a:hover {
             text-decoration: underline;
         }
@@ -200,6 +190,7 @@
             .member-card {
                 flex-direction: column;
                 min-height: auto;
+                align-items: stretch;
             }
             
             .member-photo {
