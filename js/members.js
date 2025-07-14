@@ -22,9 +22,9 @@ function createMemberCard(member) {
             <img src="${member.avatar}" alt="${member.name}" class="member-photo">
             <div class="member-info">
                 <div class="member-name">${member.name}</div>
-                <div class="member-bio">${bioContent}</div>
                 ${member.introduction && member.introduction !== "暂无" ? 
                     `<div class="member-introduction">${member.introduction}</div>` : ''}
+                <div class="member-bio">${bioContent}</div>
                 <div class="member-links">
                     ${member.links.map(link => `
                         <a href="${link.url}" target="_blank">${link.name}</a>
