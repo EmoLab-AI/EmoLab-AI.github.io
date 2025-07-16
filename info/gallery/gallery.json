@@ -13,6 +13,13 @@
             "title": "Exercise",
             "description": "Louis is building himself.",
             "image": "info/gallery/img/Exercise.jpg"
+        },
+        {
+            "category": "Life",
+            "date": "2025-07-16",
+            "title": "Have a rest",
+            "description": "Our team is having a rest.",
+            "image": "info/gallery/img/rest716.jpg"
         }
     ]
 } 
