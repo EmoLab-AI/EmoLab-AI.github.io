@@ -30,6 +30,21 @@
              "introduction":"Shuai Shi  is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His current research interests include audio-visual emotion recognition, facial landmark detection, and facial robotics."
         },
         {
+            "name": "Louis",
+            "avatar": "https://avatars.githubusercontent.com/u/123755232?v=4",
+            "title": "Exchange Student",
+            "bio": "Research focus: Emotion recognition, Biomedical signal processing",
+            "links": [
+                {
+                    "name": "Homepage",
+                    "url": "https://github.com/LouisBadaire"
+                }
+            ],
+            "google scholar": "暂无",
+            "introduction":"Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is nom pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing."
+            
+        },
+        {
             "name": "Wentao Xiang",
             "avatar": "/info/members/img/wentao.png",
             "title": "Leader",
@@ -43,5 +58,6 @@
             "google scholar": "https://scholar.google.com/citations?user=-foPGxYAAAAJ&hl=zh-CN",
             "introduction": "Wentao Xiang,associate professor of Nanjing Medical University, was selected into the Outstanding Young Teacher Training Program of Nanjing Medical University. He has published more than 20 SCI papers in journals such as Computer Methods and Programs in Biomedicine, Computers in biology and medicine, etc. It has won more than 10 national invention patents, software copyrights, etc. He presided over the sub-tasks of the National Natural Science Youth Foundation project and the National Key R&D Program, and guided the students to win 7 awards in science and technology competitions at or above the provincial level."
         }
+        
     ]
 }
