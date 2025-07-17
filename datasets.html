@@ -275,107 +275,13 @@
             <button class="filter-btn">Audio</button>
         </div>
 
-        <div class="dataset-grid">
-            <!-- Example Dataset Card -->
-            <div class="dataset-card">
-                <img src="dataset1.jpg" alt="Dataset Preview" class="dataset-image">
-                <div class="dataset-info">
-                    <div class="dataset-title">Multimodal Emotion Dataset</div>
-                    <div class="dataset-description">
-                        A comprehensive dataset for emotion recognition containing facial expressions, voice recordings, and physiological signals.
-                    </div>
-                    <div class="dataset-stats">
-                        <div class="stat-item">
-                            <span class="stat-label">Size:</span>
-                            <span class="stat-value">100GB</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Samples:</span>
-                            <span class="stat-value">50,000</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Classes:</span>
-                            <span class="stat-value">8</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Format:</span>
-                            <span class="stat-value">Mixed</span>
-                        </div>
-                    </div>
-                    <div class="dataset-tags">
-                        <span class="dataset-tag">Emotion</span>
-                        <span class="dataset-tag">Multimodal</span>
-                        <span class="dataset-tag">Vision</span>
-                        <span class="dataset-tag">Audio</span>
-                    </div>
-                    <div class="dataset-links">
-                        <a href="#" class="dataset-link">Download</a>
-                        <a href="#" class="dataset-link">Documentation</a>
-                        <a href="#" class="dataset-link">Paper</a>
-                        <a href="#" class="dataset-link">Code</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Example Dataset Card -->
-            <div class="dataset-card">
-                <img src="dataset2.jpg" alt="Dataset Preview" class="dataset-image">
-                <div class="dataset-info">
-                    <div class="dataset-title">Facial Expression Database</div>
-                    <div class="dataset-description">
-                        High-quality facial expression images collected under controlled laboratory conditions with detailed emotion annotations.
-                    </div>
-                    <div class="dataset-stats">
-                        <div class="stat-item">
-                            <span class="stat-label">Size:</span>
-                            <span class="stat-value">50GB</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Samples:</span>
-                            <span class="stat-value">25,000</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Classes:</span>
-                            <span class="stat-value">7</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-label">Format:</span>
-                            <span class="stat-value">Images</span>
-                        </div>
-                    </div>
-                    <div class="dataset-tags">
-                        <span class="dataset-tag">Emotion</span>
-                        <span class="dataset-tag">Vision</span>
-                        <span class="dataset-tag">Face</span>
-                    </div>
-                    <div class="dataset-links">
-                        <a href="#" class="dataset-link">Download</a>
-                        <a href="#" class="dataset-link">Documentation</a>
-                        <a href="#" class="dataset-link">Paper</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <div class="dataset-grid"></div>
     </div>
 
     <footer>
         <p>© 2025 EmoLab-AI</p>
     </footer>
 
-    <script>
-        // Dataset filters
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                // Add active class to clicked button
-                button.classList.add('active');
-                // Here you would typically filter the datasets
-                // For now, this is just for demonstration
-            });
-        });
-    </script>
+    <script src="js/datasets.js"></script>
 </body>
-</html> 
+</html>

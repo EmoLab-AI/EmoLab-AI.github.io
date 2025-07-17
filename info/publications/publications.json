@@ -1,32 +1,3 @@
 {
-  "publications": [
-    {
-      "year": 2024,
-      "title": "\"Play to the Score\" - An Example Paper Title",
-      "authors": ["Author1", "Author2", "Author3"],
-      "venue": "Conference on Robot Learning (CoRL) 2024",
-      "presentation": "Oral Presentation",
-      "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#",
-        "video": "#"
-      },
-      "abstract": "This is where the abstract of the paper would go. It provides a brief overview of the research, methodology, and findings.",
-      "type": "Conference Papers"
-    },
-    {
-      "year": 2023,
-      "title": "Example ICLR Paper Title",
-      "authors": ["Author1", "Author2", "Author3"],
-      "venue": "International Conference on Learning Representations (ICLR) 2023",
-      "links": {
-        "pdf": "#",
-        "code": "#",
-        "project": "#"
-      },
-      "abstract": "This is where the abstract of the paper would go. It provides a brief overview of the research, methodology, and findings.",
-      "type": "Conference Papers"
-    }
-  ]
+  "publications": [ ]
 }

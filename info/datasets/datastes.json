@@ -1,0 +1,19 @@
+{
+    "datasets": [
+        {
+            "name": "EmoLab-AI Dataset",
+            "url": "https://github.com/EmoLab-AI/EmoLab-AI-Dataset",
+            "description": "EmoLab-AI Dataset is a large-scale dataset for emotion recognition in the elderly population.",
+            "license": "MIT",
+            "language": "Chinese",
+            "size": "10GB",
+            "num_samples": 100000,
+            "num_classes": 7,
+            "split": {
+                "train": 80,
+                "val": 10,
+                "test": 10
+            }
+        }
+    ]
+}

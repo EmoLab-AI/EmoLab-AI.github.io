@@ -29,8 +29,8 @@ function createMemberCard(member) {
                     ${member.links.map(link => `
                         <a href="${link.url}" target="_blank">${link.name}</a>
                     `).join('')}
-                    ${member["google scholar"] ? 
-                        `<a href="${member["google scholar"]}" target="_blank">Google Scholar</a>` : ''}
+                    ${member["google scholar"] && member["google scholar"] !== "暂无" ? 
+                    `<a href="${member["google scholar"]}" target="_blank">Google Scholar</a>` : ''}
                 </div>
             </div>
         </div>
@@ -78,4 +78,4 @@ async function initializePage() {
 }
 
 // Load members when the page is ready
-document.addEventListener('DOMContentLoaded', initializePage); 
+document.addEventListener('DOMContentLoaded', initializePage);

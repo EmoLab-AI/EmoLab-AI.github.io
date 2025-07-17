@@ -321,87 +321,7 @@
         </div>
 
         <div class="projects-grid">
-            <!-- Example Project Card -->
-            <div class="project-card">
-                <img src="project1.jpg" alt="Project Preview" class="project-image">
-                <div class="project-info">
-                    <div class="project-title">Multimodal Emotion Recognition System</div>
-                    <span class="project-status status-active">Active</span>
-                    <div class="project-description">
-                        Development of a novel system that combines facial expressions, voice patterns, and physiological signals for accurate emotion recognition in real-time applications.
-                    </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Emotion Recognition</span>
-                        <span class="project-tag">Deep Learning</span>
-                        <span class="project-tag">Multimodal</span>
-                    </div>
-                    <div class="project-team">
-                        <div class="team-title">Research Team:</div>
-                        <div class="team-members">
-                            <span class="team-member">Dr. Smith</span>
-                            <span class="team-member">Alice Chen</span>
-                            <span class="team-member">Bob Johnson</span>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Start Date:</span>
-                            <span class="detail-value">Jan 2024</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Expected Completion:</span>
-                            <span class="detail-value">Dec 2024</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Project Page</a>
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                        <a href="#" class="project-link">Paper</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Example Project Card -->
-            <div class="project-card">
-                <img src="project2.jpg" alt="Project Preview" class="project-image">
-                <div class="project-info">
-                    <div class="project-title">Emotional Speech Synthesis</div>
-                    <span class="project-status status-completed">Completed</span>
-                    <div class="project-description">
-                        A deep learning-based system for generating natural and emotionally expressive speech, with applications in human-computer interaction and assistive technologies.
-                    </div>
-                    <div class="project-tags">
-                        <span class="project-tag">Speech Synthesis</span>
-                        <span class="project-tag">Deep Learning</span>
-                        <span class="project-tag">NLP</span>
-                    </div>
-                    <div class="project-team">
-                        <div class="team-title">Research Team:</div>
-                        <div class="team-members">
-                            <span class="team-member">Dr. Wang</span>
-                            <span class="team-member">Carol Zhang</span>
-                            <span class="team-member">David Lee</span>
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="detail-item">
-                            <span class="detail-label">Completed:</span>
-                            <span class="detail-value">Dec 2023</span>
-                        </div>
-                        <div class="detail-item">
-                            <span class="detail-label">Duration:</span>
-                            <span class="detail-value">18 months</span>
-                        </div>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link">Project Page</a>
-                        <a href="#" class="project-link">GitHub</a>
-                        <a href="#" class="project-link">Demo</a>
-                        <a href="#" class="project-link">Paper</a>
-                    </div>
-                </div>
-            </div>
+            <!-- Projects will be loaded dynamically here -->
         </div>
     </div>
 
@@ -409,20 +329,6 @@
         <p>© 2025 EmoLab-AI</p>
     </footer>
 
-    <script>
-        // Project filters
-        document.querySelectorAll('.filter-btn').forEach(button => {
-            button.addEventListener('click', () => {
-                // Remove active class from all buttons
-                document.querySelectorAll('.filter-btn').forEach(btn => {
-                    btn.classList.remove('active');
-                });
-                // Add active class to clicked button
-                button.classList.add('active');
-                // Here you would typically filter the projects
-                // For now, this is just for demonstration
-            });
-        });
-    </script>
+    <script src="js/projects.js"></script>
 </body>
-</html> 
+</html>
