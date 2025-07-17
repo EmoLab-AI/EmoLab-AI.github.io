@@ -17,7 +17,7 @@
         {
            "name": "Rui Feng",
             "avatar": "https://avatars.githubusercontent.com/u/74527878?s=64&v=4",
-            "title": "phd-members",
+            "title": "Ph.D",
             "bio": "Research focus: multimodal cognitive impairment recognition and medical image processing",
             "links": [
                 {
@@ -32,7 +32,7 @@
         {
             "name": "Hongbin Chen",
             "avatar": "https://avatars.githubusercontent.com/u/76271045?v=4",
-            "title": "Master Student",
+            "title": "Master",
             "bio": "Research focus: Cognitive impairment recognition, Affective computing",
             "links": [
                 {
@@ -47,7 +47,7 @@
         {
             "name": "Shuai Shi",
             "avatar": "https://avatars.githubusercontent.com/u/144516693?s=400&u=ee9ae092da564284cce7bc798eef1cda49ea9709&v=4",
-            "title": "Master Student",
+            "title": "Master",
             "bio": "Research focus: Robot, Emotion recognition",
             "links": [
                 {
@@ -60,9 +60,9 @@
         },
         {
             "name": "Keke Shi",
-            "avatar": "https://avatars.githubusercontent.com/u/144516693?s=400&u=ee9ae092da564284cce7bc798eef1cda49ea9709&v=4",
-            "title": "Master Student",
-            "bio": "Research focus: Elderly Emotion recognition ,Emotional regulation",
+            "avatar": "https://avatars.githubusercontent.com/u/99538869?s=64&v=4",
+            "title": "Master",
+            "bio": "Research focus: Elderly Emotion recognition,Emotional regulation",
             "links": [
                 {
                     "name": "Homepage",
@@ -76,7 +76,7 @@
         {
             "name": "Louis Badaire",
             "avatar": "https://avatars.githubusercontent.com/u/123755232?v=4",
-            "title": "Exchange Student",
+            "title": "Exchange",
             "bio": "Research focus: Emotion recognition, Biomedical signal processing",
             "links": [
                 {
@@ -85,7 +85,7 @@
                 }
             ],
             "google scholar": "暂无",
-            "introduction":"Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is nom pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing."
+            "introduction":"Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is non pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing."
             
         }
         
