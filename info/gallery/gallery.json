@@ -8,11 +8,25 @@
             "image": "info/gallery/img/BME-2025-06-23.jpg"
         },
         {
+            "category": "Events",
+            "date": "2025-07-10",
+            "title": "Visit Robot Lab",
+            "description": "Our team visited the Robot Lab ",
+            "image": "info/gallery/img/visitrobot.jpg"
+        },
+        {
             "category": "Life",
             "date": "2025-07-12",
             "title": "Exercise",
             "description": "Louis is building himself.",
             "image": "info/gallery/img/Exercise.jpg"
+        },
+        {
+            "category": "Events",
+            "date": "2025-07-13",
+            "title": "Data Collection",
+            "description": "Our team is collecting data.",
+            "image": "info/gallery/img/datacollect713.jpg"
         },
         {
             "category": "Life",
