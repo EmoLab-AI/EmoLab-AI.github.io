@@ -12,7 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
-        datasets = data;
+        datasets = data.datasets || [];
         renderDatasets(datasets);
         setupFilterButtons();
     })

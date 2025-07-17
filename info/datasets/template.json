@@ -1,0 +1,45 @@
+{
+    "datasets": [
+        {
+            "title": "EEG Emotion Dataset",
+            "description": "A dataset containing EEG signals for emotion recognition",
+            "image": "info/datasets/img/eeg.jpg",
+            "tags": ["EEG", "Emotion"],
+            "stats": [
+                {"label": "Subjects", "value": "120"},
+                {"label": "Samples", "value": "10,000"}
+            ],
+            "links": [
+                {"label": "Download", "url": "#"},
+                {"label": "Paper", "url": "#"}
+            ]
+        },
+        {
+            "title": "Facial Expression Dataset",
+            "description": "A dataset of facial expressions for emotion analysis",
+            "image": "info/datasets/img/face.jpg",
+            "tags": ["Facial", "Expression"],
+            "stats": [
+                {"label": "Images", "value": "50,000"},
+                {"label": "Classes", "value": "7"}
+            ],
+            "links": [
+                {"label": "Download", "url": "#"},
+                {"label": "Documentation", "url": "#"}
+            ]
+        },
+        {
+            "title": "Multimodal Emotion Dataset",
+            "description": "A dataset combining EEG, facial and physiological signals",
+            "image": "info/datasets/img/multimodal.jpg",
+            "tags": ["EEG", "Facial", "Physiological"],
+            "stats": [
+                {"label": "Modalities", "value": "3"},
+                {"label": "Duration", "value": "50 hours"}
+            ],
+            "links": [
+                {"label": "Request Access", "url": "#"}
+            ]
+        }
+    ]
+}
