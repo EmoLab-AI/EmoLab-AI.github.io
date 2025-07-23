@@ -34,6 +34,13 @@
             "title": "Leisure time",
             "description": "Our team is having a leisure time.",
             "image": "info/gallery/img/rest716.jpg"
+        },
+        {
+            "category": "Life",
+            "date": "2025-01-17",
+            "title": "打牌",
+            "description": "Our team is playing cards.",
+            "image": "info/gallery/img/playingcards.jpg"
         }
     ]
 } 

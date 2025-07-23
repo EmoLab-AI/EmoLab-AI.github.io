@@ -74,6 +74,21 @@
       
         },
         {
+            "name": "Xiaokun Zhou",
+            "avatar": "https://avatars.githubusercontent.com/u/122355093?s=64&v=4",
+            "title": "Master",
+            "bio": "Research focus: Medical image generation , low‑dose contrast‑agent–enhanced MRI",
+            "links": [
+                {
+                    "name": "Homepage",
+                    "url": "https://github.com/zx134716"
+                }
+            ],
+            "google scholar": "暂无",
+            "introduction":"Xiaokun Zhou is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His research interests include medical image generation and low‑dose contrast‑agent–enhanced MRI."
+            
+        },
+        {
             "name": "Louis Badaire",
             "avatar": "https://avatars.githubusercontent.com/u/123755232?v=4",
             "title": "Exchange",
@@ -88,6 +103,7 @@
             "introduction":"Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is non pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing."
             
         }
+       
         
         
     ]
