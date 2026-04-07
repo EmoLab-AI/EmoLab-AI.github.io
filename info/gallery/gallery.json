@@ -1,46 +1,46 @@
-{
-    "gallery": [
-        {
-            "category": "Events",
-            "date": "2025-06-23",
-            "title": "BME,SUZHOU-CHINA",
-            "description": "Hongbin delivered an oral presentation at BME2025 in Suzhou, China.",
-            "image": "info/gallery/img/BME-2025-06-23.jpg"
-        },
-        {
-            "category": "Events",
-            "date": "2025-07-10",
-            "title": "Visit Robot Lab",
-            "description": "Our team visited the Robot Lab ",
-            "image": "info/gallery/img/visitrobot.jpg"
-        },
-        {
-            "category": "Life",
-            "date": "2025-07-12",
-            "title": "Exercise",
-            "description": "Louis is building himself.",
-            "image": "info/gallery/img/Exercise.jpg"
-        },
-        {
-            "category": "Events",
-            "date": "2025-07-13",
-            "title": "Data Collection",
-            "description": "Our team is collecting data.",
-            "image": "info/gallery/img/datacollect713.jpg"
-        },
-        {
-            "category": "Life",
-            "date": "2025-07-16",
-            "title": "Leisure time",
-            "description": "Our team is having a leisure time.",
-            "image": "info/gallery/img/rest716.jpg"
-        },
-        {
-            "category": "Life",
-            "date": "2025-01-17",
-            "title": "打牌",
-            "description": "Our team is playing cards.",
-            "image": "info/gallery/img/playingcards.jpg"
-        }
-    ]
-} 
+﻿{
+  "gallery": [
+    {
+      "category": "Events",
+      "date": "2025-07-13",
+      "title": "Data Collection Session",
+      "description": "The team ran a new round of multimodal data collection for emotion recognition experiments.",
+      "image": "info/gallery/img/datacollect713.jpg"
+    },
+    {
+      "category": "Life",
+      "date": "2025-07-16",
+      "title": "Leisure Time",
+      "description": "A quiet team break after an intensive week of experiments.",
+      "image": "info/gallery/img/rest716.jpg"
+    },
+    {
+      "category": "Events",
+      "date": "2025-07-10",
+      "title": "Visit to the Robot Lab",
+      "description": "The team visited the robot lab to explore embodied interaction hardware and demos.",
+      "image": "info/gallery/img/visitrobot.jpg"
+    },
+    {
+      "category": "Events",
+      "date": "2025-06-23",
+      "title": "BME 2025 in Suzhou",
+      "description": "Hongbin delivered an oral presentation at BME 2025 in Suzhou, China.",
+      "image": "info/gallery/img/BME-2025-06-23.jpg"
+    },
+    {
+      "category": "Life",
+      "date": "2025-01-17",
+      "title": "Card Game Night",
+      "description": "An informal team evening with cards and conversation.",
+      "image": "info/gallery/img/playcard.jpg"
+    },
+    {
+      "category": "Life",
+      "date": "2025-01-12",
+      "title": "Exercise Session",
+      "description": "Louis took the lead in a lab exercise break between research sessions.",
+      "image": "info/gallery/img/Exercise.jpg"
+    }
+  ]
+}

@@ -1,3 +1,72 @@
-{
-  "publications": [ ]
+﻿{
+  "publications": [
+    {
+      "year": 2026,
+      "date": "2026-01-01",
+      "title": "Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning",
+      "authors": ["Keke Shi", "Hongbin Chen", "Keshu Cai", "Jinhui Wu", "Wei Wang", "Jie Li", "Bin Liu", "Liangcheng Qu", "Kuiying Yin", "Pasquale Molinaro", "Giancarlo Fortino", "Jianqing Li", "Wentao Xiang"],
+      "venue": "IEEE Transactions on Affective Computing",
+      "links": {
+        "paper": "https://doi.org/10.1109/TAFFC.2026.3679686",
+        "doi": "https://doi.org/10.1109/TAFFC.2026.3679686"
+      },
+      "image": "info/publications/img/taffc-elderly-fer.png",
+      "abstract": "This paper studies facial expression recognition for elderly Chinese subjects with a dual-path architecture that combines edge-aware and semantic representations, followed by a two-step transfer learning strategy for domain adaptation.",
+      "citation": "@article{shi2026facial\n  author    = {Keke Shi and Hongbin Chen and Keshu Cai and Jinhui Wu and Wei Wang and Jie Li and Bin Liu and Liangcheng Qu and Kuiying Yin and Pasquale Molinaro and Giancarlo Fortino and Jianqing Li and Wentao Xiang},\n  title     = {Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning},\n  journal   = {IEEE Transactions on Affective Computing},\n  year      = {2026},\n  doi       = {10.1109/TAFFC.2026.3679686},\n  url       = {https://doi.org/10.1109/TAFFC.2026.3679686}\n}",
+      "type": "Journal Articles",
+      "description": "A new IEEE Transactions on Affective Computing paper on elderly facial expression recognition was accepted in 2026.",
+      "note": "Journal article"
+    },
+    {
+      "year": 2026,
+      "date": "2026-01-23",
+      "title": "MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition",
+      "authors": ["Hongbin Chen", "Rui Feng", "Jie Li", "Wei Wang", "Jianqin Li", "Wentao Xiang"],
+      "venue": "Pattern Recognition and Computer Vision (PRCV 2025), Lecture Notes in Computer Science",
+      "links": {
+        "paper": "https://link.springer.com/chapter/10.1007/978-981-95-5567-3_29",
+        "doi": "https://doi.org/10.1007/978-981-95-5567-3_29"
+      },
+      "image": "info/publications/img/mofa-fusion.png",
+      "abstract": "MOFA introduces a modality-orthogonalized fusion strategy for multimodal emotion recognition, aiming to improve cross-modal complementarity while reducing redundant or conflicting representations across input streams.",
+      "citation": "@inproceedings{DBLP:conf/prcv/ChenFLWLX25,\n  author    = {Hongbin Chen and Rui Feng and Jie Li and Wei Wang and Jianqing Li and Wentao Xiang},\n  title     = {MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition},\n  booktitle = {Pattern Recognition and Computer Vision - 8th Chinese Conference, PRCV 2025, Proceedings, Part V},\n  series    = {Lecture Notes in Computer Science},\n  publisher = {Springer Singapore},\n  pages     = {418--433},\n  year      = {2026},\n  doi       = {10.1007/978-981-95-5567-3_29},\n  url       = {https://doi.org/10.1007/978-981-95-5567-3_29}\n}",
+      "type": "Conference Papers",
+      "description": "Our PRCV paper on modality-orthogonalized fusion for multimodal emotion recognition was published in 2026.",
+      "note": "Conference chapter"
+    },
+    {
+      "year": 2025,
+      "date": "2025-01-01",
+      "title": "Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals",
+      "authors": ["Menglan Ruan", "Bin Liu", "Wenyuan Li", "Lei Jin", "Leqi Yang", "Regine le Bouquin Jeannes", "Jie Li", "Yudong Zhang", "Chunfeng Yang", "Wentao Xiang"],
+      "venue": "IEEE Internet of Things Journal",
+      "links": {
+        "paper": "https://doi.org/10.1109/JIOT.2025.3619114",
+        "doi": "https://doi.org/10.1109/JIOT.2025.3619114"
+      },
+      "image": "info/publications/img/jiot-vr-stroop.svg",
+      "abstract": "This work presents a virtual reality Stroop testing framework for mild cognitive impairment detection, using eye-tracking signals and the KWS-TA-CNN-PE network to improve screening performance in an ecologically realistic task setting.",
+      "citation": "@article{2025_Ruan,\n  author    = {Menglan Ruan and Bin Liu and Wenyuan Li and Lei Jin and Leqi Yang and Regine Le Bouquin Jeannes and Jie Li and Yudong Zhang and Chunfeng Yang and Wentao Xiang},\n  title     = {Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection Via KWS-TA-CNN-PE Network Using Eye-Tracking Signals},\n  journal   = {IEEE Internet of Things Journal},\n  year      = {2025},\n  volume    = {12},\n  number    = {24},\n  pages     = {53966--53982},\n  month     = dec,\n  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},\n  doi       = {10.1109/jiot.2025.3619114},\n  url       = {https://ieeexplore.ieee.org/document/11196938/}\n}",
+      "type": "Journal Articles",
+      "description": "Our IEEE Internet of Things Journal paper on VR Stroop testing and eye-tracking based MCI detection was published in 2025.",
+      "note": "Journal article"
+    },
+    {
+      "year": 2025,
+      "date": "2025-01-01",
+      "title": "KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test",
+      "authors": ["Menglan Ruan", "Wenyuan Li", "Lei Jin", "Leqi Yang", "Luo Wenbin", "Liu Bin", "Yang Chunfeng", "Xiang Wentao"],
+      "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society, Volume 47",
+      "links": {
+        "paper": "https://escholarship.org/uc/item/4zf264bg",
+        "pdf": "https://escholarship.org/content/qt4zf264bg/qt4zf264bg.pdf"
+      },
+      "image": "info/publications/img/kws-eye-tracking.png",
+      "abstract": "This paper focuses on lightweight mild cognitive impairment detection using eye-tracking signals collected from a virtual reality Stroop test, emphasizing efficient modeling for practical screening scenarios.",
+      "citation": "@inproceedings{ruan2025kwstacnn,\n  author    = {Menglan Ruan and Wenyuan Li and Lei Jin and Leqi Yang and Wenbin Luo and Bin Liu and Chunfeng Yang and Wentao Xiang},\n  title     = {KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test},\n  booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society},\n  volume    = {47},\n  year      = {2025},\n  url       = {https://escholarship.org/uc/item/4zf264bg}\n}",
+      "type": "Conference Papers",
+      "description": "A CogSci proceedings paper on lightweight eye-tracking based MCI detection was released in 2025.",
+      "note": "Conference proceedings paper"
+    }
+  ]
 }

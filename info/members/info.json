@@ -1,4 +1,4 @@
-{
+﻿{
     "members": [
         {
             "name": "Wentao Xiang",
@@ -33,11 +33,11 @@
             "name": "Hongbin Chen",
             "avatar": "https://avatars.githubusercontent.com/u/76271045?v=4",
             "title": "Master",
-            "bio": "Research focus: Cognitive impairment recognition, Affective computing",
+            "bio": "Research focus:Affective computing",
             "links": [
                 {
                     "name": "Homepage",
-                    "url": "https://github.com/MaitreChen"
+                    "url": "https://maitrechen.github.io/"
                 }
             ],
             "google scholar": "暂无",

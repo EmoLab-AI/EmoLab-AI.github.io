@@ -1,0 +1,62 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "EmoLab-AI logo EmoLab-AI" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "EmoLab-AI logo" [ref=e5]
+        - generic [ref=e6]: EmoLab-AI
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: index.html
+        - link "Members" [ref=e9] [cursor=pointer]:
+          - /url: members.html
+        - link "Publications" [ref=e10] [cursor=pointer]:
+          - /url: publications.html
+        - link "Datasets" [ref=e11] [cursor=pointer]:
+          - /url: datasets.html
+        - link "Projects" [ref=e12] [cursor=pointer]:
+          - /url: projects.html
+        - link "Gallery" [ref=e13] [cursor=pointer]:
+          - /url: gallery.html
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - heading "EmoLab-AI" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Advancing multimodal understanding, affective computing, and biomedical intelligence.
+    - generic [ref=e20]:
+      - article [ref=e21]:
+        - heading "About the Lab" [level=2] [ref=e22]
+        - paragraph [ref=e23]: EmoLab-AI is a research group dedicated to exploring how machines can perceive and understand the world as humans do, especially through multimodal signals such as vision, speech, and biomedical data. Our goal is to build useful machine intelligence that contributes to both scientific progress and real-world healthcare applications.
+        - generic [ref=e24]:
+          - link "Meet the Team" [ref=e25] [cursor=pointer]:
+            - /url: members.html
+          - link "Browse Projects" [ref=e26] [cursor=pointer]:
+            - /url: projects.html
+      - complementary [ref=e27]:
+        - img "EmoLab-AI logo" [ref=e28]
+    - generic [ref=e30]:
+      - img "Overview of EmoLab-AI" [ref=e32]
+      - generic [ref=e34]:
+        - heading "News" [level=2] [ref=e35]
+        - generic [ref=e36]:
+          - generic [ref=e37]: 2025-07-13
+          - paragraph [ref=e38]: A new workshop paper on multimodal emotion understanding was presented in July 2025.
+        - generic [ref=e39]:
+          - generic [ref=e40]: 2025-07-13
+          - paragraph [ref=e41]: The team ran a new round of multimodal data collection for emotion recognition experiments.
+        - generic [ref=e42]:
+          - generic [ref=e43]: 2025-07-10
+          - paragraph [ref=e44]: The team visited the robot lab to explore embodied interaction hardware and demos.
+        - generic [ref=e45]:
+          - generic [ref=e46]: 2025-06-23
+          - paragraph [ref=e47]: Hongbin delivered an oral presentation at BME 2025 in Suzhou, China.
+        - generic [ref=e48]:
+          - generic [ref=e49]: 2024-11-02
+          - paragraph [ref=e50]: Our journal article on cognitive state assessment was published in late 2024.
+  - contentinfo [ref=e52]:
+    - generic [ref=e53]:
+      - generic [ref=e54]: © 2025 EmoLab-AI
+      - generic [ref=e55]:
+        - link "GitHub" [ref=e56] [cursor=pointer]:
+          - /url: https://github.com/EmoLab-AI
+        - link "Email" [ref=e57] [cursor=pointer]:
+          - /url: mailto:contact@emolab-ai.org

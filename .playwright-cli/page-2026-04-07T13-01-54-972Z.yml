@@ -1,0 +1,104 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "EmoLab-AI logo EmoLab-AI" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "EmoLab-AI logo" [ref=e5]
+        - generic [ref=e6]: EmoLab-AI
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: index.html
+        - link "Members" [ref=e9] [cursor=pointer]:
+          - /url: members.html
+        - link "Publications" [ref=e10] [cursor=pointer]:
+          - /url: publications.html
+        - link "Datasets" [ref=e11] [cursor=pointer]:
+          - /url: datasets.html
+        - link "Projects" [ref=e12] [cursor=pointer]:
+          - /url: projects.html
+        - link "Gallery" [ref=e13] [cursor=pointer]:
+          - /url: gallery.html
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - heading "Publications" [level=1] [ref=e17]
+      - paragraph [ref=e18]: Selected papers presented in a visual lab-style layout with preview figures and direct links.
+      - generic [ref=e19]:
+        - button "All" [ref=e20] [cursor=pointer]
+        - button "Journal Articles" [ref=e21] [cursor=pointer]
+        - button "Conference Papers" [ref=e22] [cursor=pointer]
+      - generic [ref=e23]:
+        - generic [ref=e24]:
+          - heading "2026" [level=2] [ref=e25]
+          - generic [ref=e26]:
+            - article [ref=e27]:
+              - img "Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning" [ref=e29]
+              - generic [ref=e30]:
+                - heading "Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning" [level=3] [ref=e31]
+                - paragraph [ref=e32]:
+                  - strong [ref=e33]: Keke Shi
+                  - text: ","
+                  - strong [ref=e34]: Hongbin Chen
+                  - text: ", Keshu Cai, Jinhui Wu, Wei Wang, Jie Li, Bin Liu, Liangcheng Qu, Kuiying Yin, Pasquale Molinaro, Giancarlo Fortino, Jianqing Li,"
+                  - strong [ref=e35]: Wentao Xiang
+                - paragraph [ref=e36]: IEEE Transactions on Affective Computing
+                - generic [ref=e37]:
+                  - link "Paper" [ref=e38] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109/TAFFC.2026.3679686
+                  - link "Cite" [ref=e39] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109/TAFFC.2026.3679686
+                  - button "Abstract" [ref=e40] [cursor=pointer]
+                - paragraph [ref=e41]: Journal article
+            - article [ref=e42]:
+              - 'img "MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition" [ref=e44]'
+              - generic [ref=e45]:
+                - 'heading "MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition" [level=3] [ref=e46]'
+                - paragraph [ref=e47]:
+                  - strong [ref=e48]: Hongbin Chen
+                  - text: ","
+                  - strong [ref=e49]: Rui Feng
+                  - text: ", Jie Li, Wei Wang, Jianqin Li,"
+                  - strong [ref=e50]: Wentao Xiang
+                - paragraph [ref=e51]: Pattern Recognition and Computer Vision (PRCV 2025), Lecture Notes in Computer Science
+                - generic [ref=e52]:
+                  - link "Paper" [ref=e53] [cursor=pointer]:
+                    - /url: https://link.springer.com/chapter/10.1007/978-981-95-5567-3_29
+                  - link "Cite" [ref=e54] [cursor=pointer]:
+                    - /url: https://doi.org/10.1007/978-981-95-5567-3_29
+                  - button "Abstract" [ref=e55] [cursor=pointer]
+                - paragraph [ref=e56]: Conference chapter
+        - generic [ref=e57]:
+          - heading "2025" [level=2] [ref=e58]
+          - generic [ref=e59]:
+            - article [ref=e60]:
+              - img "Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals" [ref=e62]
+              - generic [ref=e63]:
+                - heading "Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals" [level=3] [ref=e64]
+                - paragraph [ref=e65]:
+                  - strong [ref=e66]: Menglan Ruan
+                  - text: ", Bin Liu, Wenyuan Li, Lei Jin, Leqi Yang, Regine le Bouquin Jeannes, Jie Li, Yudong Zhang, Chunfeng Yang,"
+                  - strong [ref=e67]: Wentao Xiang
+                - paragraph [ref=e68]: IEEE Internet of Things Journal
+                - generic [ref=e69]:
+                  - link "Paper" [ref=e70] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109/JIOT.2025.3619114
+                  - link "Cite" [ref=e71] [cursor=pointer]:
+                    - /url: https://doi.org/10.1109/JIOT.2025.3619114
+                  - button "Abstract" [ref=e72] [cursor=pointer]
+                - paragraph [ref=e73]: Journal article
+            - article [ref=e74]:
+              - 'img "KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test" [ref=e76]'
+              - generic [ref=e77]:
+                - 'heading "KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test" [level=3] [ref=e78]'
+                - paragraph [ref=e79]:
+                  - strong [ref=e80]: Menglan Ruan
+                  - text: ", Wenyuan Li, Lei Jin, Leqi Yang, Luo Wenbin, Liu Bin, Yang Chunfeng, Xiang Wentao"
+                - paragraph [ref=e81]: Proceedings of the Annual Meeting of the Cognitive Science Society, Volume 47
+                - generic [ref=e82]:
+                  - link "Paper" [ref=e83] [cursor=pointer]:
+                    - /url: https://escholarship.org/uc/item/4zf264bg
+                  - link "PDF" [ref=e84] [cursor=pointer]:
+                    - /url: https://escholarship.org/content/qt4zf264bg/qt4zf264bg.pdf
+                  - button "Abstract" [ref=e85] [cursor=pointer]
+                - paragraph [ref=e86]: Conference proceedings paper
+  - contentinfo [ref=e87]:
+    - paragraph [ref=e89]: © 2025 EmoLab-AI

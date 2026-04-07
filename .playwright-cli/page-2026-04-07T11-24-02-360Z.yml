@@ -1,0 +1,110 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "EmoLab-AI logo EmoLab-AI" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "EmoLab-AI logo" [ref=e5]
+        - generic [ref=e6]: EmoLab-AI
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: index.html
+        - link "Members" [ref=e9] [cursor=pointer]:
+          - /url: members.html
+        - link "Publications" [ref=e10] [cursor=pointer]:
+          - /url: publications.html
+        - link "Datasets" [ref=e11] [cursor=pointer]:
+          - /url: datasets.html
+        - link "Projects" [ref=e12] [cursor=pointer]:
+          - /url: projects.html
+        - link "Gallery" [ref=e13] [cursor=pointer]:
+          - /url: gallery.html
+  - main [ref=e14]:
+    - generic [ref=e16]:
+      - heading "Our Team" [level=1] [ref=e17]
+      - paragraph [ref=e18]: People behind EmoLab-AI across leadership, graduate students, and collaborators.
+      - generic [ref=e19]:
+        - heading "Leader" [level=2] [ref=e20]
+        - article [ref=e22]:
+          - img "Wentao Xiang" [ref=e23]
+          - generic [ref=e24]:
+            - heading "Wentao Xiang" [level=3] [ref=e25]
+            - paragraph [ref=e26]: Leader
+            - paragraph [ref=e27]: Wentao Xiang is an associate professor at Nanjing Medical University and a core member of the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center. His work focuses on multimodal affective computing, biomedical signal analysis, and rehabilitation intelligence.
+            - paragraph [ref=e28]: "Research focus: Physiological signal analysis, virtual reality rehabilitation technology, and emotion recognition."
+            - generic [ref=e29]:
+              - link "Homepage" [ref=e30] [cursor=pointer]:
+                - /url: https://bmei.njmu.edu.cn/2024/0506/c19989a262997/page.htm
+              - link "Google Scholar" [ref=e31] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=-foPGxYAAAAJ&hl=zh-CN
+      - generic [ref=e32]:
+        - heading "Ph.D. Students" [level=2] [ref=e33]
+        - article [ref=e35]:
+          - img "Rui Feng" [ref=e36]
+          - generic [ref=e37]:
+            - heading "Rui Feng" [level=3] [ref=e38]
+            - paragraph [ref=e39]: Ph.D
+            - paragraph [ref=e40]: Rui Feng received the M.Eng. degree from Nanjing Medical University in 2023 and is currently pursuing a Ph.D. in clinical medical engineering. He is also a visiting researcher at the A*STAR Institute of High Performance Computing.
+            - paragraph [ref=e41]: "Research focus: Multimodal cognitive impairment recognition and medical image processing."
+            - link "Homepage" [ref=e43] [cursor=pointer]:
+              - /url: https://github.com/orgs/EmoLab-AI/people/FengRui1998
+      - generic [ref=e44]:
+        - heading "Master Students" [level=2] [ref=e45]
+        - generic [ref=e46]:
+          - article [ref=e47]:
+            - img "Hongbin Chen" [ref=e48]
+            - generic [ref=e49]:
+              - heading "Hongbin Chen" [level=3] [ref=e50]
+              - paragraph [ref=e51]: Master
+              - paragraph [ref=e52]: Hongbin Chen is pursuing an M.S. degree in Biotechnology and Engineering at Nanjing Medical University. His interests include multimodal emotion computing, computer vision in medicine, and signal-driven clinical AI.
+              - paragraph [ref=e53]: "Research focus: Cognitive impairment recognition, affective computing, and biomedical signal processing."
+              - link "Homepage" [ref=e55] [cursor=pointer]:
+                - /url: https://github.com/MaitreChen
+          - article [ref=e56]:
+            - img "Shuai Shi" [ref=e57]
+            - generic [ref=e58]:
+              - heading "Shuai Shi" [level=3] [ref=e59]
+              - paragraph [ref=e60]: Master
+              - paragraph [ref=e61]: Shuai Shi is pursuing an M.S. degree in Biotechnology and Engineering at Nanjing Medical University and works on multimodal perception for robot interaction.
+              - paragraph [ref=e62]: "Research focus: Robotics, audiovisual emotion recognition, and facial robotics."
+              - link "Homepage" [ref=e64] [cursor=pointer]:
+                - /url: https://github.com/YunWuS
+          - article [ref=e65]:
+            - img "Keke Shi" [ref=e66]
+            - generic [ref=e67]:
+              - heading "Keke Shi" [level=3] [ref=e68]
+              - paragraph [ref=e69]: Master
+              - paragraph [ref=e70]: Keke Shi received the B.S. degree from Zhengzhou University in 2023 and is currently pursuing an M.S. degree in Biomedical Engineering at Nanjing Medical University.
+              - paragraph [ref=e71]: "Research focus: Elderly emotion recognition and emotional regulation."
+              - link "Homepage" [ref=e73] [cursor=pointer]:
+                - /url: https://github.com/orgs/EmoLab-AI/people/Codenewwer
+          - article [ref=e74]:
+            - img "Xiaokun Zhou" [ref=e75]
+            - generic [ref=e76]:
+              - heading "Xiaokun Zhou" [level=3] [ref=e77]
+              - paragraph [ref=e78]: Master
+              - paragraph [ref=e79]: Xiaokun Zhou is pursuing an M.S. degree in Biotechnology and Engineering at Nanjing Medical University, focusing on generative medical imaging methods.
+              - paragraph [ref=e80]: "Research focus: Medical image generation and low-dose contrast-agent-enhanced MRI."
+              - link "Homepage" [ref=e82] [cursor=pointer]:
+                - /url: https://github.com/zx134716
+      - generic [ref=e83]:
+        - heading "Exchange Students" [level=2] [ref=e84]
+        - article [ref=e86]:
+          - img "Louis Badaire" [ref=e87]
+          - generic [ref=e88]:
+            - heading "Louis Badaire" [level=3] [ref=e89]
+            - paragraph [ref=e90]: Exchange
+            - paragraph [ref=e91]: Louis Badaire is an exchange student from the University of Rennes 1, currently visiting Nanjing Medical University. His work spans emotion recognition and biomedical sensing.
+            - paragraph [ref=e92]: "Research focus: Emotion recognition and biomedical signal processing."
+            - link "Homepage" [ref=e94] [cursor=pointer]:
+              - /url: https://github.com/LouisBadaire
+      - generic [ref=e95]:
+        - heading "Others" [level=2] [ref=e96]
+        - paragraph [ref=e98]: No members in this category yet.
+  - contentinfo [ref=e100]:
+    - generic [ref=e101]:
+      - generic [ref=e102]: © 2025 EmoLab-AI
+      - generic [ref=e103]:
+        - link "GitHub" [ref=e104] [cursor=pointer]:
+          - /url: https://github.com/EmoLab-AI
+        - link "Email" [ref=e105] [cursor=pointer]:
+          - /url: mailto:contact@emolab-ai.org

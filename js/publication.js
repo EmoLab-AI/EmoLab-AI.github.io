@@ -1,127 +1,129 @@
-// Function to fetch publications data
-async function fetchPublications() {
+﻿async function fetchPublications() {
     try {
-        const response = await fetch('../info/publications/publications.json');
+        const response = await fetch("info/publications/publications.json");
         const data = await response.json();
-        return data.publications;
+        return data.publications || [];
     } catch (error) {
-        console.error('Error fetching publications:', error);
+        console.error("Error fetching publications:", error);
         return [];
     }
 }
 
-// Function to get unique publication types
 function getUniqueTypes(publications) {
-    const types = new Set(publications.map(pub => pub.type));
-    return ['All', ...Array.from(types)];
+    return ["All", ...new Set(publications.map((pub) => pub.type))];
 }
 
-// Function to get unique years
 function getUniqueYears(publications) {
-    return [...new Set(publications.map(pub => pub.year))].sort((a, b) => b - a);
+    return [...new Set(publications.map((pub) => pub.year))].sort((a, b) => b - a);
 }
 
-// Function to create publication card
-function createPublicationCard(publication) {
-    const card = document.createElement('div');
-    card.className = 'publication-card';
-    card.setAttribute('data-type', publication.type);
+function formatAuthors(authors) {
+    return authors.join(", ");
+}
 
-    const venueText = publication.presentation 
-        ? `${publication.venue} - ${publication.presentation}`
+function escapeHtml(text) {
+    return text
+        .replaceAll("&", "&amp;")
+        .replaceAll("<", "&lt;")
+        .replaceAll(">", "&gt;")
+        .replaceAll('"', "&quot;")
+        .replaceAll("'", "&#39;");
+}
+
+function createPublicationCard(publication) {
+    const card = document.createElement("article");
+    card.className = "card publication-card";
+
+    const imageUrl = publication.image || "homepage/img/overiew.svg";
+    const imageModeClass = /\.png(?:[?#].*)?$/i.test(imageUrl) ? "publication-image--contain" : "";
+    const venueText = publication.presentation
+        ? `${publication.venue} | ${publication.presentation}`
         : publication.venue;
 
+    const titleLink = publication.links?.paper || publication.links?.pdf || publication.links?.doi || "#";
+    const primaryLink = publication.links?.pdf || publication.links?.paper;
+    const links = [
+        primaryLink ? `<a href="${primaryLink}" class="pub-link" target="_blank" rel="noreferrer">PDF</a>` : "",
+        publication.links?.paper && publication.links?.paper !== primaryLink ? `<a href="${publication.links.paper}" class="pub-link" target="_blank" rel="noreferrer">Paper</a>` : "",
+        publication.links?.project ? `<a href="${publication.links.project}" class="pub-link" target="_blank" rel="noreferrer">Code</a>` : "",
+        publication.abstract ? '<button class="show-abstract-btn" type="button">Abstract</button>' : ""
+    ].join("");
+
     card.innerHTML = `
-        <div class="publication-title">${publication.title}</div>
-        <div class="publication-authors">${publication.authors.join(', ')}</div>
-        <div class="publication-venue">${venueText}</div>
-        <div class="publication-links">
-            ${publication.links.pdf ? `<a href="${publication.links.pdf}" class="pub-link">PDF</a>` : ''}
-            ${publication.links.code ? `<a href="${publication.links.code}" class="pub-link">Code</a>` : ''}
-            ${publication.links.project ? `<a href="${publication.links.project}" class="pub-link">Project Page</a>` : ''}
-            ${publication.links.video ? `<a href="${publication.links.video}" class="pub-link">Video</a>` : ''}
-            ${publication.abstract ? `<button class="show-abstract-btn">Show Abstract</button>` : ''}
+        <div class="publication-media">
+            <img src="${imageUrl}" class="${imageModeClass}" alt="${escapeHtml(publication.title)}">
         </div>
-        ${publication.abstract ? `
-            <div class="publication-abstract">
-                ${publication.abstract}
-            </div>
-        ` : ''}
+        <div class="publication-body">
+            <h3 class="publication-title"><a href="${titleLink}" target="_blank" rel="noreferrer">${escapeHtml(publication.title)}</a></h3>
+            <p class="publication-authors">${escapeHtml(formatAuthors(publication.authors))}</p>
+            <p class="publication-venue">${escapeHtml(venueText)}</p>
+            <div class="publication-links">${links}</div>
+            ${publication.note ? `<p class="publication-note">${escapeHtml(publication.note)}</p>` : ""}
+            ${publication.abstract ? `<div class="publication-abstract">${escapeHtml(publication.abstract)}</div>` : ""}
+        </div>
     `;
 
-    // Add abstract toggle functionality
-    const abstractBtn = card.querySelector('.show-abstract-btn');
+    const abstractBtn = card.querySelector(".show-abstract-btn");
     if (abstractBtn) {
-        abstractBtn.addEventListener('click', () => {
-            const abstract = card.querySelector('.publication-abstract');
-            const isHidden = abstract.style.display === 'none' || abstract.style.display === '';
-            abstract.style.display = isHidden ? 'block' : 'none';
-            abstractBtn.textContent = isHidden ? 'Hide Abstract' : 'Show Abstract';
+        abstractBtn.addEventListener("click", () => {
+            const abstract = card.querySelector(".publication-abstract");
+            const willShow = !abstract.style.display || abstract.style.display === "none";
+            abstract.style.display = willShow ? "block" : "none";
+            abstractBtn.textContent = willShow ? "Hide Abstract" : "Abstract";
         });
     }
 
     return card;
 }
 
-// Function to render publications
-function renderPublications(publications, selectedType = 'All') {
-    const container = document.getElementById('publicationsContainer');
-    container.innerHTML = '';
+function renderPublications(publications, selectedType = "All") {
+    const container = document.getElementById("publicationsContainer");
+    container.innerHTML = "";
 
-    const years = getUniqueYears(publications);
+    const visiblePublications = publications.filter((pub) => selectedType === "All" || pub.type === selectedType);
+    if (visiblePublications.length === 0) {
+        container.innerHTML = '<p class="empty-state">No publications found for this filter.</p>';
+        return;
+    }
 
-    years.forEach(year => {
-        const yearPublications = publications.filter(pub => 
-            pub.year === year && 
-            (selectedType === 'All' || pub.type === selectedType)
-        );
+    getUniqueYears(visiblePublications).forEach((year) => {
+        const yearSection = document.createElement("section");
+        yearSection.className = "year-section";
 
-        if (yearPublications.length > 0) {
-            const yearSection = document.createElement('div');
-            yearSection.className = 'year-section';
-            yearSection.innerHTML = `<h2 class="year-title">${year}</h2>`;
+        const list = document.createElement("div");
+        list.className = "publication-list";
 
-            yearPublications.forEach(pub => {
-                yearSection.appendChild(createPublicationCard(pub));
-            });
+        visiblePublications
+            .filter((pub) => pub.year === year)
+            .forEach((pub) => list.appendChild(createPublicationCard(pub)));
 
-            container.appendChild(yearSection);
-        }
+        yearSection.innerHTML = `<h2 class="year-title">${year}</h2>`;
+        yearSection.appendChild(list);
+        container.appendChild(yearSection);
     });
 }
 
-// Function to create filter buttons
-function createFilterButtons(types) {
-    const filtersContainer = document.getElementById('publicationFilters');
-    filtersContainer.innerHTML = '';
+function createFilterButtons(types, publications) {
+    const filtersContainer = document.getElementById("publicationFilters");
+    filtersContainer.innerHTML = "";
 
-    types.forEach(type => {
-        const button = document.createElement('button');
-        button.className = 'filter-btn' + (type === 'All' ? ' active' : '');
+    types.forEach((type) => {
+        const button = document.createElement("button");
+        button.className = `filter-btn${type === "All" ? " active" : ""}`;
         button.textContent = type;
+        button.addEventListener("click", () => {
+            document.querySelectorAll("#publicationFilters .filter-btn").forEach((btn) => btn.classList.remove("active"));
+            button.classList.add("active");
+            renderPublications(publications, type);
+        });
         filtersContainer.appendChild(button);
     });
 }
 
-// Initialize the page
 async function initializePage() {
     const publications = await fetchPublications();
-    const types = getUniqueTypes(publications);
-
-    createFilterButtons(types);
+    createFilterButtons(getUniqueTypes(publications), publications);
     renderPublications(publications);
-
-    // Add filter functionality
-    document.querySelectorAll('.filter-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            document.querySelectorAll('.filter-btn').forEach(btn => {
-                btn.classList.remove('active');
-            });
-            button.classList.add('active');
-            renderPublications(publications, button.textContent);
-        });
-    });
 }
 
-// Start the application when DOM is loaded
-document.addEventListener('DOMContentLoaded', initializePage);
+document.addEventListener("DOMContentLoaded", initializePage);

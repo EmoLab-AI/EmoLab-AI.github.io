@@ -1,3 +1,33 @@
-{
-    "datasets": []
+﻿{
+  "datasets": [
+    {
+      "title": "MCI Facial Expression Dataset",
+      "description": "A facial expression dataset for mild cognitive impairment research, organized by subject folders and designed for affective computing and cognitive-health related analysis. The collection supports subject-level modeling and expression recognition experiments, and is curated around seven emotion categories for studying emotion perception and behavioral response patterns in MCI-related settings.",
+      "image": "/info/datasets/img/mci.png",
+      "tags": ["Emotion", "Vision"],
+      "stats": [
+        {"label": "Subjects", "value": "25"},
+        {"label": "Emotions", "value": "7"},
+        {"label": "Format", "value": "PNG images"}
+      ],
+      "links": [
+        {"label": "Related Publications", "url": "publications.html", "target": "_self"}
+      ]
+    },
+    {
+      "title": "MECO: A Multimodal Dataset for Emotion and Cognitive Understanding in Older Adults",
+      "description": "MECO is a multimodal dataset for emotion and cognitive understanding in older adults. It contains data from 42 participants, about 38 hours of synchronized video, audio, EEG, and ECG recordings, with annotations for valence, arousal, basic emotions, and cognitive scores. The dataset is designed to support affective computing, cognitive assessment, and early MCI-related research in aging populations.",
+      "image": "/info/datasets/img/meco.png",
+      "tags": [ "Multimodal","Video","Audio","EEG","ECG"],
+      "stats": [
+        {"label": "Subjects", "value": "42"},
+        {"label": "Emotions", "value": "7"},
+        {"label": "Total Duration", "value": "38h"},
+        {"label": "Sync Samples", "value": "30,592"}
+      ],
+      "links": [
+        {"label": "Get Data", "url": "https://maitrechen.github.io/meco-page/", "target": "https://maitrechen.github.io/meco-page/"}
+      ]
+    }
+  ]
 }

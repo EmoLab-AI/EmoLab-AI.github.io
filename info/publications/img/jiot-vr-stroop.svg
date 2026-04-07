@@ -1,0 +1,24 @@
+﻿<svg width="960" height="540" viewBox="0 0 960 540" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="960" height="540" rx="32" fill="#F7F8FC"/>
+  <rect x="40" y="44" width="310" height="452" rx="24" fill="#DCE9FF"/>
+  <rect x="66" y="78" width="108" height="82" rx="16" fill="#8EB7FF"/>
+  <rect x="66" y="182" width="108" height="82" rx="16" fill="#98A7E8"/>
+  <rect x="66" y="286" width="108" height="82" rx="16" fill="#8ED6C0"/>
+  <rect x="66" y="390" width="108" height="72" rx="16" fill="#FFC88B"/>
+  <rect x="208" y="92" width="112" height="44" rx="12" fill="#5D7BD6"/>
+  <rect x="208" y="196" width="112" height="44" rx="12" fill="#5D7BD6"/>
+  <rect x="208" y="300" width="112" height="44" rx="12" fill="#5D7BD6"/>
+  <path d="M174 118H208" stroke="#1D2740" stroke-width="6"/>
+  <path d="M174 222H208" stroke="#1D2740" stroke-width="6"/>
+  <path d="M174 326H208" stroke="#1D2740" stroke-width="6"/>
+  <rect x="390" y="82" width="530" height="120" rx="26" fill="#FFFFFF"/>
+  <text x="424" y="135" fill="#1D2740" font-family="Georgia" font-size="46">VR Stroop + Eye Tracking</text>
+  <text x="424" y="176" fill="#51607B" font-family="Arial" font-size="26">KWS-TA-CNN-PE for MCI screening</text>
+  <rect x="390" y="238" width="530" height="220" rx="26" fill="#FFFFFF"/>
+  <path d="M456 386C496 298 560 288 620 326C670 357 724 358 778 312" stroke="#3E63DD" stroke-width="10" stroke-linecap="round"/>
+  <circle cx="496" cy="312" r="18" fill="#3E63DD"/>
+  <circle cx="620" cy="326" r="18" fill="#6CC9A8"/>
+  <circle cx="778" cy="312" r="18" fill="#FFB663"/>
+  <text x="450" y="285" fill="#51607B" font-family="Arial" font-size="24">eye trajectory</text>
+  <text x="450" y="436" fill="#1D2740" font-family="Arial" font-size="28">virtual reality cognitive assessment</text>
+</svg>

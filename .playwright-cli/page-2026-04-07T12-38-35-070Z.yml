@@ -1,0 +1,96 @@
+- generic [active] [ref=e1]:
+  - navigation [ref=e2]:
+    - generic [ref=e3]:
+      - link "EmoLab-AI logo EmoLab-AI" [ref=e4] [cursor=pointer]:
+        - /url: index.html
+        - img "EmoLab-AI logo" [ref=e5]
+        - generic [ref=e6]: EmoLab-AI
+      - generic [ref=e7]:
+        - link "Home" [ref=e8] [cursor=pointer]:
+          - /url: index.html
+        - link "Members" [ref=e9] [cursor=pointer]:
+          - /url: members.html
+        - link "Publications" [ref=e10] [cursor=pointer]:
+          - /url: publications.html
+        - link "Datasets" [ref=e11] [cursor=pointer]:
+          - /url: datasets.html
+        - link "Projects" [ref=e12] [cursor=pointer]:
+          - /url: projects.html
+        - link "Gallery" [ref=e13] [cursor=pointer]:
+          - /url: gallery.html
+  - main [ref=e14]:
+    - generic [ref=e15]:
+      - heading "Our Team" [level=1] [ref=e16]
+      - generic [ref=e17]:
+        - heading "Leader" [level=2] [ref=e18]
+        - generic [ref=e20]:
+          - img "Wentao Xiang" [ref=e21]
+          - generic [ref=e22]:
+            - generic [ref=e23]: Wentao Xiang
+            - generic [ref=e24]: Wentao Xiang,associate professor of Nanjing Medical University, was selected into the Outstanding Young Teacher Training Program of Nanjing Medical University. He has published more than 20 SCI papers in journals such as Computer Methods and Programs in Biomedicine, Computers in biology and medicine, etc. It has won more than 10 national invention patents, software copyrights, etc. He presided over the sub-tasks of the National Natural Science Youth Foundation project and the National Key R&D Program, and guided the students to win 7 awards in science and technology competitions at or above the provincial level.
+            - generic [ref=e25]: "Research focus: Physiological signal analysis, virtual reality rehabilitation technology, emotion recognition"
+            - generic [ref=e26]:
+              - link "Homepage" [ref=e27] [cursor=pointer]:
+                - /url: https://bmei.njmu.edu.cn/2024/0506/c19989a262997/page.htm
+              - link "Google Scholar" [ref=e28] [cursor=pointer]:
+                - /url: https://scholar.google.com/citations?user=-foPGxYAAAAJ&hl=zh-CN
+      - generic [ref=e29]:
+        - heading "Ph.D. Students" [level=2] [ref=e30]
+        - generic [ref=e32]:
+          - img "Rui Feng" [ref=e33]
+          - generic [ref=e34]:
+            - generic [ref=e35]: Rui Feng
+            - generic [ref=e36]: Rui Feng received the Master of Engineering degree from Nanjing Medical University, Nanjing, China, in 2023. He is currently pursuing the Ph.D. degree in clinical medical engineering at Nanjing Medical University, Nanjing, China. He is with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China. He is currently a visiting researcher at the A*STAR Institute of High Performance Computing (A*STAR IHPC). His research interests include multimodal cognitive impairment recognition and medical image processing.
+            - generic [ref=e37]: "Research focus: multimodal cognitive impairment recognition and medical image processing"
+            - link "Homepage" [ref=e39] [cursor=pointer]:
+              - /url: https://github.com/orgs/EmoLab-AI/people/FengRui1998
+      - generic [ref=e40]:
+        - heading "Master Students" [level=2] [ref=e41]
+        - generic [ref=e42]:
+          - generic [ref=e43]:
+            - img "Hongbin Chen" [ref=e44]
+            - generic [ref=e45]:
+              - generic [ref=e46]: Hongbin Chen
+              - generic [ref=e47]: Hongbin Chen, a Student Member of the China Society of Image and Graphics and the Chinese Association for Artificial Intelligence. He is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His current research interests include multimodal emotion computing, computer vision in medicine and biomedical signal processing.
+              - generic [ref=e48]: "Research focus: Cognitive impairment recognition, Affective computing"
+              - link "Homepage" [ref=e50] [cursor=pointer]:
+                - /url: https://github.com/MaitreChen
+          - generic [ref=e51]:
+            - img "Shuai Shi" [ref=e52]
+            - generic [ref=e53]:
+              - generic [ref=e54]: Shuai Shi
+              - generic [ref=e55]: Shuai Shi is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His current research interests include audio-visual emotion recognition, facial landmark detection, and facial robotics.
+              - generic [ref=e56]: "Research focus: Robot, Emotion recognition"
+              - link "Homepage" [ref=e58] [cursor=pointer]:
+                - /url: https://github.com/YunWuS
+          - generic [ref=e59]:
+            - img "Keke Shi" [ref=e60]
+            - generic [ref=e61]:
+              - generic [ref=e62]: Keke Shi
+              - generic [ref=e63]: Keke Shi received the B.S. degree from Zhengzhou University, Zhengzhou, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. He is affiliated with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China.
+              - generic [ref=e64]: "Research focus: Elderly Emotion recognition,Emotional regulation"
+              - link "Homepage" [ref=e66] [cursor=pointer]:
+                - /url: https://github.com/orgs/EmoLab-AI/people/Codenewwer
+          - generic [ref=e67]:
+            - img "Xiaokun Zhou" [ref=e68]
+            - generic [ref=e69]:
+              - generic [ref=e70]: Xiaokun Zhou
+              - generic [ref=e71]: Xiaokun Zhou is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His research interests include medical image generation and low‑dose contrast‑agent–enhanced MRI.
+              - generic [ref=e72]: "Research focus: Medical image generation , low‑dose contrast‑agent–enhanced MRI"
+              - link "Homepage" [ref=e74] [cursor=pointer]:
+                - /url: https://github.com/zx134716
+      - generic [ref=e75]:
+        - heading "Exchange Students" [level=2] [ref=e76]
+        - generic [ref=e78]:
+          - img "Louis Badaire" [ref=e79]
+          - generic [ref=e80]:
+            - generic [ref=e81]: Louis Badaire
+            - generic [ref=e82]: Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is non pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing.
+            - generic [ref=e83]: "Research focus: Emotion recognition, Biomedical signal processing"
+            - link "Homepage" [ref=e85] [cursor=pointer]:
+              - /url: https://github.com/LouisBadaire
+      - generic [ref=e86]:
+        - heading "Others" [level=2] [ref=e87]
+        - paragraph [ref=e89]: No members in this category yet.
+  - contentinfo [ref=e90]:
+    - paragraph [ref=e92]: © 2025 EmoLab-AI
