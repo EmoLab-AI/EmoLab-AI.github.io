@@ -1,6 +1,9 @@
 ﻿document.addEventListener("DOMContentLoaded", () => {
     const datasetGrid = document.querySelector(".dataset-grid");
     const filterButtons = document.querySelectorAll(".filter-btn");
+    const accessModal = document.querySelector("#datasetAccessModal");
+    const applicationFrame = document.querySelector("#datasetApplicationFrame");
+    const applicationOpenLink = document.querySelector("#datasetApplicationOpenLink");
     let datasets = [];
 
     fetch("info/datasets/datastes.json")
@@ -64,13 +67,68 @@
                         ${(dataset.tags || []).map((tag) => `<span class="dataset-tag">${tag}</span>`).join("")}
                     </div>
                     <div class="dataset-links">
-                        ${(dataset.links || []).map((link) => `
-                            <a href="${link.url}" target="${link.target || '_blank'}" rel="noreferrer" class="dataset-link">${link.label}</a>
-                        `).join("")}
+                        ${(dataset.links || []).map((link) => renderDatasetLink(link)).join("")}
                     </div>
                 </div>
             `;
             datasetGrid.appendChild(card);
         });
+    }
+
+    function renderDatasetLink(link) {
+        if (link.action === "application-modal") {
+            return `<button type="button" class="dataset-link" data-application-url="${link.url}">${link.label}</button>`;
+        }
+
+        return `<a href="${link.url}" target="${link.target || '_blank'}" rel="noreferrer" class="dataset-link">${link.label}</a>`;
+    }
+
+    datasetGrid.addEventListener("click", (event) => {
+        const accessButton = event.target.closest("[data-application-url]");
+        if (!accessButton) {
+            return;
+        }
+
+        openAccessModal(accessButton.dataset.applicationUrl);
+    });
+
+    document.querySelectorAll("[data-close-dataset-modal]").forEach((button) => {
+        button.addEventListener("click", closeAccessModal);
+    });
+
+    accessModal?.addEventListener("click", (event) => {
+        if (event.target === accessModal) {
+            closeAccessModal();
+        }
+    });
+
+    document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && accessModal?.classList.contains("is-open")) {
+            closeAccessModal();
+        }
+    });
+
+    function openAccessModal(url) {
+        if (!accessModal || !applicationFrame || !applicationOpenLink) {
+            window.open(url, "_blank", "noopener,noreferrer");
+            return;
+        }
+
+        applicationFrame.src = url;
+        applicationOpenLink.href = url;
+        accessModal.classList.add("is-open");
+        accessModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+    }
+
+    function closeAccessModal() {
+        if (!accessModal || !applicationFrame) {
+            return;
+        }
+
+        accessModal.classList.remove("is-open");
+        accessModal.setAttribute("aria-hidden", "true");
+        applicationFrame.src = "";
+        document.body.style.overflow = "";
     }
 });

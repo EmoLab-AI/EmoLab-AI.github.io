@@ -15,21 +15,6 @@
             "introduction": "Wentao Xiang,associate professor of Nanjing Medical University, was selected into the Outstanding Young Teacher Training Program of Nanjing Medical University. He has published more than 20 SCI papers in journals such as Computer Methods and Programs in Biomedicine, Computers in biology and medicine, etc. It has won more than 10 national invention patents, software copyrights, etc. He presided over the sub-tasks of the National Natural Science Youth Foundation project and the National Key R&D Program, and guided the students to win 7 awards in science and technology competitions at or above the provincial level."
         },
         {
-           "name": "Rui Feng",
-            "avatar": "https://avatars.githubusercontent.com/u/74527878?s=64&v=4",
-            "title": "Ph.D",
-            "bio": "Research focus: multimodal cognitive impairment recognition and medical image processing",
-            "links": [
-                {
-                    "name": "Homepage",
-                    "url": "https://github.com/orgs/EmoLab-AI/people/FengRui1998"
-                }
-            ],
-            "google scholar": "暂无",
-            "introduction": "Rui Feng received the Master of Engineering degree from Nanjing Medical University, Nanjing, China, in 2023. He is currently pursuing the Ph.D. degree in clinical medical engineering at Nanjing Medical University, Nanjing, China. He is with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China. He is currently a visiting researcher at the A*STAR Institute of High Performance Computing (A*STAR IHPC). His research interests include multimodal cognitive impairment recognition and medical image processing. "
-      
-        },
-        {
             "name": "Hongbin Chen",
             "avatar": "https://avatars.githubusercontent.com/u/76271045?v=4",
             "title": "Master",
@@ -72,21 +57,6 @@
             "google scholar": "暂无",
              "introduction":"Keke Shi received the B.S. degree from Zhengzhou University, Zhengzhou, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. He is affiliated with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China."
       
-        },
-        {
-            "name": "Xiaokun Zhou",
-            "avatar": "https://avatars.githubusercontent.com/u/122355093?s=64&v=4",
-            "title": "Master",
-            "bio": "Research focus: Medical image generation , low‑dose contrast‑agent–enhanced MRI",
-            "links": [
-                {
-                    "name": "Homepage",
-                    "url": "https://github.com/zx134716"
-                }
-            ],
-            "google scholar": "暂无",
-            "introduction":"Xiaokun Zhou is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His research interests include medical image generation and low‑dose contrast‑agent–enhanced MRI."
-            
         },
         {
             "name": "Louis Badaire",

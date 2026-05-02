@@ -80,8 +80,110 @@
         }
 
         .dataset-link {
+            border: 0;
+            background: transparent;
             color: var(--secondary-color);
             text-decoration: none;
+            cursor: pointer;
+            font: inherit;
+            padding: 0;
+        }
+
+        .dataset-link:hover {
+            text-decoration: underline;
+        }
+
+        .dataset-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 28px;
+            background: rgba(15, 23, 42, 0.58);
+        }
+
+        .dataset-modal.is-open {
+            display: flex;
+        }
+
+        .dataset-modal-panel {
+            width: min(960px, 100%);
+            max-height: 92vh;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            border-radius: 8px;
+            background: #fff;
+            box-shadow: 0 24px 70px rgba(15, 23, 42, 0.3);
+        }
+
+        .dataset-modal-header {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            gap: 18px;
+            padding: 20px 22px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dataset-modal-title {
+            margin: 0 0 8px;
+            color: #1d2740;
+            font-size: 1.25rem;
+            line-height: 1.35;
+            font-family: Georgia, "Times New Roman", serif;
+            font-weight: 400;
+        }
+
+        .dataset-modal-note {
+            margin: 0;
+            color: var(--muted-text-color);
+            line-height: 1.55;
+        }
+
+        .dataset-modal-close {
+            flex: 0 0 auto;
+            width: 36px;
+            height: 36px;
+            border: 1px solid var(--border-color);
+            border-radius: 50%;
+            background: #fff;
+            color: #1d2740;
+            cursor: pointer;
+            font-size: 1.35rem;
+            line-height: 1;
+        }
+
+        .dataset-modal-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            padding: 14px 22px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .dataset-modal-action {
+            border: 1.5px solid #2b64ff;
+            border-radius: 8px;
+            padding: 8px 14px;
+            background: #fff;
+            color: #2b64ff;
+            text-decoration: none;
+            font-size: 0.96rem;
+            line-height: 1;
+        }
+
+        .dataset-modal-action:hover {
+            background: #2b64ff;
+            color: #fff;
+        }
+
+        .dataset-modal-frame {
+            width: 100%;
+            height: min(68vh, 720px);
+            border: 0;
         }
 
         @media (max-width: 860px) {
@@ -97,6 +199,22 @@
 
             .dataset-image {
                 aspect-ratio: 16 / 9;
+            }
+
+            .dataset-modal {
+                padding: 12px;
+            }
+
+            .dataset-modal-header {
+                padding: 16px;
+            }
+
+            .dataset-modal-actions {
+                padding: 12px 16px;
+            }
+
+            .dataset-modal-frame {
+                height: 62vh;
             }
         }
     </style>
@@ -120,6 +238,23 @@
             </div>
         </section>
     </main>
+
+    <div class="dataset-modal" id="datasetAccessModal" aria-hidden="true">
+        <div class="dataset-modal-panel" role="dialog" aria-modal="true" aria-labelledby="datasetAccessTitle">
+            <div class="dataset-modal-header">
+                <div>
+                    <h2 class="dataset-modal-title" id="datasetAccessTitle">Dataset Access Application Form</h2>
+                    <p class="dataset-modal-note">Please print and complete this application form, then send the signed copy to <a href="mailto:shuai@stu.njmu.edu.cn">shuai@stu.njmu.edu.cn</a>.</p>
+                </div>
+                <button class="dataset-modal-close" type="button" data-close-dataset-modal aria-label="Close">&times;</button>
+            </div>
+            <div class="dataset-modal-actions">
+                <a class="dataset-modal-action" id="datasetApplicationOpenLink" href="info/datasets/license_1220.pdf" target="_blank" rel="noreferrer">Open PDF</a>
+                <a class="dataset-modal-action" href="mailto:shuai@stu.njmu.edu.cn">Email Completed Form</a>
+            </div>
+            <iframe class="dataset-modal-frame" id="datasetApplicationFrame" title="Dataset access application form"></iframe>
+        </div>
+    </div>
 
     <div data-site-footer></div>
 

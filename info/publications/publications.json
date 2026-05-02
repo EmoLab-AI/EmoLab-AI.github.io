@@ -44,7 +44,7 @@
         "paper": "https://doi.org/10.1109/JIOT.2025.3619114",
         "doi": "https://doi.org/10.1109/JIOT.2025.3619114"
       },
-      "image": "info/publications/img/jiot-vr-stroop.svg",
+      "image": "info/publications/img/Virtual Reality_iotj_ruan.png",
       "abstract": "This work presents a virtual reality Stroop testing framework for mild cognitive impairment detection, using eye-tracking signals and the KWS-TA-CNN-PE network to improve screening performance in an ecologically realistic task setting.",
       "citation": "@article{2025_Ruan,\n  author    = {Menglan Ruan and Bin Liu and Wenyuan Li and Lei Jin and Leqi Yang and Regine Le Bouquin Jeannes and Jie Li and Yudong Zhang and Chunfeng Yang and Wentao Xiang},\n  title     = {Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection Via KWS-TA-CNN-PE Network Using Eye-Tracking Signals},\n  journal   = {IEEE Internet of Things Journal},\n  year      = {2025},\n  volume    = {12},\n  number    = {24},\n  pages     = {53966--53982},\n  month     = dec,\n  publisher = {Institute of Electrical and Electronics Engineers (IEEE)},\n  doi       = {10.1109/jiot.2025.3619114},\n  url       = {https://ieeexplore.ieee.org/document/11196938/}\n}",
       "type": "Journal Articles",

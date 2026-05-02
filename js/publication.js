@@ -40,11 +40,9 @@ function createPublicationCard(publication) {
         ? `${publication.venue} | ${publication.presentation}`
         : publication.venue;
 
-    const titleLink = publication.links?.paper || publication.links?.pdf || publication.links?.doi || "#";
-    const primaryLink = publication.links?.pdf || publication.links?.paper;
+    const titleLink = publication.links?.paper || publication.links?.doi || "#";
     const links = [
-        primaryLink ? `<a href="${primaryLink}" class="pub-link" target="_blank" rel="noreferrer">PDF</a>` : "",
-        publication.links?.paper && publication.links?.paper !== primaryLink ? `<a href="${publication.links.paper}" class="pub-link" target="_blank" rel="noreferrer">Paper</a>` : "",
+        publication.links?.paper ? `<a href="${publication.links.paper}" class="pub-link" target="_blank" rel="noreferrer">Paper</a>` : "",
         publication.links?.project ? `<a href="${publication.links.project}" class="pub-link" target="_blank" rel="noreferrer">Code</a>` : "",
         publication.abstract ? '<button class="show-abstract-btn" type="button">Abstract</button>' : ""
     ].join("");
