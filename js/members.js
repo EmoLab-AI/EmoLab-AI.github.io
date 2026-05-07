@@ -30,7 +30,7 @@ function createMemberCard(member) {
 
     return `
         <div class="member-card">
-            <img src="${member.avatar}" alt="${member.name}" class="member-photo">
+            <img src="${member.avatar}" alt="${member.name}" class="member-photo" loading="lazy">
             <div class="member-info">
                 <div class="member-name">${member.name}</div>
                 ${member.tag ? `<div class="member-tag">${member.tag}</div>` : ""}
