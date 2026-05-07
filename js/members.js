@@ -33,6 +33,7 @@ function createMemberCard(member) {
             <img src="${member.avatar}" alt="${member.name}" class="member-photo">
             <div class="member-info">
                 <div class="member-name">${member.name}</div>
+                ${member.tag ? `<div class="member-tag">${member.tag}</div>` : ""}
                 ${introduction}
                 <div class="member-bio">${bioContent}</div>
                 <div class="member-links">${links}${scholarLink}</div>
@@ -59,6 +60,7 @@ async function initializePage() {
     renderMembersByCategory(members, (title) => title.includes("Ph.D"), "phd-members");
     renderMembersByCategory(members, (title) => title === "Master", "master-members");
     renderMembersByCategory(members, (title) => title === "Exchange", "exchange-members");
+    renderMembersByCategory(members, (title) => title === "Collaborator", "collaborator-members");
     renderMembersByCategory(members, (title) => title === "Others", "others-members");
 }
 

@@ -1,4 +1,4 @@
-﻿{
+{
     "members": [
         {
             "name": "Wentao Xiang",
@@ -16,7 +16,7 @@
         },
         {
             "name": "Hongbin Chen",
-            "avatar": "https://avatars.githubusercontent.com/u/76271045?v=4",
+            "avatar": "/info/members/img/chb.png",
             "title": "Master",
             "bio": "Research focus:Affective computing",
             "links": [
@@ -26,12 +26,12 @@
                 }
             ],
             "google scholar": "暂无",
-            "introduction":"Hongbin Chen, a Student Member of the China Society of Image and Graphics and the Chinese Association for Artificial Intelligence. He is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His current research interests include multimodal emotion computing, computer vision in medicine and biomedical signal processing."
-            
+            "introduction":"Hongbin Chen, a Student Member of the China Society of Image and Graphics and the Chinese Association for Artificial Intelligence. He is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. He is with the Jiangsu Province Engineering Research Center for Smart Wearable and Rehabilitation Devices. His current research interests include multimodal emotion computing, computer vision in medicine and biomedical signal processing."
+
         },
         {
             "name": "Shuai Shi",
-            "avatar": "https://avatars.githubusercontent.com/u/144516693?s=400&u=ee9ae092da564284cce7bc798eef1cda49ea9709&v=4",
+            "avatar": "/info/members/img/ss.png",
             "title": "Master",
             "bio": "Research focus: Robot, Emotion recognition",
             "links": [
@@ -45,7 +45,7 @@
         },
         {
             "name": "Keke Shi",
-            "avatar": "https://avatars.githubusercontent.com/u/99538869?s=64&v=4",
+            "avatar": "/info/members/img/shikeke.jpg",
             "title": "Master",
             "bio": "Research focus: Elderly Emotion recognition,Emotional regulation",
             "links": [
@@ -56,11 +56,21 @@
             ],
             "google scholar": "暂无",
              "introduction":"Keke Shi received the B.S. degree from Zhengzhou University, Zhengzhou, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. He is affiliated with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China."
-      
+
+        },
+        {
+            "name": "Menglan Ruan",
+            "avatar": "/info/members/img/rml.png",
+            "title": "Master",
+            "tag": "Collaborator",
+            "bio": "Research focus: Virtual reality, biomedical signal processing, and analysis",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Menglan Ruan received the B.S. degree in computer science and technology from Chongqing University of Posts and Telecommunications, Chongqing, China, in 2023. She is currently pursuing the M.S. degree in software engineering with the School of Software Engineering, Southeast University, Nanjing, China."
         },
         {
             "name": "Louis Badaire",
-            "avatar": "https://avatars.githubusercontent.com/u/123755232?v=4",
+            "avatar": "/info/members/img/lousi.jpg",
             "title": "Exchange",
             "bio": "Research focus: Emotion recognition, Biomedical signal processing",
             "links": [
@@ -71,10 +81,25 @@
             ],
             "google scholar": "暂无",
             "introduction":"Louis Badaire received his B.S. degree from the University of Rennes 1, France in 2024, and is non pursuing his M.S. degree in University of Rennes 1 under the supervising of Régine le Bouquin Jeannès. He is currently an exchange student at Nanjing Medical University, China. His research interests include emotion recognition and biomedical signal processing."
-            
+
+        },
+        {
+            "name": "Jie Li",
+            "avatar": "/info/members/img/jerry.jpg",
+            "title": "Collaborator",
+            "bio": "Research focus: Motion capture, indoor localization, inertial navigation and positioning, gait analysis",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Jie Li (Member, IEEE) received the M.S. degree in East China Jiaotong University, Jiangxi, China, in 2016, and the Ph.D. degree in control theory and control engineering from the School of Control Science and Engineering, Dalian University of Technology, in 2021. He was a postdoctoral researcher from 2021 to 2024 in the College of IoT Engineering, Hohai University, Jiangsu, China. Currently, he is an associate professor at the School of Biomedical Engineering and Informatics, Nanjing Medical University, Nanjing, China."
+        },
+        {
+            "name": "Chunfeng Yang",
+            "avatar": "/info/members/img/yangchunfeng.png",
+            "title": "Collaborator",
+            "bio": "Research focus: Artificial intelligence and signal &amp; image processing, medical health, brain–computer interface, wearable devices",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Chunfeng Yang (Member, IEEE) received the Ph.D. degree from the University of Rennes 1, Rennes, France. He is currently with the Jiangsu Provincial Joint International Research Laboratory of Medical Information Processing, Key Laboratory of New Generation Artificial Intelligence Technology and Its Interdisciplinary Applications of the Ministry of Education, Southeast University, Nanjing, China, where he is also with the Laboratory of Image Science and Technology, School of Computer Science and Engineering, Southeast University."
         }
-       
-        
-        
     ]
 }

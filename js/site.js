@@ -23,7 +23,7 @@ function renderSiteNav() {
         <nav class="site-nav">
             <div class="container site-nav__inner">
                 <a href="index.html" class="site-brand">
-                    <img src="logo.png" alt="EmoLab-AI logo">
+                    <img src="logop.png" alt="EmoLab-AI logo">
                     <span>EmoLab-AI</span>
                 </a>
                 <div class="site-nav__links">${navLinks}</div>
