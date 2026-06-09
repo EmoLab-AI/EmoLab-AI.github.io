@@ -1,0 +1,42 @@
+/* === Projects Page === */
+/* Extracted from projects.html <style> block */
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    padding: 22px;
+}
+
+.project-title {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.project-description {
+    margin: 0 0 16px;
+    color: var(--muted-text-color);
+}
+
+.project-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.project-badge {
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: var(--surface-color);
+    font-size: 0.9rem;
+}
+
+.project-link {
+    color: var(--secondary-color);
+    text-decoration: none;
+}

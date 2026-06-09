@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="color-scheme" content="light dark">
+    <title>Lab Coding - CARE Lab</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/lab.css">
+</head>
+<body data-page="lab-coding">
+    <div data-site-nav></div>
+
+    <main>
+        <!-- Tools Section -->
+        <section class="page-section section-surface">
+            <div class="container">
+                <h2 class="page-title">Essential Tools</h2>
+                <p class="page-subtitle">Key tools used in the lab coding workflow for development, file transfer, and remote access.</p>
+
+                <div class="tools-grid">
+                    <!-- VS Code -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--vscode">VS</div>
+                        <h3>Visual Studio Code</h3>
+                        <p>Primary code editor with powerful remote development capabilities. Install the Remote-SSH extension to connect directly to lab servers and edit code in a visual environment.</p>
+                        <div>
+                            <span class="tag">Code Editor</span>
+                            <span class="tag">Remote SSH</span>
+                            <span class="tag">Cross-platform</span>
+                        </div>
+                        <a href="https://code.visualstudio.com/updates/v1_96" target="_blank" rel="noopener" class="tool-link">
+                            Download VS Code →
+                        </a>
+                    </div>
+
+                    <!-- PyCharm -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--pycharm">PC</div>
+                        <h3>PyCharm</h3>
+                        <p>Professional Python IDE with excellent debugging, testing, and remote interpreter support. Ideal for Python-heavy research projects and deep learning workflows.</p>
+                        <div>
+                            <span class="tag">Python IDE</span>
+                            <span class="tag">Debugging</span>
+                            <span class="tag">Remote Interpreter</span>
+                        </div>
+                        <a href="https://www.jetbrains.com/pycharm/" target="_blank" rel="noopener" class="tool-link">
+                            Download PyCharm →
+                        </a>
+                    </div>
+
+                    <!-- WinSCP -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--winscp">WS</div>
+                        <h3>WinSCP</h3>
+                        <p>Reliable file transfer client for uploading code and datasets to remote servers via SFTP/SCP. Provides a familiar Explorer-like interface for managing remote files.</p>
+                        <div>
+                            <span class="tag">File Transfer</span>
+                            <span class="tag">SFTP/SCP</span>
+                            <span class="tag">Windows</span>
+                        </div>
+                        <a href="https://winscp.net/eng/download.php" target="_blank" rel="noopener" class="tool-link">
+                            Download WinSCP →
+                        </a>
+                    </div>
+
+                    <!-- SSH -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--ssh">&gt;_</div>
+                        <h3>SSH Connection</h3>
+                        <p>Secure shell access to lab servers for running code, managing environments, and executing experiments. Can be used via VS Code terminal or standalone SSH clients.</p>
+                        <div>
+                            <span class="tag">Remote Access</span>
+                            <span class="tag">Terminal</span>
+                            <span class="tag">Secure</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SSH Guide -->
+        <section class="page-section">
+            <div class="container">
+                <h2 class="page-title">SSH Connection Guide</h2>
+                <p class="page-subtitle">Connecting to lab servers via SSH — the primary method for remote development.</p>
+
+                <div class="ssh-guide">
+                    <h3>Method 1: VS Code Remote-SSH (Recommended)</h3>
+                    <p class="ssh-guide__help">
+                        The most convenient approach — edit server files directly in VS Code with full IDE support.
+                    </p>
+                    <code>
+                        <span class="comment"># 1. Install "Remote - SSH" extension in VS Code</span><br>
+                        <span class="comment"># 2. Open Command Palette (Ctrl+Shift+P)</span><br>
+                        <span class="comment"># 3. Select "Remote-SSH: Connect to Host..."</span><br>
+                        <span class="comment"># 4. Enter the SSH command:</span><br>
+                        <span class="prompt">ssh</span> username@server-ip
+                    </code>
+
+                    <h3 class="ssh-guide__section">Method 2: Terminal SSH</h3>
+                    <p class="ssh-guide__help">
+                        Direct terminal connection for running commands and scripts on the server.
+                    </p>
+                    <code>
+                        <span class="prompt">ssh</span> username@server-ip-address
+                    </code>
+                    <p class="ssh-guide__help--bottom">
+                        After connection, you can navigate the server file system, run Python scripts,
+                        manage GPU resources, and monitor training jobs — all from the terminal.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Off-Campus Access & Network -->
+        <section class="page-section">
+            <div class="container">
+                <h2 class="page-title">Off-Campus Access & Network Notes</h2>
+                <p class="page-subtitle">How to access lab servers from outside the campus network, and important network constraints to be aware of.</p>
+
+                <!-- VPN Guide -->
+                <div class="offcampus-grid">
+                    <!-- VPN Setup -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--vscode offcampus-icon">VPN</div>
+                        <h3>School VPN Access</h3>
+                        <p>
+                            To access lab servers from off campus, you must first connect to the
+                            <strong>NJMU campus VPN</strong>. This gives you an internal IP so you can SSH into lab machines.
+                        </p>
+                        <div class="tool-card__links">
+                            <a href="https://lib.njmu.edu.cn/info/1064/2688.htm" target="_blank" rel="noopener" class="tool-link tool-card__link-item">
+                                📖 VPN Usage Guide →
+                            </a><br>
+                            <a href="https://webvpn.njmu.edu.cn/portal/#!/login" target="_blank" rel="noopener" class="tool-link tool-card__link-item">
+                                ⬇️ VPN Client Download →
+                            </a>
+                        </div>
+                        <p class="tool-card__note">
+                            Non-NJMU personnel must apply for VPN access separately:
+                            <a href="https://inc.njmu.edu.cn/ywjs/VPNfw.htm" target="_blank" rel="noopener" class="tool-card__note-link">
+                                application guide
+                            </a>
+                        </p>
+                    </div>
+
+                    <!-- Network Constraints -->
+                    <div class="tool-card">
+                        <div class="tool-card__icon tool-card__icon--ssh offcampus-icon">🌐</div>
+                        <h3>Server Network Constraints</h3>
+                        <p>
+                            Lab servers <strong>cannot access foreign networks directly</strong>.
+                            This affects tools that pull data from abroad.
+                        </p>
+                        <div class="tool-card__links">
+                            <p class="tool-card__desc">Affected tools:</p>
+                            <span class="tag">conda</span>
+                            <span class="tag">huggingface</span>
+                            <span class="tag">pip (foreign packages)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mirror & Workaround Guide -->
+                <div class="ssh-guide ssh-guide--no-top">
+                    <h3>Workarounds & Mirror Configuration</h3>
+                    <p class="ssh-guide__help--top">
+                        Two options when the server cannot reach foreign sources directly:
+                    </p>
+
+                    <p class="ssh-guide__label">Option 1: Configure Domestic Mirrors</p>
+                    <code>
+                        <span class="comment"># Conda: add Tsinghua mirror</span><br>
+                        <span class="prompt">conda</span> config --add channels https://mirrors.tuna.tsinghua.edu.cn/anaconda/pkgs/main/<br>
+                        <span class="prompt">conda</span> config --set show_channel_urls yes<br><br>
+                        <span class="comment"># pip: use Tsinghua mirror</span><br>
+                        <span class="prompt">pip</span> install package-name -i https://pypi.tuna.tsinghua.edu.cn/simple<br><br>
+                        <span class="comment"># Hugging Face: use hf-mirror.com</span><br>
+                        <span class="prompt">export</span> HF_ENDPOINT=https://hf-mirror.com<br>
+                        <span class="prompt">huggingface-cli</span> download model-name --local-dir ./models
+                    </code>
+
+                    <p class="ssh-guide__label ssh-guide__section--mirror">Option 2: Download Locally, then Upload via WinSCP</p>
+                    <code>
+                        <span class="comment"># Step 1: Download model weights on your local machine</span><br>
+                        <span class="comment"># (with access to foreign networks)</span><br><br>
+                        <span class="prompt">huggingface-cli</span> download meta-llama/Llama-2-7b-hf ./llama-2-7b<br><br>
+                        <span class="comment"># Step 2: Upload the folder to the server via WinSCP</span><br>
+                        <span class="comment"># Drag and drop in the WinSCP GUI, or use SCP:</span><br><br>
+                        <span class="prompt">scp</span> -r ./llama-2-7b username@server-ip:/path/to/projects/models/<br><br>
+                        <span class="comment"># Step 3: Point your code to the local path on the server</span><br>
+                        <span class="prompt">export</span> MODEL_PATH=/path/to/projects/models/llama-2-7b
+                    </code>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <div data-site-footer></div>
+
+    <script src="js/site.js"></script>
+</body>
+</html>

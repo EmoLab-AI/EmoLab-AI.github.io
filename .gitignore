@@ -1,0 +1,18 @@
+# Development environments / IDE
+.idea/
+.claude/
+.codebuddy/
+.workbuddy/
+playwright-cli/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Logs
+*.log
+logs/
+
+NUL
+**/NUL

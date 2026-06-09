@@ -1,4 +1,4 @@
-﻿# EmoLab-AI Website
+﻿# CARE Lab Website
 
 This site is a static website intended for GitHub Pages style hosting. Most content is maintained through JSON files under `info/` rather than by editing HTML directly.
 

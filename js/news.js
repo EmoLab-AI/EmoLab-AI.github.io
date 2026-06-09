@@ -1,59 +1,149 @@
-﻿async function loadNews() {
-    try {
-        const [pubResponse, galleryResponse] = await Promise.all([
-            fetch("info/publications/publications.json"),
-            fetch("info/gallery/gallery.json")
-        ]);
+/**
+ * news.js — Loads and renders news items on the homepage.
+ * Expects: info/news.json
+ * Renders into: [data-news-list]
+ */
 
-        const pubData = await pubResponse.json();
-        const galleryData = await galleryResponse.json();
+;(function () {
+    "use strict"
 
-        const galleryEvents = (galleryData.gallery || []).filter(
-            (item) => item.category === "Events" || item.category === "Awards"
-        );
+    const NEWS_PATH = "info/news.json"
+    const container = document.querySelector("[data-news-list]")
 
-        const allNews = [
-            ...(pubData.publications || []).map((pub) => ({
-                date: pub.date || `${pub.year}-01-01`,
-                description: pub.description || `New publication: ${pub.title}`
-            })),
-            ...galleryEvents.map((event) => ({
-                date: event.date,
-                description: event.description || event.title
-            }))
-        ].sort((a, b) => new Date(b.date) - new Date(a.date));
+    /* ---- Research cards ---- */
+    function renderResearchCards() {
+        const grid = document.getElementById("researchGrid")
+        if (!grid) return
 
-        return allNews.slice(0, 5);
-    } catch (error) {
-        console.error("Error loading news:", error);
-        return [];
+        const cards = [
+            {
+                iconImg: "icon-vr.png",
+                title: "VR & Multimodal Cognitive Computing",
+                desc: "Designing immersive rehabilitation scenarios and cognitive tasks that combine behavior, physiology, and interaction data."
+            },
+            {
+                iconImg: "icon-affective.png",
+                title: "Multimodal Affective Computing",
+                desc: "Modeling emotion and mental states through facial, audio, physiological, and contextual signals."
+            },
+            {
+                iconImg: "icon-embodied.png",
+                title: "Embodied AI & Bionic Robotics",
+                desc: "Building adaptive robotic and embodied systems for natural communication, assistance, and rehabilitation training."
+            }
+        ]
+
+        grid.innerHTML = cards.map(c => `
+            <div class="research-card">
+                <div class="research-card__icon">
+                    <img src="homepage/img/${c.iconImg}" alt="" loading="lazy">
+                </div>
+                <h3 class="research-card__title">${c.title}</h3>
+                <p class="research-card__desc">${c.desc}</p>
+            </div>
+        `).join("")
     }
-}
 
-function renderNews(newsItems) {
-    const newsContainer = document.querySelector(".news-content");
-    if (!newsContainer) {
-        return;
+    /* ---- Stats counter animation (kept for potential reuse) ---- */
+    function animateStats() {
+        const stats = document.querySelectorAll("[data-stat-target]")
+        if (!stats.length) return
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return
+                observer.unobserve(entry.target)
+                const el = entry.target
+                const target = parseInt(el.dataset.statTarget, 10)
+                const duration = 1200
+                const start = performance.now()
+
+                function tick(now) {
+                    const elapsed = now - start
+                    const progress = Math.min(elapsed / duration, 1)
+                    // ease-out quad
+                    const eased = 1 - (1 - progress) * (1 - progress)
+                    el.textContent = Math.round(eased * target)
+                    if (progress < 1) requestAnimationFrame(tick)
+                    else el.textContent = target
+                }
+
+                requestAnimationFrame(tick)
+            })
+        }, { threshold: 0.5 })
+
+        stats.forEach(el => observer.observe(el))
     }
 
-    newsContainer.innerHTML = "<h2>News</h2>";
+    /* ---- News rendering ---- */
 
-    if (newsItems.length === 0) {
-        newsContainer.innerHTML += '<p class="empty-state">No recent news found.</p>';
-        return;
+    if (!container) return
+
+    fetch(NEWS_PATH)
+        .then(res => {
+            if (!res.ok) throw new Error("Failed to load news.json")
+            return res.json()
+        })
+        .then(data => renderNews(data))
+        .catch(() => {
+            container.innerHTML = `
+                <div class="news-item">
+                    <p class="news-date">Welcome!</p>
+                    <h3>CARE Lab Website Launched</h3>
+                    <p>Our new lab website is now online. Stay tuned for updates on research, publications, and lab events.</p>
+                </div>
+                <div class="news-item">
+                    <p class="news-date">Ongoing</p>
+                    <h3>Join Our Research</h3>
+                    <p>We are looking for motivated students and researchers. Contact us via email for opportunities.</p>
+                </div>
+            `
+        })
+
+    function renderNews(items) {
+        if (!Array.isArray(items) || items.length === 0) {
+            container.innerHTML = '<p class="news-loading">No news yet. Check back soon!</p>'
+            return
+        }
+
+        container.innerHTML = items.map(item => `
+            <div class="news-item fade-in">
+                <p class="news-date">${escapeHtml(item.date || "")}</p>
+                <h3>${escapeHtml(item.title || "")}</h3>
+                <p>${escapeHtml(item.summary || "")}</p>
+                ${item.link ? `<a href="${escapeAttr(item.link)}" class="news-readmore" target="_blank" rel="noopener">Read more →</a>` : ""}
+            </div>
+        `).join("")
+
+        // Trigger fade-in on scroll
+        requestAnimationFrame(() => {
+            document.querySelectorAll(".fade-in").forEach(el => {
+                const observer = new IntersectionObserver(entries => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("is-visible")
+                            observer.unobserve(entry.target)
+                        }
+                    })
+                }, { threshold: 0.15 })
+                observer.observe(el)
+            })
+        })
     }
 
-    newsItems.forEach((news) => {
-        const newsItem = document.createElement("div");
-        newsItem.className = "news-item";
-        newsItem.innerHTML = `
-            <div class="news-date">${news.date}</div>
-            <p>${news.description}</p>
-        `;
-        newsContainer.appendChild(newsItem);
-    });
-}
+    function escapeHtml(str) {
+        const div = document.createElement("div")
+        div.textContent = str
+        return div.innerHTML
+    }
 
-document.addEventListener("DOMContentLoaded", async () => {
-    renderNews(await loadNews());
-});
+    function escapeAttr(str) {
+        return str.replace(/&/g, "&amp;").replace(/"/g, "&quot;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+    }
+
+    /* ---- Boot ---- */
+    document.addEventListener("DOMContentLoaded", () => {
+        renderResearchCards()
+        animateStats()
+    })
+})()

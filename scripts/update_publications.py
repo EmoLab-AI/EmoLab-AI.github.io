@@ -1,0 +1,262 @@
+import json
+import os
+
+publications = []
+
+# ===== 2026 =====
+publications.append({
+    "year": 2026, "date": "2026-06-01",
+    "title": "ESNN: End-to-End Shuttle Neural Network for Major Depressive Disorder Recognition via Electroencephalographic Signals",
+    "authors": ["Chunfeng Yang", "Linlin You", "Feng Zhang", "Zhicheng Sun", "Xiaojia Wang", "Yan Wang", "Regine Le Bouquin Jeannes", "Huazhong Shu", "Wentao Xiang", "Yonggui Yuan"],
+    "venue": "IRBM, Volume 47, Article 100941",
+    "links": {"paper": "https://doi.org/10.1016/j.irbm.2026.100941", "doi": "https://doi.org/10.1016/j.irbm.2026.100941"},
+    "image": "info/publications/img/esnn-depression.png",
+    "abstract": "An end-to-end shuttle neural network (ESNN) is proposed for efficient depression recognition on multichannel EEG, comprising multiscale saliency-encoded spectrogram, two-stream temporal spectrogram U-Net with crossmodule attention, and crosschannel-wise block for time-frequency feature integration. Validated on three EEG datasets, the ESNN achieves up to 98.70% accuracy.",
+    "citation": "@article{yang2026esnn, author = {Chunfeng Yang and Linlin You and Feng Zhang and Zhicheng Sun and Xiaojia Wang and Yan Wang and Regine Le Bouquin Jeannes and Huazhong Shu and Wentao Xiang and Yonggui Yuan}, title = {ESNN: End-to-End Shuttle Neural Network for Major Depressive Disorder Recognition via Electroencephalographic Signals}, journal = {IRBM}, volume = {47}, pages = {100941}, year = {2026}, doi = {10.1016/j.irbm.2026.100941}}",
+    "type": "Journal Articles",
+    "description": "Our IRBM paper on end-to-end shuttle neural network for EEG-based depression recognition was published in 2026.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-05-01",
+    "title": "Time series Decomposition and Fusion-based Granger causality network for nonlinear causal inference: Application in emotion brain network analysis using EEG signals",
+    "authors": ["Chunfeng Yang", "Jiacheng Wei", "Jianqing Li", "Bin Liu", "Regine Le Bouquin Jeannes", "Liangcheng Qu", "Kuiying Yin", "Xiaojia Wang", "Wentao Xiang"],
+    "venue": "Biomedical Signal Processing and Control",
+    "links": {"paper": "https://doi.org/10.1016/j.bspc.2026.109465", "doi": "https://doi.org/10.1016/j.bspc.2026.109465"},
+    "image": "info/publications/img/tdfgnet-emotion.png",
+    "abstract": "We propose TDFGnet for inferring nonlinear Granger causality, with adaptive seasonal-trend decomposition, RNN-ResMLP-Jacobian learning, and Dempster-Shafer causal fusion. The method achieves AUROC of 0.999 on Lorenz-96 and 0.953 on fMRI. Analysis of emotional EEG reveals significant nonlinear causality differences between affective and neutral states.",
+    "citation": "@article{yang2026tdfgnet, author = {Chunfeng Yang and Jiacheng Wei and Jianqing Li and Bin Liu and Regine Le Bouquin Jeannes and Liangcheng Qu and Kuiying Yin and Xiaojia Wang and Wentao Xiang}, title = {Time Series Decomposition and Fusion-Based Granger Causality Network for Nonlinear Causal Inference: Application in Emotion Brain Network Analysis Using EEG Signals}, journal = {Biomedical Signal Processing and Control}, year = {2026}, doi = {10.1016/j.bspc.2026.109465}}",
+    "type": "Journal Articles",
+    "description": "Our BSPC paper on TDFGnet for nonlinear Granger causality inference and emotion brain network analysis was published in 2026.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-05-04",
+    "title": "Bimodal Fusion Framework for Dynamic Facial Expression Recognition In-The-Wild",
+    "authors": ["Bohui Yang", "Luo Lilin", "Xiaojia Wang", "Chunfeng Yang", "Wentao Xiang"],
+    "venue": "ICASSP 2026 - IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "links": {"paper": "https://ieeexplore.ieee.org/document/11465074"},
+    "image": "info/publications/img/bff-dfer.png",
+    "abstract": "We propose BFF-DFER, a unified framework that extends audio-video pretrained models for bimodal DFER, introducing Modality-Specific Adaptation, Bimodal Fusion Adapter, and Cross-Modal Temporal Modeling. Achieves UAR 67.52% and WAR 78.28% on DFEW, and UAR 44.46% and WAR 58.41% on MAFW datasets.",
+    "citation": "@inproceedings{yang2026bff, author = {Bohui Yang and Luo Lilin and Xiaojia Wang and Chunfeng Yang and Wentao Xiang}, title = {Bimodal Fusion Framework for Dynamic Facial Expression Recognition In-The-Wild}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11465074}}",
+    "type": "Conference Papers",
+    "description": "Our ICASSP 2026 paper on bimodal fusion for dynamic facial expression recognition.",
+    "note": "Conference paper"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-05-04",
+    "title": "Time Series Decomposition and Fusion-Based Granger Causality Network for Nonlinear Causal Inference",
+    "authors": ["Jiacheng Wei", "Chunfeng Yang", "Xiaojia Wang", "Yudong Zhang", "Wentao Xiang"],
+    "venue": "ICASSP 2026 - IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "links": {"paper": "https://ieeexplore.ieee.org/document/11461910"},
+    "image": "info/publications/img/tdfgnet-icassp.png",
+    "abstract": "We propose TDFGnet for inferring nonlinear Granger causality, with adaptive seasonal-trend decomposition via discrete wavelet transform, RNN-ResMLP-Jacobian learning, and Dempster-Shafer causal fusion. On Lorenz-96, AUROC reaches 0.999 and AUPRC 0.994.",
+    "citation": "@inproceedings{wei2026tdfgnet, author = {Jiacheng Wei and Chunfeng Yang and Xiaojia Wang and Yudong Zhang and Wentao Xiang}, title = {Time Series Decomposition and Fusion-Based Granger Causality Network for Nonlinear Causal Inference}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11461910}}",
+    "type": "Conference Papers",
+    "description": "Our ICASSP 2026 paper on TDFGnet for nonlinear Granger causality inference.",
+    "note": "Conference paper"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-05-04",
+    "title": "Dual Contrastive Learning for Semi-Supervised Domain Adaptation in Bi-Modal Depression Recognition",
+    "authors": ["Lei Jin", "Zhuochang Xu", "Yudong Zhang", "Shijie Wang", "Chunfeng Yang", "Wentao Xiang"],
+    "venue": "ICASSP 2026 - IEEE International Conference on Acoustics, Speech and Signal Processing",
+    "links": {"paper": "https://ieeexplore.ieee.org/document/11463256"},
+    "image": "info/publications/img/ducl-depression.png",
+    "abstract": "We propose a Dual Contrastive Learning framework for semi-supervised domain adaptation in bi-modal depression recognition. The framework includes Semantic Consistency Weighting Unsupervised Contrastive Learning and Joint Pseudo-label Weighting Supervised Contrastive Learning, outperforming classical SSDA methods on AVEC 2014, CMDC, and DAIC-WOZ datasets.",
+    "citation": "@inproceedings{jin2026ducl, author = {Lei Jin and Zhuochang Xu and Yudong Zhang and Shijie Wang and Chunfeng Yang and Wentao Xiang}, title = {Dual Contrastive Learning for Semi-Supervised Domain Adaptation in Bi-Modal Depression Recognition}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11463256}}",
+    "type": "Conference Papers",
+    "description": "Our ICASSP 2026 paper on dual contrastive learning for depression recognition domain adaptation.",
+    "note": "Conference paper"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-01-01",
+    "title": "Spatial Graph Distillation Transfer for Depression Detection with Few-Channel EEG Signals",
+    "authors": ["Chenyang Liu", "Lilin Luo", "Kainan Wu", "Yudong Zhang", "Chunfeng Yang", "Wentao Xiang"],
+    "venue": "ICME 2026 - IEEE International Conference on Multimedia and Expo",
+    "links": {"paper": "#", "code": "https://github.com/ChenyangLiuu/SGDTnet"},
+    "image": "info/publications/img/sgdt-depression.png",
+    "abstract": "We propose a Spatial Graph Distillation Transfer (SGDT) network for cross-dataset depression detection with few-channel EEG. SGDT introduces Spatial Graph Adapter and a two-stage teacher-assistant-student knowledge distillation strategy to transfer full-channel spatial knowledge to few-channel models, significantly improving detection performance and reducing alignment discrepancy.",
+    "citation": "@inproceedings{liu2026sgdt, author = {Chenyang Liu and Lilin Luo and Kainan Wu and Yudong Zhang and Chunfeng Yang and Wentao Xiang}, title = {Spatial Graph Distillation Transfer for Depression Detection with Few-Channel EEG Signals}, booktitle = {ICME 2026}, year = {2026}}",
+    "type": "Conference Papers",
+    "description": "Our ICME 2026 paper on spatial graph distillation transfer for few-channel EEG depression detection.",
+    "note": "Conference paper"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-01-01",
+    "title": "Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning",
+    "authors": ["Keke Shi", "Hongbin Chen", "Keshu Cai", "Jinhui Wu", "Wei Wang", "Jie Li", "Bin Liu", "Liangcheng Qu", "Kuiying Yin", "Pasquale Molinaro", "Giancarlo Fortino", "Jianqing Li", "Wentao Xiang"],
+    "venue": "IEEE Transactions on Affective Computing",
+    "links": {"paper": "https://doi.org/10.1109/TAFFC.2026.3679686", "doi": "https://doi.org/10.1109/TAFFC.2026.3679686"},
+    "image": "info/publications/img/taffc-elderly-fer.png",
+    "abstract": "This paper studies facial expression recognition for elderly Chinese subjects with a dual-path architecture that combines edge-aware and semantic representations, followed by a two-step transfer learning strategy for domain adaptation.",
+    "citation": "@article{shi2026facial, author = {Keke Shi and Hongbin Chen and Keshu Cai and Jinhui Wu and Wei Wang and Jie Li and Bin Liu and Liangcheng Qu and Kuiying Yin and Pasquale Molinaro and Giancarlo Fortino and Jianqing Li and Wentao Xiang}, title = {Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning}, journal = {IEEE Transactions on Affective Computing}, year = {2026}, doi = {10.1109/TAFFC.2026.3679686}}",
+    "type": "Journal Articles",
+    "description": "Our IEEE TAFFC paper on elderly facial expression recognition was accepted in 2026.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-01-01",
+    "title": "ABVnet: Adapter-based fine-tuning Bimodal ViTs network for Dynamic Facial Expression Recognition in-the-wild",
+    "authors": ["Chunfeng Yang", "Bohui Yang", "Jie Li", "Xiaojia Wang", "Jianqing Li", "Yudong Zhang", "Yang Chen", "Angelo Cangelosi", "Wentao Xiang"],
+    "venue": "Information Fusion",
+    "links": {"paper": "https://doi.org/10.1016/j.inffus.2025.103959", "doi": "https://doi.org/10.1016/j.inffus.2025.103959", "code": "https://github.com/bohuiyang/ABVnet"},
+    "image": "info/publications/img/abvnet-dfer.png",
+    "abstract": "ABVnet is an Adapter-based fine-tuning Bimodal ViTs network for audio-video dynamic facial expression recognition in-the-wild. It incorporates Modality-Specific Adaptation, Bimodal Fusion Adapter, and Cross-modal Temporal Modeling, achieving UAR 67.52% and WAR 78.28% on DFEW, and UAR 44.46% and WAR 58.41% on MAFW.",
+    "citation": "@article{yang2026abvnet, author = {Chunfeng Yang and Bohui Yang and Jie Li and Xiaojia Wang and Jianqing Li and Yudong Zhang and Yang Chen and Angelo Cangelosi and Wentao Xiang}, title = {ABVnet: Adapter-based Fine-tuning Bimodal ViTs Network for Dynamic Facial Expression Recognition In-the-Wild}, journal = {Information Fusion}, year = {2026}, doi = {10.1016/j.inffus.2025.103959}}",
+    "type": "Journal Articles",
+    "description": "Our Information Fusion paper on ABVnet for bimodal dynamic facial expression recognition was published in 2026.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2026, "date": "2026-01-23",
+    "title": "MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition",
+    "authors": ["Hongbin Chen", "Rui Feng", "Jie Li", "Wei Wang", "Jianqin Li", "Wentao Xiang"],
+    "venue": "Pattern Recognition and Computer Vision (PRCV 2025), Lecture Notes in Computer Science",
+    "links": {"paper": "https://link.springer.com/chapter/10.1007/978-981-95-5567-3_29", "doi": "https://doi.org/10.1007/978-981-95-5567-3_29"},
+    "image": "info/publications/img/mofa-fusion.png",
+    "abstract": "MOFA introduces a modality-orthogonalized fusion strategy for multimodal emotion recognition, aiming to improve cross-modal complementarity while reducing redundant or conflicting representations across input streams.",
+    "citation": "@inproceedings{chen2025mofa, author = {Hongbin Chen and Rui Feng and Jie Li and Wei Wang and Jianqing Li and Wentao Xiang}, title = {MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition}, booktitle = {PRCV 2025, LNCS}, publisher = {Springer Singapore}, pages = {418--433}, year = {2026}, doi = {10.1007/978-981-95-5567-3_29}}",
+    "type": "Conference Papers",
+    "description": "Our PRCV paper on modality-orthogonalized fusion for multimodal emotion recognition was published in 2026.",
+    "note": "Conference chapter"
+})
+
+# ===== 2025 =====
+publications.append({
+    "year": 2025, "date": "2025-08-02",
+    "title": "Construction and evaluation of an emotion-inducing video dataset towards Chinese elderly healthy controls and individuals with mild cognitive impairment",
+    "authors": ["Tao Liang", "Junxiao Yu", "Keke Shi", "Yihao Yao", "Jie Li", "Bin Liu", "Wei Wang", "Chengyu Liu", "Liangcheng Qu", "Kuiying Yin", "Wentao Xiang", "Jianqing Li"],
+    "venue": "Cognitive Neurodynamics",
+    "links": {"paper": "https://doi.org/10.1007/s11571-025-10318-x", "doi": "https://doi.org/10.1007/s11571-025-10318-x"},
+    "image": "info/publications/img/meco-emotion-video.png",
+    "abstract": "This work developed and validated an emotion-inducing video dataset for the Chinese elderly, with 18 videos across six emotions (neutrality, sadness, anger, happiness, boredom, tension). Evaluated on 37 subjects (21 HC and 16 MCI) with synchronous ECG and EEG recordings. The MCI group exhibited higher relative band power in delta and theta bands.",
+    "citation": "@article{liang2025emotion, author = {Tao Liang and Junxiao Yu and Keke Shi and Yihao Yao and Jie Li and Bin Liu and Wei Wang and Chengyu Liu and Liangcheng Qu and Kuiying Yin and Wentao Xiang and Jianqing Li}, title = {Construction and Evaluation of an Emotion-Inducing Video Dataset towards Chinese Elderly Healthy Controls and Individuals with Mild Cognitive Impairment}, journal = {Cognitive Neurodynamics}, year = {2025}, doi = {10.1007/s11571-025-10318-x}}",
+    "type": "Journal Articles",
+    "description": "Our Cognitive Neurodynamics paper on an emotion-inducing video dataset for Chinese elderly and MCI was published in 2025.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2025, "date": "2025-12-01",
+    "title": "Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals",
+    "authors": ["Menglan Ruan", "Bin Liu", "Wenyuan Li", "Lei Jin", "Leqi Yang", "Regine Le Bouquin Jeannes", "Jie Li", "Yudong Zhang", "Chunfeng Yang", "Wentao Xiang"],
+    "venue": "IEEE Internet of Things Journal, Volume 12, Issue 24, Pages 53966-53982",
+    "links": {"paper": "https://doi.org/10.1109/JIOT.2025.3619114", "doi": "https://doi.org/10.1109/JIOT.2025.3619114"},
+    "image": "info/publications/img/Virtual Reality_iotj_ruan.png",
+    "abstract": "This work presents a virtual reality Stroop testing framework for MCI detection, using eye-tracking signals and the KWS-TA-CNN-PE network. The proposed method achieved accuracies of 0.8629 and 0.8621 using leave-one-subject-out cross-validation and blind-test protocol respectively.",
+    "citation": "@article{ruan2025vr, author = {Menglan Ruan and Bin Liu and Wenyuan Li and Lei Jin and Leqi Yang and Regine Le Bouquin Jeannes and Jie Li and Yudong Zhang and Chunfeng Yang and Wentao Xiang}, title = {Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals}, journal = {IEEE Internet of Things Journal}, year = {2025}, volume = {12}, number = {24}, pages = {53966--53982}, doi = {10.1109/JIOT.2025.3619114}}",
+    "type": "Journal Articles",
+    "description": "Our IEEE IOTJ paper on VR Stroop testing and eye-tracking based MCI detection was published in 2025.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2025, "date": "2025-01-01",
+    "title": "KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test",
+    "authors": ["Menglan Ruan", "Wenyuan Li", "Lei Jin", "Leqi Yang", "Wenbin Luo", "Bin Liu", "Chunfeng Yang", "Wentao Xiang"],
+    "venue": "Proceedings of the Annual Meeting of the Cognitive Science Society, Volume 47",
+    "links": {"paper": "https://escholarship.org/uc/item/4zf264bg", "pdf": "https://escholarship.org/content/qt4zf264bg/qt4zf264bg.pdf"},
+    "image": "info/publications/img/kws-eye-tracking.png",
+    "abstract": "This paper focuses on lightweight MCI detection using eye-tracking signals from a VR Stroop test. The proposed KWS-TA-CNN uses Kymatio Wavelet Scattering, Temporal Attention, and 1D CNN, achieving subject-level accuracies up to 0.9211 across four tasks.",
+    "citation": "@inproceedings{ruan2025kws, author = {Menglan Ruan and Wenyuan Li and Lei Jin and Leqi Yang and Wenbin Luo and Bin Liu and Chunfeng Yang and Wentao Xiang}, title = {KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test}, booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society}, volume = {47}, year = {2025}}",
+    "type": "Conference Papers",
+    "description": "A CogSci proceedings paper on lightweight eye-tracking based MCI detection was released in 2025.",
+    "note": "Conference proceedings paper"
+})
+
+publications.append({
+    "year": 2025, "date": "2025-01-01",
+    "title": "WS-BiLSTM-MA: Wavelet Scattering-Based BiLSTM With Mixed Attention Block for MDD Recognition Using Multichannel EEG Signals",
+    "authors": ["Feng Zhang", "Chunfeng Yang", "Linlin You", "Xiaojia Wang", "Yonggui Yuan", "Regine Le Bouquin Jeannes", "Huazhong Shu", "Wentao Xiang"],
+    "venue": "IEEE Transactions on Instrumentation and Measurement, Volume 74, Article 6500513",
+    "links": {"paper": "https://doi.org/10.1109/TIM.2024.3502843", "doi": "https://doi.org/10.1109/TIM.2024.3502843"},
+    "image": "info/publications/img/ws-bilstm-mdd.png",
+    "abstract": "The WS-BiLSTM-MA network is proposed for MDD recognition using multichannel EEG. It combines wavelet scattering network for deformation-stable features, bidirectional LSTM for temporal relationships, and mixed attention blocks to redistribute feature weights across scattering coefficients and relevant matrices.",
+    "citation": "@article{zhang2025wsbilstm, author = {Feng Zhang and Chunfeng Yang and Linlin You and Xiaojia Wang and Yonggui Yuan and Regine Le Bouquin Jeannes and Huazhong Shu and Wentao Xiang}, title = {WS-BiLSTM-MA: Wavelet Scattering-Based BiLSTM With Mixed Attention Block for MDD Recognition Using Multichannel EEG Signals}, journal = {IEEE Transactions on Instrumentation and Measurement}, volume = {74}, pages = {6500513}, year = {2025}, doi = {10.1109/TIM.2024.3502843}}",
+    "type": "Journal Articles",
+    "description": "Our IEEE TIM paper on wavelet scattering BiLSTM with mixed attention for MDD recognition was published in 2025.",
+    "note": "Journal article"
+})
+
+# ===== 2023 =====
+publications.append({
+    "year": 2023, "date": "2023-07-24",
+    "title": "TSUnet-CC: Temporal Spectrogram Unet embedding Cross Channel-wise attention mechanism for MDD identification",
+    "authors": ["Chunfeng Yang", "Zhicheng Sun", "Feng Zhang", "Huazhong Shu", "Jianqing Li", "Wentao Xiang"],
+    "venue": "EMBC 2023 - 45th Annual International Conference of the IEEE Engineering in Medicine and Biology Society",
+    "links": {"paper": "https://ieeexplore.ieee.org/document/10340299"},
+    "image": "info/publications/img/tsunet-mdd.png",
+    "abstract": "TSUnet-CC is a novel Temporal Spectrogram U-Net embedding cross channel-wise attention for multichannel EEG-based MDD identification. It uses multi-scale saliency-encoded spectrograms, a two-stream U-Net architecture, and cross channel-wise attention to assign larger weights to key feature channels, achieving up to 99.22% accuracy.",
+    "citation": "@inproceedings{yang2023tsunet, author = {Chunfeng Yang and Zhicheng Sun and Feng Zhang and Huazhong Shu and Jianqing Li and Wentao Xiang}, title = {TSUnet-CC: Temporal Spectrogram Unet Embedding Cross Channel-wise Attention Mechanism for MDD Identification}, booktitle = {EMBC 2023}, pages = {1--4}, year = {2023}}",
+    "type": "Conference Papers",
+    "description": "Our EMBC 2023 paper on TSUnet-CC for EEG-based MDD identification was presented in 2023.",
+    "note": "Conference paper"
+})
+
+publications.append({
+    "year": 2023, "date": "2023-10-31",
+    "title": "Multi-channel EEG-based sleep staging using brain functional connectivity and domain adaptation",
+    "authors": ["Wenhao Yuan", "Wentao Xiang", "Kaiyue Si", "Chunfeng Yang", "Lina Zhao", "Jianqing Li", "Chengyu Liu"],
+    "venue": "Physiological Measurement, Volume 44, Article 105007",
+    "links": {"paper": "https://doi.org/10.1088/1361-6579/ad02db", "doi": "https://doi.org/10.1088/1361-6579/ad02db"},
+    "image": "info/publications/img/eeg-sleep-staging.png",
+    "abstract": "A brain functional connectivity method is developed for five-class sleep staging using multi-channel EEG. Three frequency-domain features--synchronization likelihood, wavelet-based correlation, and energy ratio--are combined, and domain adaptation methods are applied to reduce cross-subject discrepancies, achieving 83.97% accuracy in subject-dependent and up to 62.66% in subject-independent settings.",
+    "citation": "@article{yuan2023sleep, author = {Wenhao Yuan and Wentao Xiang and Kaiyue Si and Chunfeng Yang and Lina Zhao and Jianqing Li and Chengyu Liu}, title = {Multi-Channel EEG-Based Sleep Staging Using Brain Functional Connectivity and Domain Adaptation}, journal = {Physiological Measurement}, volume = {44}, pages = {105007}, year = {2023}, doi = {10.1088/1361-6579/ad02db}}",
+    "type": "Journal Articles",
+    "description": "Our Physiological Measurement paper on EEG sleep staging with functional connectivity was published in 2023.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2023, "date": "2023-08-25",
+    "title": "Psychodynamic-based virtual reality cognitive training system with personalized emotional arousal elements for mild cognitive impairment patients",
+    "authors": ["Yanfeng Zhao", "Liang Li", "Xu He", "Shuluo Yin", "Yuxuan Zhou", "Cesar Marquez-Chin", "Wenjie Yang", "Jiang Rao", "Wentao Xiang", "Bin Liu", "Jianqing Li"],
+    "venue": "Computer Methods and Programs in Biomedicine, Volume 241, Article 107779",
+    "links": {"paper": "https://doi.org/10.1016/j.cmpb.2023.107779", "doi": "https://doi.org/10.1016/j.cmpb.2023.107779"},
+    "image": "info/publications/img/vr-psych-cognitive.png",
+    "abstract": "A psychodynamics-based VR cognitive rehabilitation training method with personalized emotional arousal elements is proposed for MCI patients. Four training tasks and six positive emotional arousal elements significantly improved cognitive function, with training score improvements of 66.7%, 33.4%, and 25.0% across attention, working memory, and abstraction domains over six weeks.",
+    "citation": "@article{zhao2023psychodynamic, author = {Yanfeng Zhao and Liang Li and Xu He and Shuluo Yin and Yuxuan Zhou and Cesar Marquez-Chin and Wenjie Yang and Jiang Rao and Wentao Xiang and Bin Liu and Jianqing Li}, title = {Psychodynamic-Based Virtual Reality Cognitive Training System with Personalized Emotional Arousal Elements for Mild Cognitive Impairment Patients}, journal = {Computer Methods and Programs in Biomedicine}, volume = {241}, pages = {107779}, year = {2023}, doi = {10.1016/j.cmpb.2023.107779}}",
+    "type": "Journal Articles",
+    "description": "Our CMPB paper on psychodynamic VR cognitive training for MCI was published in 2023.",
+    "note": "Journal article"
+})
+
+publications.append({
+    "year": 2023, "date": "2023-04-19",
+    "title": "Exploration of interictal to ictal transition in epileptic seizures using a neural mass model",
+    "authors": ["Chunfeng Yang", "Qingbo Luo", "Huazhong Shu", "Regine Le Bouquin Jeannes", "Jianqing Li", "Wentao Xiang"],
+    "venue": "Cognitive Neurodynamics",
+    "links": {"paper": "https://doi.org/10.1007/s11571-023-09976-6", "doi": "https://doi.org/10.1007/s11571-023-09976-6"},
+    "image": "info/publications/img/epilepsy-nmm.png",
+    "abstract": "This paper employs a neural mass model (cPBM) and spectral dynamic causal modelling with a hybrid deterministic approach to explore interictal-to-ictal transitions in epileptic seizures. Results reveal that the transition is explained by increased excitatory connections and decreased self-loop inhibition, with E-I balance significantly increasing during seizures.",
+    "citation": "@article{yang2023epilepsy, author = {Chunfeng Yang and Qingbo Luo and Huazhong Shu and Regine Le Bouquin Jeannes and Jianqing Li and Wentao Xiang}, title = {Exploration of Interictal to Ictal Transition in Epileptic Seizures Using a Neural Mass Model}, journal = {Cognitive Neurodynamics}, year = {2023}, doi = {10.1007/s11571-023-09976-6}}",
+    "type": "Journal Articles",
+    "description": "Our Cognitive Neurodynamics paper on epileptic seizure transition using neural mass modeling was published in 2023.",
+    "note": "Journal article"
+})
+
+# Output
+output = {"publications": publications}
+out_path = "E:/EmoLab-AI_page/EmoLab-AI.github.io/info/publications/publications.json"
+with open(out_path, "w", encoding="utf-8") as f:
+    json.dump(output, f, indent=2, ensure_ascii=False)
+
+print(f"Updated publications.json")
+print(f"Total: {len(publications)} publications")
+print(f"  Journal Articles: {sum(1 for p in publications if p['type'] == 'Journal Articles')}")
+print(f"  Conference Papers: {sum(1 for p in publications if p['type'] == 'Conference Papers')}")
+print()
+by_year = {}
+for p in publications:
+    by_year.setdefault(p['year'], []).append(p)
+for yr in sorted(by_year.keys(), reverse=True):
+    print(f"  [{yr}]: {len(by_year[yr])} papers")

@@ -51,12 +51,21 @@
             "links": [
                 {
                     "name": "Homepage",
-                    "url": "https://github.com/orgs/EmoLab-AI/people/Codenewwer"
+                    "url": "https://github.com/orgs/CARE-Lab/people/Codenewwer"
                 }
             ],
             "google scholar": "暂无",
              "introduction":"Keke Shi received the B.S. degree from Zhengzhou University, Zhengzhou, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. He is affiliated with the Jiangsu Province Smart Wearable and Rehabilitation Device Engineering Research Center, Nanjing, China."
 
+        },
+        {
+            "name": "Zichen Song",
+            "avatar": "/info/members/img/szc.jpg",
+            "title": "Master",
+            "bio": "Research focus: Virtual reality, multimodal physiological signal analysis, cognitive assessment in older adults",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Zichen Song is dedicated to the assessment of cognitive function in older adults through the integration of virtual reality and multimodal physiological signal analysis. His work focuses on developing ecologically valid cognitive tasks using virtual reality technology, while combining electroencephalography, electrocardiography, and other physiological signals to evaluate cognitive functional states in aging populations. Through this interdisciplinary approach, he aims to provide more objective, immersive, and accurate methods for early cognitive assessment and health monitoring."
         },
         {
             "name": "Menglan Ruan",

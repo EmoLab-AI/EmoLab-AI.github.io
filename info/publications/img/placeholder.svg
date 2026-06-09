@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#eef4ff"/>
+  <rect x="140" y="60" width="120" height="180" rx="8" fill="#fff" stroke="#c7d2e3" stroke-width="1.5"/>
+  <text x="200" y="170" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#4a4a9e">Publication</text>
+  <text x="200" y="190" text-anchor="middle" font-family="Georgia,serif" font-size="14" fill="#4a4a9e">Preview</text>
+</svg>

@@ -1,0 +1,237 @@
+/* === Lab Coding Page === */
+/* Extracted from lab-coding.html <style> block + inline styles — now with full dark-mode support */
+
+/* --- Tools Grid --- */
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin: 40px 0;
+}
+
+.tool-card {
+    padding: 28px;
+    border-radius: var(--radius-md);
+    background: var(--background-color);
+    border: 1px solid var(--primary-bg-light);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+}
+
+.tool-card__icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    font-weight: 700;
+    color: var(--white);
+}
+
+.tool-card__icon--vscode {
+    background: linear-gradient(135deg, var(--primary-color), #2f6f68);
+}
+
+.tool-card__icon--pycharm {
+    background: linear-gradient(135deg, #2f6f68, var(--accent-color));
+}
+
+.tool-card__icon--winscp {
+    background: linear-gradient(135deg, #174d4a, #5f8f83);
+}
+
+.tool-card__icon--ssh {
+    background: linear-gradient(135deg, #18222f, var(--primary-color));
+}
+
+.tool-card h3 {
+    margin: 0 0 8px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+}
+
+.tool-card p {
+    margin: 0 0 12px;
+    color: var(--muted-text-color);
+    line-height: 1.6;
+}
+
+.tool-card .tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    background: var(--primary-bg-light);
+    color: var(--primary-color);
+    margin-right: 6px;
+    margin-bottom: 6px;
+}
+
+.tool-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+    margin-top: 8px;
+    transition: color 0.2s ease;
+}
+
+.tool-link:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* --- SSH Guide --- */
+.ssh-guide {
+    background: linear-gradient(135deg, #0b3036, #123f46);
+    color: #e7f1ef;
+    padding: 32px;
+    border-radius: var(--radius-md);
+    margin: 40px 0;
+    font-family: var(--font-mono);
+}
+
+.ssh-guide h3 {
+    color: var(--accent-soft);
+    margin: 0 0 16px;
+    font-size: 1.1rem;
+}
+
+.ssh-guide code {
+    display: block;
+    background: rgba(0, 0, 0, 0.28);
+    padding: 16px 20px;
+    border-radius: 10px;
+    color: #dff7f3;
+    font-size: 0.95rem;
+    margin: 8px 0;
+    word-break: break-all;
+}
+
+.ssh-guide .prompt {
+    color: var(--accent-soft);
+}
+
+.ssh-guide .comment {
+    color: #9fb1ae;
+}
+
+/* SSH guide helper text (formerly inline styles) */
+.ssh-guide__help {
+    margin: 0 0 12px;
+    color: #9ca3af;
+}
+
+.ssh-guide__help--top {
+    margin: 0 0 16px;
+    color: #9ca3af;
+}
+
+.ssh-guide__help--bottom {
+    margin: 12px 0 0;
+    color: #9ca3af;
+    font-family: inherit;
+}
+
+.ssh-guide__section {
+    margin-top: 24px;
+}
+
+.ssh-guide__section--mirror {
+    margin-top: 20px;
+}
+
+.ssh-guide__label {
+    color: var(--accent-soft);
+    font-weight: 600;
+    margin: 8px 0 4px;
+}
+
+.ssh-guide__label--first {
+    color: var(--accent-soft);
+    font-weight: 600;
+    margin: 8px 0 4px;
+}
+
+/* --- Off-campus section layout (formerly inline grid) --- */
+.offcampus-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+    margin: 32px 0;
+}
+
+.offcampus-grid .tool-card__icon {
+    font-size: 1.1rem;
+}
+
+/* Tool card note text (formerly inline) */
+.tool-card__note {
+    margin-top: 12px;
+    font-size: 0.88rem;
+    color: #9ca3af;
+}
+
+.tool-card__note a {
+    color: var(--secondary-color);
+}
+
+.tool-card__note-link {
+    color: var(--secondary-color);
+}
+
+.tool-card__links {
+    margin-top: 12px;
+}
+
+.tool-card__links .tool-link,
+.tool-card__link-item {
+    display: inline-flex;
+    margin-bottom: 8px;
+}
+
+.tool-card__desc {
+    margin-top: 12px;
+    font-size: 0.92rem;
+    color: var(--muted-text-color);
+    margin-bottom: 8px;
+}
+
+/* --- Surface section (formerly inline on section) --- */
+.section-surface {
+    background: var(--surface-color);
+}
+
+/* --- Section margin reset --- */
+.ssh-guide--no-top {
+    margin-top: 0;
+}
+
+/* === Dark Mode === */
+@media (prefers-color-scheme: dark) {
+    .tool-card {
+        background: var(--surface-color);
+        border-color: var(--border-color);
+    }
+
+    .tool-card .tag {
+        background: var(--primary-bg-light);
+    }
+
+    .ssh-guide__help,
+    .ssh-guide__help--top,
+    .ssh-guide__help--bottom,
+    .tool-card__note {
+        color: #94a3b8;
+    }
+}
