@@ -32,7 +32,7 @@
     {
       "title": "VR Stroop Eye-Tracking Dataset for Lightweight MCI Detection",
       "description": "This dataset supports the CogSci paper \"KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test.\" It contains eye-tracking signals collected during a virtual reality Stroop test and is designed for lightweight mild cognitive impairment detection, cognitive-health screening research, and efficient temporal-attention modeling.",
-      "image": "/info/publications/img/kws-eye-tracking.png",
+      "image": "/info/datasets/img/vr_ruan.png",
       "tags": ["Multimodal", "Vision"],
       "stats": [
         {"label": "Task", "value": "VR Stroop test"},

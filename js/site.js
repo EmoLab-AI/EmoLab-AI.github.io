@@ -108,8 +108,7 @@ function renderSiteFooter() {
                         <span>南京医科大学 · 常州校区工信楼408</span>
                     </address>
                     <div class="site-footer__external">
-                        <a href="https://github.com/CARE-Lab-NJMU" target="_blank" rel="noopener">GitHub</a>
-                        <a href="https://scholar.google.com/citations?user=-foPGxYAAAAJ&hl=zh-CN" target="_blank" rel="noopener">Google Scholar</a>
+                        <a href="https://github.com/EmoLab-AI/" target="_blank" rel="noopener">GitHub</a>
                     </div>
                 </div>
             </div>

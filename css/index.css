@@ -157,9 +157,10 @@ main {
     left: 28px;
     z-index: 1;
     max-width: 520px;
-    color: rgba(255, 255, 255, 0.88);
-    font-size: 0.92rem;
-    line-height: 1.45;
+    color: rgba(255, 255, 255, 0.92);
+    font-size: 1.08rem;
+    font-weight: 800;
+    line-height: 1.25;
     pointer-events: none;
 }
 
@@ -208,6 +209,7 @@ main {
     bottom: 18px;
     left: 22px;
     z-index: 1;
+    color: rgba(255, 255, 255, 0.92);
     font-size: 1.08rem;
     font-weight: 800;
     line-height: 1.25;
