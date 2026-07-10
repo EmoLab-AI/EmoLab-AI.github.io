@@ -76,6 +76,8 @@ main {
     color: rgba(255, 255, 255, 0.76);
     font-size: 1.02rem;
     line-height: 1.78;
+    text-align: justify;
+    text-justify: inter-word;
 }
 
 .hero-actions {
