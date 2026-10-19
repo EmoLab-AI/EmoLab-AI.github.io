@@ -86,6 +86,15 @@
             "introduction": "Jinhui Wu received the B.S. degree in Software Engineering from Zhejiang Wanli University, Ningbo, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. His research interests include multimodal physiological signal analysis and cognitive load assessment in virtual reality."
         },
         {
+            "name": "Junjie Wang",
+            "avatar": "/info/members/img/junjie-wang.jpg",
+            "title": "Master",
+            "bio": "Research focus: Virtual reality, EEG signal analysis, working memory, cognitive assessment.",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Junjie Wang’s research integrates virtual reality (VR) and electroencephalography (EEG) to assess cognitive function. Combining EEG and behavioral data, he compares brain activity, brain network connectivity, and task performance in healthy participants across VR and two-dimensional (2D) display environments. His work examines how presentation modalities influence working memory processing and explores the potential of these neural and behavioral measures for cognitive impairment screening."
+        },
+        {
             "name": "Menglan Ruan",
             "avatar": "/info/members/img/rml.png",
             "title": "Master",
