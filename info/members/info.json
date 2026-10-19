@@ -17,7 +17,7 @@
         {
             "name": "Hongbin Chen",
             "avatar": "/info/members/img/chb.png",
-            "title": "Master",
+            "title": "Ph.D. Students",
             "bio": "Research focus:Affective computing",
             "links": [
                 {
@@ -66,6 +66,24 @@
             "links": [],
             "google scholar": "暂无",
             "introduction": "Zichen Song is dedicated to the assessment of cognitive function in older adults through the integration of virtual reality and multimodal physiological signal analysis. His work focuses on developing ecologically valid cognitive tasks using virtual reality technology, while combining electroencephalography, electrocardiography, and other physiological signals to evaluate cognitive functional states in aging populations. Through this interdisciplinary approach, he aims to provide more objective, immersive, and accurate methods for early cognitive assessment and health monitoring."
+        },
+        {
+            "name": "Nan Zhang",
+            "avatar": "/info/members/img/zhangnan.png",
+            "title": "Master",
+            "bio": "Research focus: Multimodal emotion recognition and large-model-based affective computing",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Nan Zhang is currently pursuing the M.S. degree in Biotechnology and Engineering at the School of Biomedical Engineering and Informatics, Nanjing Medical University. Her current research interests include multimodal emotion recognition and large-model-based affective computing, and she mainly investigates emotional signal compensation and fusion strategies coping with missing modalities among mild cognitive impairment patients, as well as emotion recognition and reasoning with large models."
+        },
+        {
+            "name": "Jinhui Wu",
+            "avatar": "/info/members/img/wjh.jpg",
+            "title": "Master",
+            "bio": "Research focus: Multimodal physiological signal analysis and cognitive load assessment in virtual reality",
+            "links": [],
+            "google scholar": "暂无",
+            "introduction": "Jinhui Wu received the B.S. degree in Software Engineering from Zhejiang Wanli University, Ningbo, China, in 2023. He is currently pursuing the M.S. degree in Biomedical Engineering at Nanjing Medical University, Nanjing, China. His research interests include multimodal physiological signal analysis and cognitive load assessment in virtual reality."
         },
         {
             "name": "Menglan Ruan",
