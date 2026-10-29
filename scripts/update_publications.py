@@ -5,6 +5,62 @@ publications = []
 
 # ===== 2026 =====
 publications.append({
+    "year": 2026,
+    "title": "Modality Orthogonal Fusion with Alignment Framework for Multimodal Emotion Recognition",
+    "authors": [
+        "Hongbin Chen",
+        "Rui Feng",
+        "Shuai Shi",
+        "Jinhui Wu",
+        "Jie Li",
+        "Wei Wang",
+        "Chunfeng Yang",
+        "Giancarlo Fortino",
+        "Raffaele Gravina",
+        "Jianqing Li",
+        "Wentao Xiang"
+    ],
+    "venue": "IEEE Transactions on Affective Computing (accepted)",
+    "links": {
+        "paper": "https://doi.org/10.1109/TAFFC.2026.3745611",
+        "doi": "https://doi.org/10.1109/TAFFC.2026.3745611",
+        "project": "https://github.com/MaitreChen/MOFA"
+    },
+    "image": "info/publications/img/mofa-alignment-teaser.png",
+    "abstract": "We propose Modality Orthogonal Fusion with Alignment (MOFA) for multimodal emotion recognition, addressing temporal redundancy, semantic overlap, and representation imbalance across behavioral and physiological modalities. The framework combines modality-specific encoders, a Gated Bottleneck Aligner, an Orthogonal Alignment Mechanism, and Dynamic Modality-guided Fusion. Experiments on EAV and PME4 demonstrate consistent improvements over baselines, with the orthogonal alignment mechanism introducing negligible computational overhead.",
+    "citation": "@article{chen2026mofa, author = {Hongbin Chen and Rui Feng and Shuai Shi and Jinhui Wu and Jie Li and Wei Wang and Chunfeng Yang and Giancarlo Fortino and Raffaele Gravina and Jianqing Li and Wentao Xiang}, title = {Modality Orthogonal Fusion with Alignment Framework for Multimodal Emotion Recognition}, journal = {IEEE Transactions on Affective Computing}, year = {2026}, doi = {10.1109/TAFFC.2026.3745611}, note = {Accepted for publication}}",
+    "type": "Journal Articles",
+    "description": "Our IEEE TAFFC paper proposes redundancy-aware orthogonal alignment and dynamic modality-guided fusion for multimodal emotion recognition.",
+    "note": "Accepted journal article"
+})
+
+publications.append({
+    "year": 2026,
+    "date": "2026-10-11",
+    "title": "MBPnet: Cognitive Load Recognition in Virtual Reality Tasks Using ECG and EEG Signals",
+    "authors": [
+        "Jinhui Wu",
+        "Yamei Bai",
+        "Jianqing Li",
+        "Bin Liu",
+        "Jie Li",
+        "Wentao Xiang"
+    ],
+    "venue": "Companion of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing (UbiComp Companion 2026)",
+    "links": {
+        "paper": "https://doi.org/10.1145/3798063.3842631",
+        "doi": "https://doi.org/10.1145/3798063.3842631",
+        "project": "https://github.com/jinhuiwu-bme/MBPnet"
+    },
+    "image": "info/publications/img/mbpnet-teaser.png",
+    "abstract": "We develop a VR Supermarket-based Cognitive Load Induction system and the VREE dataset, comprising single-lead ECG and dual-channel EEG from 66 participants with mild cognitive impairment across ten sessions and three VR cognitive tasks. The proposed Multi-scale Bottleneck Prototype Network (MBPnet) combines Multi-scale Temporal Encoding, Bottleneck-based Reliability-aware Fusion, and a Prototype Alignment Radius strategy. MBPnet achieves 56.69% accuracy under five-fold subject-independent cross-validation, supporting future adaptive cognitive interventions.",
+    "citation": "@inproceedings{wu2026mbpnet, author = {Jinhui Wu and Yamei Bai and Jianqing Li and Bin Liu and Jie Li and Wentao Xiang}, title = {MBPnet: Cognitive Load Recognition in Virtual Reality Tasks Using ECG and EEG Signals}, booktitle = {Companion of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing}, year = {2026}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, numpages = {4}, doi = {10.1145/3798063.3842631}}",
+    "type": "Conference Papers",
+    "description": "Our UbiComp Companion 2026 paper introduces the VREE dataset and MBPnet for ECG-EEG cognitive load recognition in VR tasks for individuals with mild cognitive impairment.",
+    "note": "Conference paper"
+})
+
+publications.append({
     "year": 2026, "date": "2026-06-01",
     "title": "ESNN: End-to-End Shuttle Neural Network for Major Depressive Disorder Recognition via Electroencephalographic Signals",
     "authors": ["Chunfeng Yang", "Linlin You", "Feng Zhang", "Zhicheng Sun", "Xiaojia Wang", "Yan Wang", "Regine Le Bouquin Jeannes", "Huazhong Shu", "Wentao Xiang", "Yonggui Yuan"],
