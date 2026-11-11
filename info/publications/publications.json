@@ -27,7 +27,12 @@
       "citation": "@article{chen2026mofa, author = {Hongbin Chen and Rui Feng and Shuai Shi and Jinhui Wu and Jie Li and Wei Wang and Chunfeng Yang and Giancarlo Fortino and Raffaele Gravina and Jianqing Li and Wentao Xiang}, title = {Modality Orthogonal Fusion with Alignment Framework for Multimodal Emotion Recognition}, journal = {IEEE Transactions on Affective Computing}, year = {2026}, doi = {10.1109/TAFFC.2026.3745611}, note = {Accepted for publication}}",
       "type": "Journal Articles",
       "description": "Our IEEE TAFFC paper proposes redundancy-aware orthogonal alignment and dynamic modality-guided fusion for multimodal emotion recognition.",
-      "note": "Accepted journal article"
+      "note": "Accepted journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出面向多模态情感识别的模态正交融合与对齐框架（MOFA），解决行为与生理模态之间的时序冗余、语义重叠和表征不平衡问题。框架结合模态专属编码器、门控瓶颈对齐器、正交对齐机制及动态模态引导融合，在 EAV 和 PME4 数据集上持续优于基线方法，且正交对齐机制仅带来可忽略的计算开销。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -52,7 +57,12 @@
       "citation": "@inproceedings{wu2026mbpnet, author = {Jinhui Wu and Yamei Bai and Jianqing Li and Bin Liu and Jie Li and Wentao Xiang}, title = {MBPnet: Cognitive Load Recognition in Virtual Reality Tasks Using ECG and EEG Signals}, booktitle = {Companion of the 2026 ACM International Joint Conference on Pervasive and Ubiquitous Computing}, year = {2026}, publisher = {Association for Computing Machinery}, address = {New York, NY, USA}, numpages = {4}, doi = {10.1145/3798063.3842631}}",
       "type": "Conference Papers",
       "description": "Our UbiComp Companion 2026 paper introduces the VREE dataset and MBPnet for ECG-EEG cognitive load recognition in VR tasks for individuals with mild cognitive impairment.",
-      "note": "Conference paper"
+      "note": "Conference paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "开发基于虚拟超市的认知负荷诱导系统，构建 VREE 数据集，包含 66 名轻度认知障碍参与者在十次实验和三类虚拟现实认知任务中的单导联心电与双通道脑电。提出多尺度瓶颈原型网络（MBPnet），结合多尺度时序编码、基于瓶颈的可靠性感知融合与原型对齐半径策略，在五折受试者独立交叉验证中达到 56.69% 的准确率，为自适应认知干预提供支持。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -80,7 +90,12 @@
       "citation": "@article{yang2026esnn, author = {Chunfeng Yang and Linlin You and Feng Zhang and Zhicheng Sun and Xiaojia Wang and Yan Wang and Regine Le Bouquin Jeannes and Huazhong Shu and Wentao Xiang and Yonggui Yuan}, title = {ESNN: End-to-End Shuttle Neural Network for Major Depressive Disorder Recognition via Electroencephalographic Signals}, journal = {IRBM}, volume = {47}, pages = {100941}, year = {2026}, doi = {10.1016/j.irbm.2026.100941}}",
       "type": "Journal Articles",
       "description": "Our IRBM paper on end-to-end shuttle neural network for EEG-based depression recognition was published in 2026.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出端到端 Shuttle 神经网络（ESNN），用于基于多通道脑电的高效抑郁症识别。网络结合多尺度显著性编码频谱图、带跨模块注意力的双流时序频谱 U-Net，以及跨通道模块，实现时频特征整合。在三个脑电数据集上验证，准确率最高达到 98.70%。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -107,7 +122,12 @@
       "citation": "@article{yang2026tdfgnet, author = {Chunfeng Yang and Jiacheng Wei and Jianqing Li and Bin Liu and Regine Le Bouquin Jeannes and Liangcheng Qu and Kuiying Yin and Xiaojia Wang and Wentao Xiang}, title = {Time Series Decomposition and Fusion-Based Granger Causality Network for Nonlinear Causal Inference: Application in Emotion Brain Network Analysis Using EEG Signals}, journal = {Biomedical Signal Processing and Control}, year = {2026}, doi = {10.1016/j.bspc.2026.109465}}",
       "type": "Journal Articles",
       "description": "Our BSPC paper on TDFGnet for nonlinear Granger causality inference and emotion brain network analysis was published in 2026.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出 TDFGnet，结合自适应季节—趋势分解、RNN-ResMLP-Jacobian 学习与 Dempster-Shafer 因果融合，推断非线性格兰杰因果关系。在 Lorenz-96 和 fMRI 数据上分别达到 0.999 和 0.953 的 AUROC。情绪脑电分析显示，情绪与中性状态之间存在显著的非线性因果差异。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -129,7 +149,12 @@
       "citation": "@inproceedings{yang2026bff, author = {Bohui Yang and Luo Lilin and Xiaojia Wang and Chunfeng Yang and Wentao Xiang}, title = {Bimodal Fusion Framework for Dynamic Facial Expression Recognition In-The-Wild}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11465074}}",
       "type": "Conference Papers",
       "description": "Our ICASSP 2026 paper on bimodal fusion for dynamic facial expression recognition.",
-      "note": "Conference paper"
+      "note": "Conference paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出双模态动态面部表情识别框架 BFF-DFER，扩展视听预训练模型，引入模态专属适配、双模态融合适配器和跨模态时序建模。在 DFEW 上达到 67.52% UAR 和 78.28% WAR，在 MAFW 上达到 44.46% UAR 和 58.41% WAR。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -151,7 +176,12 @@
       "citation": "@inproceedings{wei2026tdfgnet, author = {Jiacheng Wei and Chunfeng Yang and Xiaojia Wang and Yudong Zhang and Wentao Xiang}, title = {Time Series Decomposition and Fusion-Based Granger Causality Network for Nonlinear Causal Inference}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11461910}}",
       "type": "Conference Papers",
       "description": "Our ICASSP 2026 paper on TDFGnet for nonlinear Granger causality inference.",
-      "note": "Conference paper"
+      "note": "Conference paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出 TDFGnet，采用基于离散小波变换的自适应季节—趋势分解、RNN-ResMLP-Jacobian 学习和 Dempster-Shafer 因果融合，推断非线性格兰杰因果关系。在 Lorenz-96 上达到 0.999 AUROC 和 0.994 AUPRC。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -174,7 +204,12 @@
       "citation": "@inproceedings{jin2026ducl, author = {Lei Jin and Zhuochang Xu and Yudong Zhang and Shijie Wang and Chunfeng Yang and Wentao Xiang}, title = {Dual Contrastive Learning for Semi-Supervised Domain Adaptation in Bi-Modal Depression Recognition}, booktitle = {ICASSP 2026}, year = {2026}, url = {https://ieeexplore.ieee.org/document/11463256}}",
       "type": "Conference Papers",
       "description": "Our ICASSP 2026 paper on dual contrastive learning for depression recognition domain adaptation.",
-      "note": "Conference paper"
+      "note": "Conference paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出用于双模态抑郁症识别的半监督域适应双重对比学习框架，包含语义一致性加权无监督对比学习与联合伪标签加权监督对比学习，在 AVEC 2014、CMDC 和 DAIC-WOZ 数据集上优于经典半监督域适应方法。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -205,7 +240,12 @@
       "citation": "@article{shi2026facial, author = {Keke Shi and Hongbin Chen and Keshu Cai and Jinhui Wu and Wei Wang and Jie Li and Bin Liu and Liangcheng Qu and Kuiying Yin and Pasquale Molinaro and Giancarlo Fortino and Jianqing Li and Wentao Xiang}, title = {Facial Expression Recognition for Chinese Elderly Using Edge and Semantic Features Dual Path Network With Two-Step Transfer Learning}, journal = {IEEE Transactions on Affective Computing}, year = {2026}, doi = {10.1109/TAFFC.2026.3679686}}",
       "type": "Journal Articles",
       "description": "Our IEEE TAFFC paper on elderly facial expression recognition was accepted in 2026.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "研究中国老年人的面部表情识别，使用结合边缘感知特征与语义表征的双路径架构，并通过两阶段迁移学习策略实现域适应。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -233,7 +273,12 @@
       "citation": "@article{yang2026abvnet, author = {Chunfeng Yang and Bohui Yang and Jie Li and Xiaojia Wang and Jianqing Li and Yudong Zhang and Yang Chen and Angelo Cangelosi and Wentao Xiang}, title = {ABVnet: Adapter-based Fine-tuning Bimodal ViTs Network for Dynamic Facial Expression Recognition In-the-Wild}, journal = {Information Fusion}, year = {2026}, doi = {10.1016/j.inffus.2025.103959}}",
       "type": "Journal Articles",
       "description": "Our Information Fusion paper on ABVnet for bimodal dynamic facial expression recognition was published in 2026.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "ABVnet 是基于适配器微调的双模态视觉 Transformer 网络，用于真实场景中的视听动态面部表情识别。网络结合模态专属适配、双模态融合适配器和跨模态时序建模，在 DFEW 上达到 67.52% UAR 和 78.28% WAR，在 MAFW 上达到 44.46% UAR 和 58.41% WAR。"
+        }
+      }
     },
     {
       "year": 2026,
@@ -257,7 +302,12 @@
       "citation": "@inproceedings{chen2025mofa, author = {Hongbin Chen and Rui Feng and Jie Li and Wei Wang and Jianqing Li and Wentao Xiang}, title = {MOFA: Modality-Orthogonalized Fusion Architecture for Multimodal Emotion Recognition}, booktitle = {PRCV 2025, LNCS}, publisher = {Springer Singapore}, pages = {418--433}, year = {2026}, doi = {10.1007/978-981-95-5567-3_29}}",
       "type": "Conference Papers",
       "description": "Our PRCV paper on modality-orthogonalized fusion for multimodal emotion recognition was published in 2026.",
-      "note": "Conference chapter"
+      "note": "Conference chapter",
+      "translations": {
+        "zh-CN": {
+          "abstract": "MOFA 引入面向多模态情感识别的模态正交化融合策略，在减少输入流之间冗余或冲突表征的同时，增强跨模态互补性。"
+        }
+      }
     },
     {
       "year": 2025,
@@ -287,7 +337,12 @@
       "citation": "@article{liang2025emotion, author = {Tao Liang and Junxiao Yu and Keke Shi and Yihao Yao and Jie Li and Bin Liu and Wei Wang and Chengyu Liu and Liangcheng Qu and Kuiying Yin and Wentao Xiang and Jianqing Li}, title = {Construction and Evaluation of an Emotion-Inducing Video Dataset towards Chinese Elderly Healthy Controls and Individuals with Mild Cognitive Impairment}, journal = {Cognitive Neurodynamics}, year = {2025}, doi = {10.1007/s11571-025-10318-x}}",
       "type": "Journal Articles",
       "description": "Our Cognitive Neurodynamics paper on an emotion-inducing video dataset for Chinese elderly and MCI was published in 2025.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "构建并验证面向中国老年人的情绪诱发视频数据集，包含覆盖中性、悲伤、愤怒、快乐、无聊和紧张六类情绪的 18 段视频。在 37 名参与者（21 名健康对照和 16 名轻度认知障碍者）中同步采集心电与脑电。轻度认知障碍组在 delta 和 theta 频段表现出更高的相对频带功率。"
+        }
+      }
     },
     {
       "year": 2025,
@@ -315,7 +370,12 @@
       "citation": "@article{ruan2025vr, author = {Menglan Ruan and Bin Liu and Wenyuan Li and Lei Jin and Leqi Yang and Regine Le Bouquin Jeannes and Jie Li and Yudong Zhang and Chunfeng Yang and Wentao Xiang}, title = {Virtual Reality-Based Stroop Test for Mild Cognitive Impairment Detection via KWS-TA-CNN-PE Network Using Eye-Tracking Signals}, journal = {IEEE Internet of Things Journal}, year = {2025}, volume = {12}, number = {24}, pages = {53966--53982}, doi = {10.1109/JIOT.2025.3619114}}",
       "type": "Journal Articles",
       "description": "Our IEEE IOTJ paper on VR Stroop testing and eye-tracking based MCI detection was published in 2025.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出结合眼动信号与 KWS-TA-CNN-PE 网络的虚拟现实 Stroop 测试框架，用于轻度认知障碍检测。在留一受试者交叉验证和盲测协议下，分别达到 0.8629 和 0.8621 的准确率。"
+        }
+      }
     },
     {
       "year": 2025,
@@ -341,7 +401,12 @@
       "citation": "@inproceedings{ruan2025kws, author = {Menglan Ruan and Wenyuan Li and Lei Jin and Leqi Yang and Wenbin Luo and Bin Liu and Chunfeng Yang and Wentao Xiang}, title = {KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test}, booktitle = {Proceedings of the Annual Meeting of the Cognitive Science Society}, volume = {47}, year = {2025}}",
       "type": "Conference Papers",
       "description": "A CogSci proceedings paper on lightweight eye-tracking based MCI detection was released in 2025.",
-      "note": "Conference proceedings paper"
+      "note": "Conference proceedings paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "利用虚拟现实 Stroop 测试中的眼动信号开展轻量级轻度认知障碍检测。提出的 KWS-TA-CNN 结合 Kymatio 小波散射、时序注意力和一维卷积神经网络，在四类任务中获得最高 0.9211 的受试者级准确率。"
+        }
+      }
     },
     {
       "year": 2025,
@@ -367,7 +432,12 @@
       "citation": "@article{zhang2025wsbilstm, author = {Feng Zhang and Chunfeng Yang and Linlin You and Xiaojia Wang and Yonggui Yuan and Regine Le Bouquin Jeannes and Huazhong Shu and Wentao Xiang}, title = {WS-BiLSTM-MA: Wavelet Scattering-Based BiLSTM With Mixed Attention Block for MDD Recognition Using Multichannel EEG Signals}, journal = {IEEE Transactions on Instrumentation and Measurement}, volume = {74}, pages = {6500513}, year = {2025}, doi = {10.1109/TIM.2024.3502843}}",
       "type": "Journal Articles",
       "description": "Our IEEE TIM paper on wavelet scattering BiLSTM with mixed attention for MDD recognition was published in 2025.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出基于多通道脑电的重性抑郁障碍识别网络 WS-BiLSTM-MA，结合小波散射网络提取形变稳定特征、双向 LSTM 建模时序关系，以及混合注意力模块重新分配散射系数和相关矩阵的特征权重。"
+        }
+      }
     },
     {
       "year": 2023,
@@ -390,7 +460,12 @@
       "citation": "@inproceedings{yang2023tsunet, author = {Chunfeng Yang and Zhicheng Sun and Feng Zhang and Huazhong Shu and Jianqing Li and Wentao Xiang}, title = {TSUnet-CC: Temporal Spectrogram Unet Embedding Cross Channel-wise Attention Mechanism for MDD Identification}, booktitle = {EMBC 2023}, pages = {1--4}, year = {2023}}",
       "type": "Conference Papers",
       "description": "Our EMBC 2023 paper on TSUnet-CC for EEG-based MDD identification was presented in 2023.",
-      "note": "Conference paper"
+      "note": "Conference paper",
+      "translations": {
+        "zh-CN": {
+          "abstract": "TSUnet-CC 将跨通道注意力嵌入时序频谱 U-Net，用于多通道脑电重性抑郁障碍识别。结合多尺度显著性编码频谱图、双流 U-Net 与跨通道注意力，为关键特征通道分配更高权重，准确率最高达到 99.22%。"
+        }
+      }
     },
     {
       "year": 2023,
@@ -415,7 +490,12 @@
       "citation": "@article{yuan2023sleep, author = {Wenhao Yuan and Wentao Xiang and Kaiyue Si and Chunfeng Yang and Lina Zhao and Jianqing Li and Chengyu Liu}, title = {Multi-Channel EEG-Based Sleep Staging Using Brain Functional Connectivity and Domain Adaptation}, journal = {Physiological Measurement}, volume = {44}, pages = {105007}, year = {2023}, doi = {10.1088/1361-6579/ad02db}}",
       "type": "Journal Articles",
       "description": "Our Physiological Measurement paper on EEG sleep staging with functional connectivity was published in 2023.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出基于脑功能连接的多通道脑电五分类睡眠分期方法，融合同步似然、小波相关性和能量比三种频域特征，并通过域适应降低跨受试者差异。在受试者相关设置中达到 83.97% 的准确率，在受试者独立设置中最高达到 62.66%。"
+        }
+      }
     },
     {
       "year": 2023,
@@ -444,7 +524,12 @@
       "citation": "@article{zhao2023psychodynamic, author = {Yanfeng Zhao and Liang Li and Xu He and Shuluo Yin and Yuxuan Zhou and Cesar Marquez-Chin and Wenjie Yang and Jiang Rao and Wentao Xiang and Bin Liu and Jianqing Li}, title = {Psychodynamic-Based Virtual Reality Cognitive Training System with Personalized Emotional Arousal Elements for Mild Cognitive Impairment Patients}, journal = {Computer Methods and Programs in Biomedicine}, volume = {241}, pages = {107779}, year = {2023}, doi = {10.1016/j.cmpb.2023.107779}}",
       "type": "Journal Articles",
       "description": "Our CMPB paper on psychodynamic VR cognitive training for MCI was published in 2023.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "提出结合个性化情绪唤醒元素的心理动力学虚拟现实认知康复训练方法，面向轻度认知障碍患者。四类训练任务与六种积极情绪唤醒元素显著改善认知功能。六周训练后，注意、工作记忆和抽象能力领域的训练得分分别提高 66.7%、33.4% 和 25.0%。"
+        }
+      }
     },
     {
       "year": 2023,
@@ -468,7 +553,12 @@
       "citation": "@article{yang2023epilepsy, author = {Chunfeng Yang and Qingbo Luo and Huazhong Shu and Regine Le Bouquin Jeannes and Jianqing Li and Wentao Xiang}, title = {Exploration of Interictal to Ictal Transition in Epileptic Seizures Using a Neural Mass Model}, journal = {Cognitive Neurodynamics}, year = {2023}, doi = {10.1007/s11571-023-09976-6}}",
       "type": "Journal Articles",
       "description": "Our Cognitive Neurodynamics paper on epileptic seizure transition using neural mass modeling was published in 2023.",
-      "note": "Journal article"
+      "note": "Journal article",
+      "translations": {
+        "zh-CN": {
+          "abstract": "采用神经质量模型（cPBM）和结合确定性方法的频谱动态因果建模，探索癫痫发作间期向发作期的转变。结果显示，该转变与兴奋性连接增强及自环抑制减弱有关，发作期间的兴奋—抑制平衡显著升高。"
+        }
+      }
     }
   ]
 }

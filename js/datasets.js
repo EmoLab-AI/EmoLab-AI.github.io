@@ -1,10 +1,23 @@
-﻿document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", async () => {
+    await I18n.ready;
     const datasetGrid = document.querySelector(".dataset-grid");
     const filterButtons = document.querySelectorAll(".filter-btn");
     const accessModal = document.querySelector("#datasetAccessModal");
     const applicationFrame = document.querySelector("#datasetApplicationFrame");
     const applicationOpenLink = document.querySelector("#datasetApplicationOpenLink");
     let datasets = [];
+    let currentFilter = 'All';
+    let failed = false;
+
+    function renderFiltered() {
+        if (failed) {
+            datasetGrid.innerHTML = `<p class="empty-state">${I18n.t('datasets.error')}</p>`;
+            return;
+        }
+        renderDatasets(currentFilter === 'All' ? datasets : datasets.filter(dataset =>
+            (dataset.tags || []).includes(currentFilter)));
+    }
+    document.addEventListener('languagechange', renderFiltered);
 
     fetch("info/datasets/datastes.json")
         .then((response) => {
@@ -15,12 +28,13 @@
         })
         .then((data) => {
             datasets = data.datasets || [];
-            renderDatasets(datasets);
+            renderFiltered();
             setupFilterButtons();
         })
         .catch((error) => {
             console.error("Error loading datasets:", error);
-            datasetGrid.innerHTML = '<p class="empty-state">Failed to load datasets. Please try again later.</p>';
+            failed = true;
+            renderFiltered();
         });
 
     function setupFilterButtons() {
@@ -29,15 +43,8 @@
                 filterButtons.forEach((btn) => btn.classList.remove("active"));
                 button.classList.add("active");
 
-                const filterText = button.textContent.trim().toLowerCase();
-                if (filterText === "all") {
-                    renderDatasets(datasets);
-                    return;
-                }
-
-                renderDatasets(
-                    datasets.filter((dataset) => (dataset.tags || []).some((tag) => tag.toLowerCase() === filterText))
-                );
+                currentFilter = button.dataset.filter;
+                renderFiltered();
             });
         });
     }
@@ -46,7 +53,7 @@
         datasetGrid.innerHTML = "";
 
         if (datasetsToRender.length === 0) {
-            datasetGrid.innerHTML = '<p class="empty-state">No datasets found matching your criteria.</p>';
+            datasetGrid.innerHTML = `<p class="empty-state">${I18n.t('datasets.empty')}</p>`;
             return;
         }
 
@@ -54,19 +61,19 @@
             const card = document.createElement("article");
             card.className = "card dataset-card";
             card.innerHTML = `
-                <div class="dataset-preview" data-placeholder="CARE Lab dataset">
-                    <img src="${escapeAttr(dataset.image || 'logo.png')}" alt="${escapeAttr(dataset.title)}" class="dataset-image" loading="lazy">
+                <div class="dataset-preview" data-placeholder="${I18n.t('datasets.placeholder')}">
+                    <img src="${escapeAttr(dataset.image || 'logo.png')}" alt="${escapeAttr(I18n.field(dataset, 'title'))}" class="dataset-image" loading="lazy">
                     <span class="dataset-access-badge">${getAccessLabel(dataset)}</span>
                 </div>
                 <div class="dataset-info">
                     <div class="dataset-meta">
-                        ${(dataset.tags || []).slice(0, 3).map((tag) => `<span class="dataset-tag dataset-tag--meta">${escapeHtml(tag)}</span>`).join("")}
+                        ${(dataset.tags || []).slice(0, 3).map((tag) => `<span class="dataset-tag dataset-tag--meta">${escapeHtml(I18n.label(tag))}</span>`).join("")}
                     </div>
-                    <h3 class="dataset-title">${escapeHtml(dataset.title)}</h3>
-                    <p class="dataset-description">${escapeHtml(dataset.description)}</p>
-                    <div class="dataset-stats" aria-label="Dataset key metrics">
+                    <h3 class="dataset-title">${escapeHtml(I18n.field(dataset, 'title'))}</h3>
+                    <p class="dataset-description">${escapeHtml(I18n.field(dataset, 'description'))}</p>
+                    <div class="dataset-stats" aria-label="${I18n.t('datasets.metrics')}">
                         ${(dataset.stats || []).map((stat) => `
-                            <span class="stat-item"><strong>${escapeHtml(stat.label)}</strong><em>${escapeHtml(stat.value)}</em></span>
+                            <span class="stat-item"><strong>${escapeHtml(I18n.label(stat.label))}</strong><em>${escapeHtml(I18n.label(stat.value))}</em></span>
                         `).join("")}
                     </div>
                     <div class="dataset-links">
@@ -90,9 +97,9 @@
     function getAccessLabel(dataset) {
         const hasApplication = (dataset.links || []).some((link) => link.action === "application-modal");
         const hasDataAction = (dataset.links || []).some((link) => /get data|request|access/i.test(link.label || ""));
-        if (hasApplication) return "Application required";
-        if (hasDataAction) return "Controlled access";
-        return "Research resource";
+        if (hasApplication) return I18n.label("Application required");
+        if (hasDataAction) return I18n.label("Controlled access");
+        return I18n.label("Research resource");
     }
 
     function isPrimaryLink(link) {
@@ -122,14 +129,14 @@
 
     function renderDatasetLink(link, index) {
         const primaryClass = isPrimaryLink(link) || (index === 0 && /data/i.test(link.label || "")) ? " dataset-link--primary" : "";
-        const label = escapeHtml(link.label || "Open");
+        const label = escapeHtml(I18n.label(link.label || "Open"));
         const icon = datasetIcon(getLinkIconName(link));
 
         if (link.action === "application-modal") {
             return `<button type="button" class="dataset-link${primaryClass}" data-application-url="${escapeAttr(link.url)}">${icon}<span>${label}</span></button>`;
         }
 
-        return `<a href="${escapeAttr(link.url)}" target="${normalizeTarget(link)}" rel="noreferrer" class="dataset-link${primaryClass}">${icon}<span>${label}</span></a>`;
+        return `<a href="${escapeAttr(I18n.url(link.url))}" target="${normalizeTarget(link)}" rel="noreferrer" class="dataset-link${primaryClass}">${icon}<span>${label}</span></a>`;
     }
 
     function escapeHtml(value) {

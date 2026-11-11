@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>Datasets - CARE Lab</title>
+    <script src="js/i18n.js?v=20261111"></script>
+    <title data-i18n="page.datasets">Datasets - CARE Lab</title>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common.css?v=20261111">
     <link rel="stylesheet" href="css/datasets.css">
 </head>
 <body data-page="datasets">
@@ -15,13 +16,13 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <h1 class="page-title">Datasets</h1>
+                <h1 class="page-title" data-i18n="nav.datasets">Datasets</h1>
                 <div class="filter-bar">
-                    <button class="filter-btn active">All</button>
-                    <button class="filter-btn">Emotion</button>
-                    <button class="filter-btn">Multimodal</button>
-                    <button class="filter-btn">Vision</button>
-                    <button class="filter-btn">Audio</button>
+                    <button class="filter-btn active" data-filter="All" data-i18n="labels.All">All</button>
+                    <button class="filter-btn" data-filter="Emotion" data-i18n="labels.Emotion">Emotion</button>
+                    <button class="filter-btn" data-filter="Multimodal" data-i18n="labels.Multimodal">Multimodal</button>
+                    <button class="filter-btn" data-filter="Vision" data-i18n="labels.Vision">Vision</button>
+                    <button class="filter-btn" data-filter="Audio" data-i18n="labels.Audio">Audio</button>
                 </div>
                 <div class="dataset-grid"></div>
             </div>
@@ -32,22 +33,22 @@
         <div class="dataset-modal-panel" role="dialog" aria-modal="true" aria-labelledby="datasetAccessTitle">
             <div class="dataset-modal-header">
                 <div>
-                    <h2 class="dataset-modal-title" id="datasetAccessTitle">Dataset Access Application Form</h2>
-                    <p class="dataset-modal-note">Please print and complete this application form, then send the signed copy to <a href="mailto:shuai@stu.njmu.edu.cn">shuai@stu.njmu.edu.cn</a>.</p>
+                    <h2 class="dataset-modal-title" id="datasetAccessTitle" data-i18n="datasets.application">Dataset Access Application Form</h2>
+                    <p class="dataset-modal-note"><span data-i18n="datasets.applicationNote">Please print and complete this application form, then send the signed copy to</span> <a href="mailto:shuai@stu.njmu.edu.cn">shuai@stu.njmu.edu.cn</a>.</p>
                 </div>
-                <button class="dataset-modal-close" type="button" data-close-dataset-modal aria-label="Close">&times;</button>
+                <button class="dataset-modal-close" type="button" data-close-dataset-modal aria-label="Close" data-i18n-aria-label="common.close">&times;</button>
             </div>
             <div class="dataset-modal-actions">
-                <a class="dataset-modal-action" id="datasetApplicationOpenLink" href="info/datasets/license_1220.pdf" target="_blank" rel="noreferrer">Open PDF</a>
-                <a class="dataset-modal-action" href="mailto:shuai@stu.njmu.edu.cn">Email Completed Form</a>
+                <a class="dataset-modal-action" id="datasetApplicationOpenLink" href="info/datasets/license_1220.pdf" target="_blank" rel="noreferrer" data-i18n="datasets.openPdf">Open PDF</a>
+                <a class="dataset-modal-action" href="mailto:shuai@stu.njmu.edu.cn" data-i18n="datasets.email">Email Completed Form</a>
             </div>
-            <iframe class="dataset-modal-frame" id="datasetApplicationFrame" title="Dataset access application form"></iframe>
+            <iframe class="dataset-modal-frame" id="datasetApplicationFrame" title="Dataset access application form" data-i18n-title="datasets.frameTitle"></iframe>
         </div>
     </div>
 
     <div data-site-footer></div>
 
-    <script src="js/site.js"></script>
-    <script src="js/datasets.js"></script>
+    <script src="js/site.js?v=20261111"></script>
+    <script src="js/datasets.js?v=20261111"></script>
 </body>
 </html>

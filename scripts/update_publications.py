@@ -303,6 +303,18 @@ publications.append({
 # Output
 output = {"publications": publications}
 out_path = "E:/EmoLab-AI_page/EmoLab-AI.github.io/info/publications/publications.json"
+# Preserve manually maintained translations when regenerating English records.
+if os.path.exists(out_path):
+    with open(out_path, encoding="utf-8-sig") as existing_file:
+        existing = json.load(existing_file).get("publications", [])
+    translations = {
+        (item.get("links", {}).get("doi") or item["title"]): item["translations"]
+        for item in existing if item.get("translations")
+    }
+    for publication in publications:
+        key = publication.get("links", {}).get("doi") or publication["title"]
+        if key in translations:
+            publication["translations"] = translations[key]
 with open(out_path, "w", encoding="utf-8") as f:
     json.dump(output, f, indent=2, ensure_ascii=False)
 

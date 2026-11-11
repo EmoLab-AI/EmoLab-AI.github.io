@@ -12,7 +12,13 @@
       ],
       "links": [
         {"label": "Related Publications", "url": "publications.html", "target": "_self"}
-      ]
+      ],
+      "translations": {
+        "zh-CN": {
+          "title": "轻度认知障碍面部表情数据集",
+          "description": "面向轻度认知障碍（MCI）研究的面部表情数据集，按受试者文件夹组织，支持情感计算和认知健康相关分析。数据围绕七类情绪整理，可用于受试者级建模、表情识别实验，以及 MCI 相关情境中的情感感知与行为反应模式研究。"
+        }
+      }
     },
     {
       "title": "MECO: A Multimodal Dataset for Emotion and Cognitive Understanding in Older Adults",
@@ -27,7 +33,13 @@
       ],
       "links": [
         {"label": "Get Data", "url": "https://maitrechen.github.io/meco-page/", "target": "https://maitrechen.github.io/meco-page/"}
-      ]
+      ],
+      "translations": {
+        "zh-CN": {
+          "title": "MECO：面向老年人情感与认知理解的多模态数据集",
+          "description": "MECO 是面向老年人情感与认知理解的多模态数据集，包含 42 名参与者约 38 小时的同步视频、音频、脑电和心电记录，以及效价、唤醒度、基本情绪和认知评分等标注，用于支持情感计算、认知评估及老年群体轻度认知障碍相关的早期研究。"
+        }
+      }
     },
     {
       "title": "VR Stroop Eye-Tracking Dataset for Lightweight MCI Detection",
@@ -43,7 +55,13 @@
       "links": [
         {"label": "Related Publication", "url": "publications.html", "target": "_self"},
         {"label": "Get Data", "url": "info/datasets/license_1220.pdf", "action": "application-modal"}
-      ]
+      ],
+      "translations": {
+        "zh-CN": {
+          "title": "面向轻量级轻度认知障碍检测的 VR Stroop 眼动数据集",
+          "description": "该数据集支持 CogSci 论文“KWS-TA-CNN Network: Towards Lightweight Mild Cognitive Impairment Detection Using Eye-Tracking Signals From Virtual Reality Stroop Test”。包含虚拟现实 Stroop 测试期间采集的眼动信号，用于轻量级轻度认知障碍检测、认知健康筛查及高效时序注意力建模研究。"
+        }
+      }
     }
   ]
 }

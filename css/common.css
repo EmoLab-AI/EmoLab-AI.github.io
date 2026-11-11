@@ -236,6 +236,41 @@ main {
 }
 
 /* === Footer === */
+.site-brand { flex-shrink: 0; }
+.site-nav__inner { gap: 12px; }
+.language-switch {
+    position: relative;
+    z-index: 1100;
+    display: inline-flex;
+    flex-shrink: 0;
+    gap: 2px;
+    padding: 3px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+}
+.language-switch button {
+    border: 0;
+    border-radius: 5px;
+    padding: 6px 9px;
+    background: transparent;
+    color: var(--text-color);
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.language-switch button[aria-pressed="true"] {
+    background: var(--primary-color);
+    color: var(--white);
+}
+.language-switch button:focus-visible {
+    outline: 2px solid var(--primary-color);
+    outline-offset: 2px;
+}
+@media (max-width: 860px) {
+    .language-switch { margin-left: auto; }
+    .site-nav__hamburger { order: 3; flex-shrink: 0; }
+}
+
 .site-footer {
     z-index: 1000;
     color: var(--white);

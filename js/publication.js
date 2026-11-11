@@ -2,6 +2,8 @@ var PUB_DATA = [];
 
 var currentTypeFilter = 'All';
 var currentSearchQuery = '';
+var publicationRenderTimer;
+var expandedAbstracts = new Set();
 
 async function fetchPublications() {
     try {
@@ -14,7 +16,7 @@ async function fetchPublications() {
         if (window.location.protocol === 'file:') {
             throw new Error('LOCAL_FILE_PROTOCOL');
         }
-        return [];
+        throw error;
     }
 }
 
@@ -60,14 +62,14 @@ function iconSvg(name) {
 }
 
 function actionLabel(iconName, text) {
-    return iconSvg(iconName) + '<span>' + text + '</span>';
+    return iconSvg(iconName) + '<span>' + escapeHtml(I18n.label(text)) + '</span>';
 }
 
 function formatTypeLabel(pub) {
-    if (pub.note) return pub.note;
-    if (pub.type === 'Journal Articles') return 'Journal article';
-    if (pub.type === 'Conference Papers') return 'Conference paper';
-    return pub.type || 'Publication';
+    if (pub.note) return I18n.label(pub.note);
+    if (pub.type === 'Journal Articles') return I18n.label('Journal article');
+    if (pub.type === 'Conference Papers') return I18n.label('Conference paper');
+    return I18n.label(pub.type || 'Publication');
 }
 
 /* --- Combined Filtering --- */
@@ -83,7 +85,8 @@ function getFilteredPubs() {
         pubs = pubs.filter(function(p) {
             var inTitle = p.title && p.title.toLowerCase().indexOf(q) !== -1;
             var inAuthors = p.authors && p.authors.some(function(a) { return a.toLowerCase().indexOf(q) !== -1; });
-            var inAbstract = p.abstract && p.abstract.toLowerCase().indexOf(q) !== -1;
+            var inAbstract = [p.abstract, p.description, ...Object.values(p.translations || {}).flatMap(item => [item.abstract, item.description])]
+                .some(text => text && text.toLowerCase().includes(q));
             var inVenue = p.venue && p.venue.toLowerCase().indexOf(q) !== -1;
             return inTitle || inAuthors || inAbstract || inVenue;
         });
@@ -115,7 +118,9 @@ function showCiteToast(msg) {
         toast.className = 'cite-toast';
         document.body.appendChild(toast);
     }
-    toast.textContent = msg;
+    toast.dataset.i18n = msg;
+    toast.setAttribute('role', 'status');
+    toast.textContent = I18n.t(msg);
     toast.classList.add('show');
     setTimeout(function() { toast.classList.remove('show'); }, 2000);
 }
@@ -127,8 +132,9 @@ function fallbackCopy(text) {
     ta.style.left = '-9999px';
     document.body.appendChild(ta);
     ta.select();
-    document.execCommand('copy');
+    var copied = document.execCommand('copy');
     document.body.removeChild(ta);
+    if (!copied) throw new Error('Copy failed');
 }
 
 /* --- Card Creation --- */
@@ -143,21 +149,23 @@ function createPublicationCard(pub) {
     var titleLink = (pub.links && pub.links.paper) ? pub.links.paper : ((pub.links && pub.links.doi) ? pub.links.doi : '#');
 
     var parts = [];
+    var abstractOpen = expandedAbstracts.has(pub.title);
+    var codeLink = pub.links && (pub.links.project || pub.links.code);
     if (pub.links && pub.links.paper) parts.push('<a href="' + pub.links.paper + '" class="pub-link pub-link--primary" target="_blank" rel="noreferrer">' + actionLabel('paper', 'Paper') + '</a>');
     if (pub.links && pub.links.doi && !(pub.links && pub.links.paper)) parts.push('<a href="' + pub.links.doi + '" class="pub-link pub-link--primary" target="_blank" rel="noreferrer">' + actionLabel('doi', 'DOI') + '</a>');
-    if (pub.links && pub.links.project) parts.push('<a href="' + pub.links.project + '" class="pub-link" target="_blank" rel="noreferrer">' + actionLabel('code', 'Code') + '</a>');
-    if (pub.abstract) parts.push('<button class="show-abstract-btn" type="button">' + actionLabel('abstract', 'Abstract') + '</button>');
+    if (codeLink) parts.push('<a href="' + codeLink + '" class="pub-link" target="_blank" rel="noreferrer">' + actionLabel('code', 'Code') + '</a>');
+    if (pub.abstract) parts.push('<button class="show-abstract-btn" type="button" aria-expanded="' + abstractOpen + '">' + actionLabel('abstract', abstractOpen ? 'Hide Abstract' : 'Abstract') + '</button>');
     if (pub.citation) parts.push('<button class="cite-btn" type="button">' + actionLabel('cite', 'Cite') + '</button>');
 
     var imgAlt = escapeHtml(pub.title);
-    var imgHtml = '<div class="publication-media" data-placeholder="CARE Lab publication"><img src="' + imageUrl + '" class="' + imgClass + '" alt="' + imgAlt + '" loading="lazy"></div>';
+    var imgHtml = '<div class="publication-media" data-placeholder="' + I18n.t('pub.placeholder') + '"><img src="' + imageUrl + '" class="' + imgClass + '" alt="' + imgAlt + '" loading="lazy"></div>';
     var metaHtml = '<div class="publication-meta"><span class="publication-type">' + escapeHtml(formatTypeLabel(pub)) + '</span><span class="publication-year">' + escapeHtml(String(pub.year || '')) + '</span></div>';
-    var titleHtml = '<h3 class="publication-title"><a href="' + titleLink + '" target="_blank" rel="noreferrer">' + escapeHtml(pub.title) + '</a></h3>';
+    var titleHtml = '<h3 class="publication-title" lang="en"><a href="' + titleLink + '" target="_blank" rel="noreferrer">' + escapeHtml(pub.title) + '</a></h3>';
     var authorsHtml = '<p class="publication-authors">' + escapeHtml(formatAuthors(pub.authors)) + '</p>';
     var venueHtml = '<p class="publication-venue">' + escapeHtml(venueText) + '</p>';
     var linksHtml = '<div class="publication-links">' + parts.join('') + '</div>';
-    var noteHtml = pub.note ? '<p class="publication-note">' + escapeHtml(pub.note) + '</p>' : '';
-    var abstractHtml = pub.abstract ? '<div class="publication-abstract">' + formatAbstract(pub.abstract) + '</div>' : '';
+    var noteHtml = pub.note ? '<p class="publication-note">' + escapeHtml(I18n.label(pub.note)) + '</p>' : '';
+    var abstractHtml = pub.abstract ? '<div class="publication-abstract' + (abstractOpen ? ' show' : '') + '">' + formatAbstract(I18n.field(pub, 'abstract')) + '</div>' : '';
 
     card.innerHTML = imgHtml + '<div class="publication-body">' + metaHtml + titleHtml + authorsHtml + venueHtml + linksHtml + noteHtml + abstractHtml + '</div>';
 
@@ -178,6 +186,9 @@ function createPublicationCard(pub) {
             var ab = card.querySelector('.publication-abstract');
             var isOpen = ab.classList.contains('show');
             ab.classList.toggle('show', !isOpen);
+            absBtn.setAttribute('aria-expanded', String(!isOpen));
+            if (isOpen) expandedAbstracts.delete(pub.title);
+            else expandedAbstracts.add(pub.title);
             absBtn.innerHTML = actionLabel('abstract', isOpen ? 'Abstract' : 'Hide Abstract');
         });
     }
@@ -185,14 +196,14 @@ function createPublicationCard(pub) {
     /* Cite button */
     var citeBtn = card.querySelector('.cite-btn');
     if (citeBtn) {
-        citeBtn.addEventListener('click', function() {
+        citeBtn.addEventListener('click', async function() {
             var cit = pub.citation;
-            if (navigator.clipboard && navigator.clipboard.writeText) {
-                navigator.clipboard.writeText(cit).catch(function() { fallbackCopy(cit); });
-            } else {
-                fallbackCopy(cit);
-            }
-            showCiteToast('Citation copied to clipboard');
+            try {
+                if (navigator.clipboard && navigator.clipboard.writeText) {
+                    await navigator.clipboard.writeText(cit).catch(function() { fallbackCopy(cit); });
+                } else fallbackCopy(cit);
+                showCiteToast('pub.copied');
+            } catch (_) { showCiteToast('pub.copyFailed'); }
         });
     }
 
@@ -204,7 +215,8 @@ function renderPublications() {
     var container = document.getElementById('publicationsContainer');
     container.classList.add('fade-out');
 
-    setTimeout(function() {
+    clearTimeout(publicationRenderTimer);
+    publicationRenderTimer = setTimeout(function() {
         container.innerHTML = '';
         container.classList.remove('fade-out');
 
@@ -213,14 +225,14 @@ function renderPublications() {
         /* Update result count */
         var countEl = document.getElementById('pubResultCount');
         if (countEl) {
-            countEl.textContent = 'Showing ' + visible.length + ' of ' + PUB_DATA.length;
-            countEl.style.display = visible.length < PUB_DATA.length ? '' : 'none';
+            countEl.textContent = I18n.t('pub.count', { count: visible.length, total: PUB_DATA.length });
+            countEl.hidden = visible.length >= PUB_DATA.length;
         }
 
         if (visible.length === 0) {
             var emptyMsg = currentSearchQuery
-                ? 'No publications match "' + escapeHtml(currentSearchQuery) + '". Try different keywords.'
-                : 'No publications found for this filter.';
+                ? escapeHtml(I18n.t('pub.noMatch', { query: currentSearchQuery }))
+                : I18n.t('pub.emptyFilter');
             container.innerHTML = '<p class="empty-state">' + emptyMsg + '</p>';
             return;
         }
@@ -257,9 +269,11 @@ function createFilterButtons(types, allPubs) {
 
     types.forEach(function(type) {
         var btn = document.createElement('button');
+        btn.type = 'button';
+        btn.dataset.filter = type;
         btn.className = 'filter-btn' + (type === currentTypeFilter ? ' active' : '');
         var cnt = type === 'All' ? allPubs.length : allPubs.filter(function(p) { return p.type === type; }).length;
-        btn.innerHTML = '<span>' + escapeHtml(type) + '</span><strong>' + cnt + '</strong>';
+        btn.innerHTML = '<span>' + escapeHtml(I18n.label(type)) + '</span><strong>' + cnt + '</strong>';
         btn.addEventListener('click', function() {
             currentTypeFilter = type;
             document.querySelectorAll('#publicationFilters .filter-btn').forEach(function(b) { b.classList.remove('active'); });
@@ -277,9 +291,9 @@ function initSearch() {
 
     var debounceTimer;
     input.addEventListener('input', function() {
+        currentSearchQuery = input.value.trim();
         clearTimeout(debounceTimer);
         debounceTimer = setTimeout(function() {
-            currentSearchQuery = input.value.trim();
             renderPublications();
         }, 250);
     });
@@ -297,30 +311,38 @@ function initSearch() {
 
 /* --- Init --- */
 async function initializePage() {
+    await I18n.ready;
     var container = document.getElementById('publicationsContainer');
     showLoadingSkeleton(container);
+    var loaded = false;
+    var loadError;
+
+    function refresh() {
+        if (!loaded) return;
+        if (loadError) {
+            container.innerHTML = loadError.message === 'LOCAL_FILE_PROTOCOL'
+                ? '<div class="empty-state"><p><strong>' + I18n.t('pub.localTitle') + '</strong></p><p>' + I18n.t('pub.localHelp') + '</p></div>'
+                : '<p class="empty-state">' + I18n.t('pub.error') + '</p>';
+        } else if (!PUB_DATA.length) {
+            container.innerHTML = '<p class="empty-state">' + I18n.t('pub.empty') + '</p>';
+        } else {
+            createFilterButtons(getUniqueTypes(PUB_DATA), PUB_DATA);
+            renderPublications();
+        }
+    }
+    document.addEventListener('languagechange', refresh);
 
     await new Promise(function(r) { setTimeout(r, 300); });
 
     try {
         PUB_DATA = await fetchPublications();
     } catch (err) {
-        if (err.message === 'LOCAL_FILE_PROTOCOL') {
-            container.innerHTML = '<div class="empty-state"><p><strong>Cannot load data from local file.</strong></p><p>Please serve this site via a local web server (e.g., <code>python -m http.server</code> or <code>npx serve</code>) instead of opening the HTML file directly.</p></div>';
-        } else {
-            container.innerHTML = '<p class="empty-state">Failed to load publications. Please check your network connection and try again.</p>';
-        }
-        return;
+        loadError = err;
     }
 
-    if (PUB_DATA.length === 0) {
-        container.innerHTML = '<p class="empty-state">No publications found. Please check back later.</p>';
-        return;
-    }
-
-    createFilterButtons(getUniqueTypes(PUB_DATA), PUB_DATA);
+    loaded = true;
     initSearch();
-    renderPublications();
+    refresh();
 }
 
 document.addEventListener('DOMContentLoaded', initializePage);

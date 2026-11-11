@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="color-scheme" content="light dark">
-    <title>Gallery - CARE Lab</title>
+    <script src="js/i18n.js?v=20261111"></script>
+    <title data-i18n="page.gallery">Gallery - CARE Lab</title>
     <link rel="icon" href="logo.png" type="image/png">
-    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/common.css?v=20261111">
     <link rel="stylesheet" href="css/gallery.css">
 </head>
 <body data-page="gallery">
@@ -15,13 +16,13 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <h1 class="page-title">Gallery</h1>
-                <p class="page-subtitle">Events, lab life, and milestones from the CARE Lab group.</p>
+                <h1 class="page-title" data-i18n="nav.gallery">Gallery</h1>
+                <p class="page-subtitle" data-i18n="gallery.subtitle">Events, lab life, and milestones from the CARE Lab group.</p>
                 <div class="filter-bar">
-                    <button class="filter-btn active">All</button>
-                    <button class="filter-btn">Life</button>
-                    <button class="filter-btn">Events</button>
-                    <button class="filter-btn">Awards</button>
+                    <button class="filter-btn active" data-filter="All" data-i18n="labels.All">All</button>
+                    <button class="filter-btn" data-filter="Life" data-i18n="labels.Life">Life</button>
+                    <button class="filter-btn" data-filter="Events" data-i18n="labels.Events">Events</button>
+                    <button class="filter-btn" data-filter="Awards" data-i18n="labels.Awards">Awards</button>
                 </div>
                 <div class="gallery-grid"></div>
             </div>
@@ -30,7 +31,7 @@
 
     <div data-site-footer></div>
 
-    <script src="js/site.js"></script>
-    <script src="js/gallery.js"></script>
+    <script src="js/site.js?v=20261111"></script>
+    <script src="js/gallery.js?v=20261111"></script>
 </body>
 </html>
